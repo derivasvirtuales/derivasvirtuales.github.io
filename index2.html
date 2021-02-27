@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Cartografías Virtuales</title>
+		<style>
+			body { margin: 0; }
+        </style>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+        <script src="https://assets.shiftr.io/js/mqtt-2.9.0.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+
+        <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+        
+	</head>
+	<body>
+        <script type="module">
+
+            // Find the latest version by visiting https://unpkg.com/three. The URL will
+            // redirect to the newest stable release.
+            import * as THREE from 'https://unpkg.com/three/build/three.module.js';
+
+            import { MapControls } from 'https://unpkg.com/three/examples/jsm/controls/OrbitControls.js';
+
+            import { GUI } from 'https://unpkg.com/three/examples/jsm/libs/dat.gui.module.js';
+          
+
+            const raycaster = new THREE.Raycaster();
+const mouse = new THREE.Vector2();
+
+function onMouseMove( event ) {
+
+	// calculate mouse position in normalized device coordinates
+	// (-1 to +1) for both components
+
+	mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+	mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+
+}
+
+function render() {
+
+	// update the picking ray with the camera and mouse position
+	raycaster.setFromCamera( mouse, camera );
+
+	// calculate objects intersecting the picking ray
+	const intersects = raycaster.intersectObjects( scene.children );
+
+	for ( let i = 0; i < intersects.length; i ++ ) {
+
+		intersects[ i ].object.material.color.set( 0xff0000 );
+
+	}
+
+	renderer.render( scene, camera );
+
+}
+
+window.addEventListener( 'mousemove', onMouseMove, false );
+
+window.requestAnimationFrame(render);
+
+          </script>
+
+	</body>
+</html>
