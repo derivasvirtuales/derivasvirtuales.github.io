@@ -100,6 +100,12 @@ function draw() {
     player.velocity.x = (camera.mouseX - player.position.x) / 200;
     player.velocity.y = (camera.mouseY - player.position.y) / 200;
   }
+
+  if ( mouseX < x/5 ){
+    player.velocity.x = (camera.mouseX - player.position.x) / 2000;
+    player.velocity.y = (camera.mouseY - player.position.y) / 2000;
+  }
+
  
 
 
@@ -192,3 +198,12 @@ close.addEventListener('click', () => {
   popup.style.display = 'none';
   popUpEstado = false;
 });
+
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
