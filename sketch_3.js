@@ -26,6 +26,7 @@ function preload() {
   modeloPiedra6 = loadModel('assets/models/modeloPiedras6.obj', true);
   modeloPiedra7 = loadModel('assets/models/modeloPiedras7.obj', true);
   modeloPiedra8 = loadModel('assets/models/modeloPiedras8.obj', true);
+  ciudad = loadModel('assets/models/dallas.stl', true);
 
 }
 
@@ -48,7 +49,7 @@ document.oncontextmenu = function() { return false; }
 function draw() {
   background(0);
 
-  //noStroke();
+noStroke();
 
   //easycam.removeMouseListeners();
 
@@ -56,9 +57,18 @@ function draw() {
 lights();
 ambientLight(20);
 
-stroke(150);
+//stroke(150);
 
+  push()
+  fill(255);
+  translate(0, 0, 0);
+  rotateX(180);
+  rotateY(frameCount / 10);
+  scale(3);
+  model(ciudad);
+  pop();
 
+  /*
   push()
   texture(texturaPiedra1);
   translate(-100, 0, -100);
@@ -95,7 +105,7 @@ push()
     line(-100, 0, -100, 200, 0, 200);
     line(-100, 0, -100, 0, 200, -200);
     line(0, 200, -200, 200, 0, 200);
-
+*/
 
 
 /////////////////////////////////

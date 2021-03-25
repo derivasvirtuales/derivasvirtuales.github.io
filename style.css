@@ -4,7 +4,7 @@ body {
 }
 
 button {
-    display: block;
+    
     margin: 20px auto;
     background: gray;
     color: white;
@@ -14,9 +14,13 @@ button {
 }
  
 button:hover {
-    background: gray;
+    background: gainsboro;
     transition: all 0.2s;
 }
+
+.ParquedelaMemoria {
+    margin-left: 200px;
+  }
 
 h1, h2, h3 {
     color: white;
@@ -121,3 +125,5 @@ span {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+  
