@@ -18,7 +18,21 @@ button:hover {
     transition: all 0.2s;
 }
 
-.ParquedelaMemoria {
+.CCMemoria {
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 300px;
+  }
+
+  .SEFADU {
+    position: absolute;
+    margin-top: 500px;
+    margin-left: 600px;
+  }
+
+  .ParquedelaMemoria {
+    position: absolute;
+    margin-top: 100px;
     margin-left: 200px;
   }
 
