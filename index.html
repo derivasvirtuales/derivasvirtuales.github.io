@@ -3,6 +3,7 @@
   <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.0/p5.easycam.js"></script>
     <script src="libs/p5.play.js" type="text/javascript"></script>  
 
 
@@ -45,9 +46,17 @@
   <h1>Cartografías Virtuales</h1>
   <h3>SUBTITULO</h3>
   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+
+
+  <button onmousemove="moverCCMemoria()" onmousedown="CCMemoria()" onmouseout="moverPrincipal()">Centro Cultural de la Memoria Haroldo Conti</button>
+  <button onmousemove="moverSEFADU()" onmousedown="SEFADU()" onmouseout="moverPrincipal()">Sala de Exposiciones FADU</button>
+  <button onmousemove="moverParquedelaMemoria()" onmousedown="ParquedelaMemoria()" onmouseout="moverPrincipal()">Sala PAyS Parque de la Memoria</button>
+
+
   </div>
 
-    <script src="sketch.js"></script>
+    <script src="sketch_3.js"></script>
+
 
   </body>
 </html>
