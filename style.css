@@ -1,5 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
 }
 
 button {
@@ -13,9 +14,18 @@ button {
 }
  
 button:hover {
-    background: palevioletred;
+    background: gray;
     transition: all 0.2s;
 }
+
+h1, h2, h3 {
+    color: white;
+}
+
+span {
+    color: white;
+}
+
  
 .popup-wrapper {
     background: rgba(0, 0, 0, 0.5);
@@ -40,7 +50,7 @@ button:hover {
 }
  
 .popup a {
-    background: salmon;
+    background: black;
     color: white;
     text-decoration: none;
     padding: 6px 10px;
@@ -50,7 +60,7 @@ button:hover {
 }
  
 .popup a:hover {
-    background: palevioletred;
+    background: black;
     transition: all 0.2s;
 }
  
@@ -74,11 +84,11 @@ button:hover {
     width: 0;
     position: fixed;
     z-index: 1;
-    top: 0;
+    top: 20%;
     left: 0;
     background-color: white;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 1s;
     padding-top: 60px;
   }
   
@@ -92,7 +102,7 @@ button:hover {
   }
   
   .sidenav a:hover {
-    color: black;
+    color: gray;
   }
   
   .sidenav .closebtn {
@@ -107,3 +117,5 @@ button:hover {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+  #draggable { width: 150px; height: 150px; padding: 0.5em; }
