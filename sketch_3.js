@@ -46,7 +46,7 @@ document.oncontextmenu = function() { return false; }
 }
 
 function draw() {
-  background(100);
+  background(0);
 
   //noStroke();
 
@@ -55,6 +55,8 @@ function draw() {
 // LUCES ////
 lights();
 ambientLight(20);
+
+stroke(150);
 
 
   push()
@@ -89,7 +91,7 @@ push()
   pop();
 
 
-    stroke(0);
+    
     line(-100, 0, -100, 200, 0, 200);
     line(-100, 0, -100, 0, 200, -200);
     line(0, 200, -200, 200, 0, 200);

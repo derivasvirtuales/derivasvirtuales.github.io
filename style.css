@@ -6,7 +6,7 @@ body {
 button {
     display: block;
     margin: 20px auto;
-    background: salmon;
+    background: gray;
     color: white;
     border: 0;
     padding: 6px 10px;
@@ -121,5 +121,3 @@ span {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
-
-  #draggable { width: 150px; height: 150px; padding: 0.5em; }
