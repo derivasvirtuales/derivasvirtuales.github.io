@@ -6,17 +6,23 @@ body {
 button {
     
     margin: 20px auto;
-    background: gray;
-    color: white;
+    background: rgb(253, 224, 6);
+    color: rgb(15, 14, 15);
     border: 0;
     padding: 6px 10px;
     cursor: pointer;
 }
  
 button:hover {
-    background: gainsboro;
+    background: rgb(242, 241, 237);
     transition: all 0.2s;
 }
+
+.titulo {
+  margin-left: 30px;
+}
+
+
 
 .CCMemoria {
     position: absolute;
@@ -33,15 +39,15 @@ button:hover {
   .ParquedelaMemoria {
     position: absolute;
     margin-top: 100px;
-    margin-left: 200px;
+    margin-left: 250px;
   }
 
 h1, h2, h3 {
-    color: white;
+    color: rgb(242, 241, 237);
 }
 
 span {
-    color: white;
+    color:rgb(242, 241, 237);
 }
 
  
@@ -61,7 +67,7 @@ span {
     text-align: center;
     width: 100%;
     max-width: 600px;
-    background: white;
+    background: rgb(121, 121, 121);
     margin: 10% auto;
     padding: 20px;
     position: relative;
@@ -69,7 +75,7 @@ span {
  
 .popup a {
     background: black;
-    color: white;
+    color:rgb(242, 241, 237);
     text-decoration: none;
     padding: 6px 10px;
     margin: 30px auto;
@@ -100,7 +106,6 @@ span {
 }
 
 
-
 .sidenav {
     height: 100%;
     width: 0;
@@ -108,7 +113,7 @@ span {
     z-index: 1;
     top: 20%;
     left: 0;
-    background-color: white;
+    background-color: rgb(51, 50, 51);
     overflow-x: hidden;
     transition: 1s;
     padding-top: 60px;
@@ -118,9 +123,14 @@ span {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 12px;
-    color: black;
+    color:rgb(242, 241, 237);
     display: block;
     transition: 0.3s;
+  }
+
+  .sidenav hr {
+    margin-left: 32px;
+    margin-right: 160px;
   }
   
   .sidenav a:hover {
@@ -133,6 +143,19 @@ span {
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+  }
+
+
+  .sidenav .recorridos, .recorridoshr {
+    color: rgb(48, 221, 176);
+  }
+  
+  .sidenav .espacios, .espacioshr {
+    color: rgb(253, 224, 6);
+  }
+  
+  .sidenav .obras, .obrashr {
+    color: rgb(244, 172, 204);
   }
   
   @media screen and (max-height: 450px) {
