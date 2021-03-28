@@ -19,21 +19,21 @@
     <div class="titulo">
       <h1>CARTOGRAFÍAS VIRTUALES</h1>
       <h2>MUSEOS Y CIUDAD</h2>
-      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+      <span id="menu" onclick="openNav()">&#9776; MENU</span>
       </div>
 
 
 
-    <div class="CCMemoria" >
-      <button onmousemove="moverCCMemoria()" onmousedown="CCMemoria()" onmouseout="moverPrincipal()"><b>Centro Cultural de la Memoria Haroldo Conti</b></button>
+    <div id="MALBA" >
+      <button onmousemove="moverMALBA()" onmousedown="MALBA()" onmouseout="moverPrincipal()"><b>MALBA</b></button>
     </div>
 
     <div class="ParquedelaMemoria">
-      <button  onmousemove="moverParquedelaMemoria()" onmousedown="ParquedelaMemoria()" onmouseout="moverPrincipal()"><b>Sala PAyS Parque de la Memoria</b></button>
+      <button  onmousemove="moverParquedelaMemoria()" onmousedown="ParquedelaMemoria()" onmouseout="moverPrincipal()"><b>Parque de la Memoria</b></button>
     </div>
 
-    <div class="SEFADU">
-      <button onmousemove="moverSEFADU()" onmousedown="SEFADU()" onmouseout="moverPrincipal()"><b>Sala de Exposiciones FADU</b></button>
+    <div class="SanTelmo">
+      <button onmousemove="moverSanTelmo()" onmousedown="SanTelmo()" onmouseout="moverPrincipal()"><b>San Telmo</b></button>
     </div>
      
 
@@ -44,16 +44,12 @@
           <div class="popup-content">
 
             <div class="wrapperpopup">
-              <div class="one"><img class="imagenespacios" id="imagen" src="assets/img/malba1.png"></div>
-              <div class="two">MALBA
-                <hr>
-              </div>
-              <div class="three">Three</div>
-              <div class="four">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti nisi dignissimos nesciunt ea aut asperiores inventore quae quidem at, iusto accusantium cumque aliquid possimus commodi eos officiis! Molestias, repellat nam.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti nisi dignissimos nesciunt ea aut asperiores inventore quae quidem at, iusto accusantium cumque aliquid possimus commodi eos officiis! Molestias, repellat nam.
-              </div>
-              <div class="five">MUSEO DE ARTE LATINOAMERICANO DE BUENOS AIRES</div>
+              <div class="imagenarte"><img class="imagenespacios" id="imagen" src=""></div>
+              <div class="tituloarte" id="titulo"></div>
+              <div class="hrtitulo"><hr></div>
+              <div class="subtituloarte" id="subtitulo"></div>
+              <div class="contenidoarte" id="contenido"></div>
+              <div class="nombrecompletoarte" id="nombrecompleto"></div>
             </div>
             
             <!--
@@ -77,13 +73,13 @@
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
     <hr class="recorridoshr">
-    <a class="recorridos" href=""><b>RECORRIDOS URBANOS</b></a>
+    <a class="recorridos" href="#" onmousedown=""><b>RECORRIDOS URBANOS</b> &#9660;</a>
     <br>
     <hr class="espacioshr">
-    <a class="espacios" href=""><b>ESPACIOS DE ARTE</b></a>
+    <a class="espacios" href="#" onmousedown=""><b>ESPACIOS DE ARTE</b> &#9660;</a>
     <br>
     <hr class="obrashr">
-    <a class="obras" href="#"><b>OBRAS Y EXPOSICIONES</b></a>
+    <a class="obras" href="#" onmousedown=""><b>OBRAS Y EXPOSICIONES</b> &#9660;</a>
     <br>
     <br>
     <br>
@@ -95,7 +91,7 @@
 
  
 
-    <script src="sketch_3.js"></script>
+    <script src="sketch.js"></script>
 
 
   </body>

@@ -3,8 +3,7 @@ body {
     background-color: black;
 }
 
-button {
-    
+button{
     margin: 20px auto;
     background: rgb(253, 224, 6);
     color: rgb(15, 14, 15);
@@ -12,25 +11,20 @@ button {
     padding: 6px 10px;
     cursor: pointer;
 }
- 
-button:hover {
-    background: rgb(242, 241, 237);
-    transition: all 0.2s;
+
+#MALBA {
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 300px;
 }
+
 
 .titulo {
   margin-left: 30px;
 }
 
 
-
-.CCMemoria {
-    position: absolute;
-    margin-top: 200px;
-    margin-left: 300px;
-  }
-
-  .SEFADU {
+  .SanTelmo {
     position: absolute;
     margin-top: 400px;
     margin-left: 1000px;
@@ -65,8 +59,8 @@ span {
 .popup {
     width: 100%;
     height: 100%;
-    max-width: 650px;
-    max-height: 480px;
+    max-width: 700px;
+    max-height: 500px;
     background: rgb(242, 241, 237);
     margin: 5% auto;
     padding: 20px;
@@ -109,43 +103,54 @@ span {
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
 }
-.one {
+
+.imagenarte {
   text-align: center;
   margin: auto;
-  
   grid-column: 1 / 3;
   grid-row: 1 / 3;
 }
 
-.two {
-  text-align: center;
-  margin: auto;
+.tituloarte {
+  margin-top: 35%;
+  margin-left: -2%;
+  text-align: left;
   font-size: 3.5rem;
-  background-color: royalblue;
   grid-column: 3 / 4;
   grid-row: 2;
 }
-.three {
+
+.hrtitulo {
+  margin-top: 68%;
+  max-width: 60%;
+  text-align: left;
+  grid-column: 3 / 4;
+  grid-row: 2;
+
+}
+.subtituloarte {
+  margin-top: -2%;
   max-height: 20px;
   max-width: 60%;
-  background-color: salmon;
+  font-size: 0.6rem;
   grid-column: 1 / 4;
   grid-row: 3;
 }
-.four {
-  margin-top: 30px;
+.contenidoarte {
+  text-align: left;
+  margin-top: 25px;
   max-height: 70%;
   font-size: 0.75rem;
-  background-color: seagreen;
   grid-column: 1 / 4;
   grid-row: 3 / 5;
 }
-.five {
+.nombrecompletoarte {
   margin-left: -30px;
   max-width: 20px;
-  max-height: 93%;
-  background-color: rgb(253, 224, 6);
+  max-height: 100%;
   text-align: end;
+  font-size: 0.65rem;
+  font-weight: bold;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   grid-column: 1;
@@ -183,6 +188,10 @@ span {
     position: fixed;
 }
 
+#menu {
+  font-size: 1.3rem;
+  cursor:pointer
+}
 
 .sidenav {
     height: 100%;
@@ -210,9 +219,9 @@ span {
     margin-left: 32px;
     margin-right: 160px;
   }
-  
+
   .sidenav a:hover {
-    color: gray;
+    color:seashell;
   }
   
   .sidenav .closebtn {

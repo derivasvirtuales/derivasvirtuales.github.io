@@ -1,27 +1,19 @@
-//virtual camera
-//move the mouse around
-//the sprite follows the mouse but appears at the center of the sketch
-//because the camera is following it
-
+//////////////////////
+/////////////////////
+////////////////////
 
 let x, y;
-let player;
-var ghost;
-let ghost_2;
-let cloud, cloud2, cloud3, cloud4;
-var bg;
 let popUpEstado = false;
-
-let ruedaZoom = 0.5;
-
-let ciudad;
+let state;
 
 const popup = document.querySelector('.popup-wrapper');
 const close = document.querySelector('.popup-close');
 
-//the scene is twice the size of the canvas
-var SCENE_W = 1366-20;
-var SCENE_H = 768-20;
+
+function preload() {
+  ciudad = loadModel('assets/models/modelo_ciudad.stl', true);
+}
+
 
 
 function setup() {
@@ -29,206 +21,39 @@ function setup() {
   x = windowWidth - 20;
   y = windowHeight - 20;
 
-createCanvas(x, y);
+createCanvas(x, y, WEBGL);
+smooth();
+angleMode(DEGREES);
 
-
-  ciudad = loadImage('assets/img/MapaOrtografico5.png');
-
-  //create a sprite and add the 3 animations
-  player = createSprite(200, 200);
-  player.mouseActive = false;
-  
-
-  //create a sprite and add the 3 animations
-  ghost = createSprite(200, 200);
-  ghost.addAnimation('normal', 'assets/img/ghost_walk.png', 'assets/img/ghost_walk_2.png');
-  ghost.mouseActive = true;
-  ghost.position.x = random(SCENE_W);
-  ghost.position.y = random(SCENE_H);
-
-  ghost_2 = createSprite(200,200);
-  ghost_2.addAnimation('normal', 'assets/img/asterisk_circle.png', 'assets/img/asterisk_circle_2.png');
-  ghost_2.mouseActive = true;
-  ghost_2.position.x = random(SCENE_W);
-  ghost_2.position.y = random(SCENE_H);
-
-  cloud = createSprite(200,200);
-  cloud.addAnimation('normal', 'assets/img/edificio1.png', 'assets/img/edificio1.png');
-  cloud.mouseActive = true;
-  cloud.position.x = 200;
-  cloud.position.y = 250;
-
-  cloud2 = createSprite(200,200);
-  cloud2.addAnimation('normal', 'assets/img/edificio1.png', 'assets/img/edificio1.png');
-  cloud2.mouseActive = true;
-  cloud2.position.x = 200;
-  cloud2.position.y = 550;
-
-  cloud3 = createSprite(200,200);
-  cloud3.addAnimation('normal', 'assets/img/edificio1.png', 'assets/img/edificio1.png');
-  cloud3.mouseActive = true;
-  cloud3.position.x = 450;
-  cloud3.position.y = 400;
-
-  cloud4 = createSprite(200,200);
-  cloud4.addAnimation('normal', 'assets/img/edificio1.png', 'assets/img/edificio1.png');
-  cloud4.mouseActive = true;
-  cloud4.position.x = -50;
-  cloud4.position.y = 400;
-
-  bg = new Group();
-
-  //create some background for visual reference
-  for(var i=0; i<50; i++)
-  {
-
-    //create a sprite and add the 3 animations
-    //var rock = createSprite(random(-width, SCENE_W+width), random(-height, SCENE_H+height));
-    //cycles through rocks 0 1 2
-    //rock.addAnimation('normal', 'assets/img/edificio1.png');
-    //bg.add(rock);
-  }
-
-  //ciudad = createSprite(0, 0, SCENE_W, SCENE_H);
-  //ciudad.addAnimation('normal', 'assets/img/MapaOrtografico1.png')
-  //bg.add(ciudad);
-
-
-  //frame = loadImage('assets/img/box.png');
-
+easycam = new Dw.EasyCam(this._renderer, {distance:250});
+document.oncontextmenu = function() { return false; }
 
 }
 
 function draw() {
   background(0);
 
-  //mouse trailer, the speed is inversely proportional to the mouse distance
-  
-  player.velocity.x = (camera.mouseX-player.position.x)/20;
-  player.velocity.y = (camera.mouseY-player.position.y)/20;
+noStroke();
 
-  //a camera is created automatically at the beginning
+  //easycam.removeMouseListeners();
 
+// LUCES ////
+lights();
+ambientLight(80);
+pointLight(150, 150, 150, -100, -200, -100);
 
-  
-  camera.zoom = ruedaZoom;
+//stroke(150);
 
-  //set the camera position to the ghost position
-  if (popUpEstado == false){
-    camera.position.x = player.position.x;
-    camera.position.y = player.position.y;
-  }
+  push()
+  fill(200);
+  //strokeWeight(1);
+  //stroke(0);
+  translate(0, 0, 0);
+  rotateX(90);
+  scale(3);
+  model(ciudad);
+  pop();
 
-  
-  //limit the player movements
-  if(player.position.x < 0)
-    player.position.x = 0;
-  if(player.position.y < 0)
-    player.position.y = 0;
-  if(player.position.x > SCENE_W)
-    player.position.x = SCENE_W;
-  if(player.position.y > SCENE_H)
-    player.position.y = SCENE_H;
-
-  
-  if( mouseX < x/2 + 100 && mouseX > x/2 - 100 && mouseY < y/2 + 80 && mouseY > y/2 - 80 )
-  {
-    player.velocity.x = (camera.mouseX - player.position.x) / 200;
-    player.velocity.y = (camera.mouseY - player.position.y) / 200;
-  }
-
-  if ( mouseX < x/5 ){
-    player.velocity.x = (camera.mouseX - player.position.x) / 2000;
-    player.velocity.y = (camera.mouseY - player.position.y) / 2000;
-  }
-  
-
- 
-
-
-  //draw the scene
-  //rocks first
-  drawSprites(bg);
-
-  image(ciudad, -x, -y);
-  
-
-  /*
-  //shadow using p5 drawing
-  noStroke();
-  fill(0, 0, 0, 20);
-  //shadow
-  ellipse(ghost.position.x, ghost.position.y+90, 80, 30);
-  */
-
-  //character on the top
-  drawSprite(ghost);
-  drawSprite(ghost_2);
-  drawSprite(cloud);
-  drawSprite(cloud2);
-  drawSprite(cloud3);
-  drawSprite(cloud4);
-
-
-  //I can turn on and off the camera at any point to restore
-  //the normal drawing coordinates, the frame will be drawn at
-  //the absolute 0,0 (try to see what happens if you don't turn it off
-  camera.off();
-  //image(frame, 0, 0);
-
-
-// INTERACCION CON LOS MUSEOS
-// POP UP
-// INFORMACION
-
-if(ghost.mouseIsOver)
-  ghost.rotation-= 10;
-  
-if(ghost.mouseIsPressed)
-{
-  popUp();
-  document.getElementById("titulo").innerHTML = "Icono 1";
-  document.getElementById("parrafo1").innerHTML = "Icono 1 Parrafo 1";
-  document.getElementById("parrafo2").innerHTML = "Icono 1 Parrafo 2";
-  document.getElementById("imagen").src = "assets/img/ghost_walk.png";
-  document.getElementById("imagen2").src = "assets/img/ghost_walk.png";
-}
-
-if(ghost_2.mouseIsOver)
-  ghost_2.rotation-= 10;
-  
-if(ghost_2.mouseIsPressed)
-{
-  popUp();
-  document.getElementById("titulo").innerHTML = "Icono 2";
-  document.getElementById("parrafo1").innerHTML = "Icono 2 Parrafo 1";
-  document.getElementById("parrafo2").innerHTML = "Icono 2 Parrafo 2";
-  document.getElementById("imagen").src = "assets/img/asterisk_circle.png";
-  document.getElementById("imagen2").src = "assets/img/asterisk_circle.png";
-}
-
-if(cloud.mouseIsOver)
-  //cloud.rotation-= 10;
-  
-if(cloud.mouseIsPressed)
-{
-  popUp();
-  document.getElementById("titulo").innerHTML = "Icono 3";
-  document.getElementById("parrafo1").innerHTML = "Icono 3 Parrafo 1";
-  document.getElementById("parrafo2").innerHTML = "Icono 3 Parrafo 2";
-  document.getElementById("imagen").src = "assets/img/cloud.png";
-  document.getElementById("imagen2").src = "assets/img/cloud.png";
-}
-
-if(cloud2.mouseIsPressed)
-{
-  popUp();
-  document.getElementById("titulo").innerHTML = "Icono 4";
-  document.getElementById("parrafo1").innerHTML = "Icono 3 Parrafo 1";
-  document.getElementById("parrafo2").innerHTML = "Icono 3 Parrafo 2";
-  document.getElementById("imagen").src = "assets/img/cloud.png";
-  document.getElementById("imagen2").src = "assets/img/cloud.png";
-}
 
 /////////////////////////////////
 /////////////////////////////////
@@ -236,23 +61,6 @@ if(cloud2.mouseIsPressed)
 
 
 }
-
-
-function mouseWheel(event) {
-    
-  // Change the red value according
-  // to the scroll delta value
-
-if (popUpEstado != true){
-ruedaZoom += event.delta / 50;
-
-if (ruedaZoom > 1) {ruedaZoom = 1}
-if (ruedaZoom < 0.5) {ruedaZoom = 0.5}
-
-}
-}
-
-
 
 // ACTIVA EL POP UP
 
@@ -278,5 +86,80 @@ function closeNav() {
 }
 
 
+function keyReleased(){
+    if(key == 's') state = easycam.getState();
+    console.log(state);
+  }
+
+  estadoCero = {
+    distance : 250,                 // scalar
+    center   : [0, 0, 0],         // vector
+    rotation : [1, 0, 0, 0],  // quaternion
+  }
+
+  estadoMALBA = {
+    distance : 68,                 // scalar
+    center   : [-102.23454337363096, -14.711766180181627, 15.689828765105716],         // vector
+    rotation : [0.07247230281845167, -0.01954019803605333, 0.9658079185810962, 0],  // quaternion
+  }
+
+  estadoSanTelmo = {
+    distance : 270,                 // scalar
+    center   : [102.42073373122642, 43.71616294550289, -142.58225210592633],         // vector
+    rotation : [0.8255191944674429, -0.19111326258670294, -0.5096549590176044, 0],  // quaternion
+  }
+
+  estadoParquedelaMemoria = {
+    distance : 299,                 // scalar
+    center   : [-126.36434073369199, 101.21016792723559, 80.26746354915045],         // vector
+    rotation : [ 0.9555410411618301, -0.22222470958330082, -0.19050037697575248, 0],  // quaternion
+  }
+
+  function moverPrincipal(){
+    easycam.setState(estadoCero, 2000);
+  }
+
+  function moverMALBA(){
+    easycam.setState(estadoMALBA, 2000);
+  }
+
+  function moverSanTelmo(){
+    easycam.setState(estadoSanTelmo, 2000);
+  }
+
+  function moverParquedelaMemoria(){
+    easycam.setState(estadoParquedelaMemoria, 2000);
+  }
+
+  
+  // INTERACCION CON LOS MUSEOS
+// POP UP
+// INFORMACION
 
 
+  function MALBA(){
+    popUp();
+    document.getElementById("titulo").innerHTML = "MALBA";
+    document.getElementById("subtitulo").innerHTML = "Ph: Ernesto Monasterio o Santiago Tenenbaum";
+    document.getElementById("contenido").innerHTML = "Museo privado creado en el 2001 para albergar la colección de arte latinoamericano de Eduardo Constantini. Es uno de los pocos museos nacionales que desde sus orígenes fue concebido y construido específicamente con este fin. Su configuración arquitectónica es una caja multifuncional (exhibición, experiencia, consumo y entretenimiento) que está orientada a una ideología de acceso directo, transparencia y funcionalidad, que ofrece espacios flexibles para el arte y una propuesta de visión vinculada con la idea de mirada flotante (ausencia de recorrido dirigido). Es un museo de fin de siglo que desde su museografía logra posicionarse a nivel internacional e interactuar con un público contemporáneo. A su vez, posee una fuerte impronta como marca en torno a procesos de branding cultural. La marca MALBA articula aspectos históricos, culturales y sociales alrededor del mito de identidad de la institución como hito cultural (Buenos Aires como epicentro). Su emplazamiento urbano es Palermo Chico/Barrio Parque (una especie de barrio “cerrado” en el medio de la ciudad), siendo lindante con el shopping Paseo Alcorta.";
+    document.getElementById("imagen").src = "assets/img/malba1.png";
+    document.getElementById("nombrecompleto").innerHTML = "MUSEO DE ARTE LATINOAMERICANO DE BUENOS AIRES";
+  }
+
+  function SanTelmo(){
+    popUp();
+    document.getElementById("titulo").innerHTML = "Sala de Exposiciones FADU (Facultad de Arquitectura, Diseño y Urbanismo)";
+    document.getElementById("parrafo1").innerHTML = "Sala Baliero y Pinacoteca";
+    //document.getElementById("parrafo2").innerHTML = "Párrafo";
+    document.getElementById("imagen").src = "assets/img/malba1.png";
+    //document.getElementById("imagen2").src = "assets/img/malba1.png";
+  }
+
+  function ParquedelaMemoria(){
+    popUp();
+    document.getElementById("titulo").innerHTML = "Sala PAyS Parque de la Memoria";
+    document.getElementById("parrafo1").innerHTML = "desc";
+    //document.getElementById("parrafo2").innerHTML = "Párrafo";
+    document.getElementById("imagen").src = "assets/img/malba1.png";
+    //document.getElementById("imagen2").src = "assets/img/malba1.png";
+  }
