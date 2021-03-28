@@ -63,7 +63,6 @@ ambientLight(20);
   fill(255);
   translate(0, 0, 0);
   rotateX(180);
-  rotateY(frameCount / 10);
   scale(3);
   model(ciudad);
   pop();
@@ -194,25 +193,25 @@ function keyReleased(){
     popUp();
     document.getElementById("titulo").innerHTML = "Centro Cultural de la Memoria Haroldo Conti";
     document.getElementById("parrafo1").innerHTML = "Descripción";
-    document.getElementById("parrafo2").innerHTML = "Párrafo";
-    document.getElementById("imagen").src = "assets/img/ghost_walk.png";
-    document.getElementById("imagen2").src = "assets/img/ghost_walk.png";
+    //document.getElementById("parrafo2").innerHTML = "Párrafo";
+    document.getElementById("imagen").src = "assets/img/malba1.png";
+    //document.getElementById("imagen2").src = "assets/img/malba1.png";
   }
 
   function SEFADU(){
     popUp();
     document.getElementById("titulo").innerHTML = "Sala de Exposiciones FADU (Facultad de Arquitectura, Diseño y Urbanismo)";
     document.getElementById("parrafo1").innerHTML = "Sala Baliero y Pinacoteca";
-    document.getElementById("parrafo2").innerHTML = "Párrafo";
-    document.getElementById("imagen").src = "assets/img/ghost_walk.png";
-    document.getElementById("imagen2").src = "assets/img/ghost_walk.png";
+    //document.getElementById("parrafo2").innerHTML = "Párrafo";
+    document.getElementById("imagen").src = "assets/img/malba1.png";
+    //document.getElementById("imagen2").src = "assets/img/malba1.png";
   }
 
   function ParquedelaMemoria(){
     popUp();
     document.getElementById("titulo").innerHTML = "Sala PAyS Parque de la Memoria";
     document.getElementById("parrafo1").innerHTML = "desc";
-    document.getElementById("parrafo2").innerHTML = "Párrafo";
-    document.getElementById("imagen").src = "assets/img/ghost_walk.png";
-    document.getElementById("imagen2").src = "assets/img/ghost_walk.png";
+    //document.getElementById("parrafo2").innerHTML = "Párrafo";
+    document.getElementById("imagen").src = "assets/img/malba1.png";
+    //document.getElementById("imagen2").src = "assets/img/malba1.png";
   }
