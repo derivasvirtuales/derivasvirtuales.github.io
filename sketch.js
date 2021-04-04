@@ -272,7 +272,7 @@ function keyReleased(){
     document.getElementById("subtituloRecorridos").innerHTML = "Ph. Antonelia Aldosi";
     document.getElementById("contenidoRecorridos").innerHTML = "El recorrido por San Telmo evidencia un barrio de importante valor histórico que hoy se ve impregnado de espacios destinados exclusivamente al turismo que fueron transformando la identidad del espacio. Es decir que, en la actualidad, San Telmo sufre una conversión orientada al marketing turístico. Algunos edificios, ubicados sobre la calle Balcarce, que han contribuido a la construcción del barrio y sus habitantes, fueron modificados para suplir una función administrativa que despoja por completo el sentido original. Dentro de este recorrido, destacamos el &quot;Paseo de la Memoria&quot; del ex Club Atlético de San Telmo que desde 2014 fue declarado Lugar Histórico Nacional luego de ser reconocido como un antiguo Centro de detención y Tortura en el año 1977. Este espacio, hoy se encuentra completamente deteriorado ante las transformaciones urbanas que lo han atravesado y que implican problemas directos tanto en su preservación como en su mantenimiento.";
     document.getElementById("imagenRecorridos").src = "assets/img/malba1.png";
-    document.getElementById("nombreCompletoRecorridos").innerHTML = "nombre completo";
+    document.getElementById("nombreCompletoRecorridos").innerHTML = "Recorrido San Telmo";
   }
 
   function ParquedelaMemoria(){

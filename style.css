@@ -110,7 +110,7 @@ span {
 /*------------------*/
 
 .imagenEspacios {
-  text-align: center;
+  text-align: left;
   margin: auto;
   grid-column: 1 / 3;
   grid-row: 1 / 3;
@@ -122,10 +122,10 @@ span {
 
 .tituloEspacios {
   margin-top: 35%;
-  margin-left: -2%;
+  margin-left: 0%;
   text-align: left;
-  text-size-adjust: auto;
-  font-size: 3rem;
+  font-size: 2.8rem;
+  font-weight: bold;
   grid-column: 3 / 4;
   grid-row: 2;
 }
@@ -172,18 +172,23 @@ span {
 /*--------------------*/
 
 .imagenRecorridos {
-  text-align: center;
+  text-align: left;
   margin: auto;
   grid-column: 1 / 3;
   grid-row: 1 / 3;
 }
 
+#imagenRecorridos{
+  width: 95%;
+}
+
 .tituloRecorridos {
   margin-top: 35%;
-  margin-left: -2%;
+  margin-left: -8%;
+  margin-right: -10%;
   text-align: left;
-  text-size-adjust: auto;
-  font-size: 3rem;
+  font-size: 2.8rem;
+  font-weight: bold;
   grid-column: 3 / 4;
   grid-row: 2;
 }
@@ -191,6 +196,7 @@ span {
 .hrTituloRecorridos {
   margin-top: 68%;
   max-width: 60%;
+  margin-left: -8%;
   text-align: left;
   grid-column: 3 / 4;
   grid-row: 2;
@@ -231,24 +237,29 @@ span {
 /*--------------------*/
 
 .imagenObras {
-  text-align: center;
+  text-align: left;
   margin: auto;
   grid-column: 1 / 3;
   grid-row: 1 / 3;
 }
 
+#imagenObras{
+  width: 100%;
+}
+
 .tituloObras {
   margin-top: 35%;
-  margin-left: -2%;
+  margin-left: 5%;
   text-align: left;
-  text-size-adjust: auto;
-  font-size: 3rem;
+  font-size: 2.8rem;
+  font-weight: bold;
   grid-column: 3 / 4;
   grid-row: 2;
 }
 
 .hrTituloObras {
   margin-top: 68%;
+  margin-left: 5%;
   max-width: 60%;
   text-align: left;
   grid-column: 3 / 4;
