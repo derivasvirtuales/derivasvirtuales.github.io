@@ -24,17 +24,9 @@
 
 
 
-    <div id="MALBA" >
-      <button onmousemove="moverMALBA()" onmousedown="MALBA()" onmouseout="moverPrincipal()"><b>MALBA</b></button>
-    </div>
-
-    <div class="ParquedelaMemoria">
-      <button  onmousemove="moverParquedelaMemoria()" onmousedown="ParquedelaMemoria()" onmouseout="moverPrincipal()"><b>Parque de la Memoria</b></button>
-    </div>
-
-    <div class="SanTelmo">
-      <button onmousemove="moverSanTelmo()" onmousedown="SanTelmo()" onmouseout="moverPrincipal()"><b>San Telmo</b></button>
-    </div>
+    <button class="botonEspacios" id="MALBA" onmousemove="moverMALBA()" onmousedown="MALBA()" onmouseout="moverPrincipal()"><b>MALBA</b></button>
+    <button class="botonObras" id="ParquedelaMemoria" onmousemove="moverParquedelaMemoria()" onmousedown="ParquedelaMemoria()" onmouseout="moverPrincipal()"><b>Parque de la Memoria</b></button>
+    <button class="botonRecorridos" id="SanTelmo" onmousemove="moverSanTelmo()" onmousedown="SanTelmo()" onmouseout="moverPrincipal()"><b>San Telmo</b></button>
      
 
 
@@ -44,26 +36,32 @@
           <div class="popup-content">
 
             <div class="wrapperpopup">
-              <div class="imagenarte"><img class="imagenespacios" id="imagen" src=""></div>
-              <div class="tituloarte" id="titulo"></div>
-              <div class="hrtitulo"><hr></div>
-              <div class="subtituloarte" id="subtitulo"></div>
-              <div class="contenidoarte" id="contenido"></div>
-              <div class="nombrecompletoarte" id="nombrecompleto"></div>
-            </div>
-            
-            <!--
-            <div class="imagenespaciosdiv"><img class="imagenespacios" id="imagen" src="assets/img/malba1.png"></div>
-            <div class="tituloespaciosdiv"><h3 class="tituloespacios" id="titulo"> MALBA</h3></div>
-            <div class="parrafoespacios"></div>
-            <div class= "textoverticalespacio"></div>
 
-            
+              <div class="imagenEspacios"><img id="imagenEspacios" src=""></div>
+              <div class="tituloEspacios" id="tituloEspacios"></div>
+              <div class="hrTituloEspacios"><hr></div>
+              <div class="subtituloEspacios" id="subtituloEspacios"></div>
+              <div class="contenidoEspacios" id="contenidoEspacios"></div>
+              <div class="nombreCompletoEspacios" id="nombreCompletoEspacios"></div>
+
+
+              <div class="imagenRecorridos"><img id="imagenRecorridos" src=""></div>
+              <div class="tituloRecorridos" id="tituloRecorridos"></div>
+              <div class="hrTituloRecorridos"><hr></div>
+              <div class="subtituloRecorridos" id="subtituloRecorridos"></div>
+              <div class="contenidoRecorridos" id="contenidoRecorridos"></div>
+              <div class="nombreCompletoRecorridos" id="nombreCompletoRecorridos"></div>
+
+
+              <div class="imagenObras"><img id="imagenObras" src=""></div>
+              <div class="tituloObras" id="tituloObras"></div>
+              <div class="hrTituloObras"><hr></div>
+              <div class="subtituloObras" id="subtituloObras"></div>
+              <div class="contenidoObras" id="contenidoObras"></div>
+              <div class="nombreCompletoObras" id="nombreCompletoObras"></div>
+
+            </div>
               
-              
-              <p  id="parrafo1"></p>
-              <a href="" target="_blank">Posible botón</a>
-               -->
           </div>
       </div>
   </div>
@@ -73,13 +71,13 @@
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
     <hr class="recorridoshr">
-    <a class="recorridos" href="#" onmousedown=""><b>RECORRIDOS URBANOS</b> &#9660;</a>
+    <a class="recorridos" href="#" onclick="mostrarRecorridos()"><b>RECORRIDOS URBANOS</b> &#9660;</a>
     <br>
     <hr class="espacioshr">
-    <a class="espacios" href="#" onmousedown=""><b>ESPACIOS DE ARTE</b> &#9660;</a>
+    <a class="espacios" href="#" onclick="mostrarEspacios()"><b>ESPACIOS DE ARTE</b> &#9660;</a>
     <br>
     <hr class="obrashr">
-    <a class="obras" href="#" onmousedown=""><b>OBRAS Y EXPOSICIONES</b> &#9660;</a>
+    <a class="obras" href="#" onclick="mostrarObras()"><b>OBRAS Y EXPOSICIONES</b> &#9660;</a>
     <br>
     <br>
     <br>

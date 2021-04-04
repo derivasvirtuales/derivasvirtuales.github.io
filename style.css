@@ -3,37 +3,39 @@ body {
     background-color: black;
 }
 
+.titulo {
+  margin-left: 30px;
+}
+
 button{
     margin: 20px auto;
-    background: rgb(253, 224, 6);
     color: rgb(15, 14, 15);
     border: 0;
     padding: 6px 10px;
     cursor: pointer;
 }
 
+
 #MALBA {
+  background: rgb(253, 224, 6);
   position: absolute;
   margin-top: 200px;
   margin-left: 300px;
 }
 
 
-.titulo {
-  margin-left: 30px;
-}
-
-
-  .SanTelmo {
+#SanTelmo {
+  background: rgb(48, 221, 176);
     position: absolute;
     margin-top: 400px;
     margin-left: 1000px;
   }
 
-  .ParquedelaMemoria {
+#ParquedelaMemoria {
+  background: rgb(244, 172, 204);
     position: absolute;
-    margin-top: 100px;
-    margin-left: 250px;
+    margin-top: 10%;
+    margin-left: 20%;
   }
 
 h1, h2, h3 {
@@ -104,23 +106,31 @@ span {
   grid-auto-rows: minmax(100px, auto);
 }
 
-.imagenarte {
+/* ESPACIOS DE ARTE */
+/*------------------*/
+
+.imagenEspacios {
   text-align: center;
   margin: auto;
   grid-column: 1 / 3;
   grid-row: 1 / 3;
 }
 
-.tituloarte {
+#imagenEspacios {
+  width: 100%;
+}
+
+.tituloEspacios {
   margin-top: 35%;
   margin-left: -2%;
   text-align: left;
-  font-size: 3.5rem;
+  text-size-adjust: auto;
+  font-size: 3rem;
   grid-column: 3 / 4;
   grid-row: 2;
 }
 
-.hrtitulo {
+.hrTituloEspacios {
   margin-top: 68%;
   max-width: 60%;
   text-align: left;
@@ -128,7 +138,7 @@ span {
   grid-row: 2;
 
 }
-.subtituloarte {
+.subtituloEspacios {
   margin-top: -2%;
   max-height: 20px;
   max-width: 60%;
@@ -136,7 +146,7 @@ span {
   grid-column: 1 / 4;
   grid-row: 3;
 }
-.contenidoarte {
+.contenidoEspacios {
   text-align: left;
   margin-top: 25px;
   max-height: 70%;
@@ -144,7 +154,7 @@ span {
   grid-column: 1 / 4;
   grid-row: 3 / 5;
 }
-.nombrecompletoarte {
+.nombreCompletoEspacios {
   margin-left: -30px;
   max-width: 20px;
   max-height: 100%;
@@ -157,31 +167,124 @@ span {
   grid-row: 1 / 5;
 }
 
-.popup .tituloespaciosdiv {
-  display: block;
-  margin-left: 70%;
-  background-color: rgb(51, 50, 51);
-  
+
+/* RECORRIDOS URBANOS*/
+/*--------------------*/
+
+.imagenRecorridos {
+  text-align: center;
+  margin: auto;
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
 }
 
-.popup .tituloespaciosdiv .tituloespacios {
-  width: 100%;
-  
+.tituloRecorridos {
+  margin-top: 35%;
+  margin-left: -2%;
+  text-align: left;
+  text-size-adjust: auto;
+  font-size: 3rem;
+  grid-column: 3 / 4;
+  grid-row: 2;
 }
 
-.popup .imagenespaciosdiv {
-  display: block;
+.hrTituloRecorridos {
+  margin-top: 68%;
+  max-width: 60%;
+  text-align: left;
+  grid-column: 3 / 4;
+  grid-row: 2;
+
+}
+.subtituloRecorridos {
+  margin-top: -2%;
+  max-height: 20px;
+  max-width: 60%;
+  font-size: 0.6rem;
+  grid-column: 1 / 4;
+  grid-row: 3;
+}
+.contenidoRecorridos {
+  text-align: left;
   margin-top: 25px;
-  margin-left: 40px;
-  width: 60%;
-  height: 50%;
-  max-height: 200px;
+  max-height: 70%;
+  font-size: 0.75rem;
+  grid-column: 1 / 4;
+  grid-row: 3 / 5;
+}
+.nombreCompletoRecorridos {
+  margin-left: -30px;
+  max-width: 20px;
+  max-height: 100%;
+  text-align: end;
+  font-size: 0.65rem;
+  font-weight: bold;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  grid-column: 1;
+  grid-row: 1 / 5;
 }
 
+/*-----------------*/
 
-#imagen {
-  width: 100%;
+/* OBRAS*/
+/*--------------------*/
+
+.imagenObras {
+  text-align: center;
+  margin: auto;
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
 }
+
+.tituloObras {
+  margin-top: 35%;
+  margin-left: -2%;
+  text-align: left;
+  text-size-adjust: auto;
+  font-size: 3rem;
+  grid-column: 3 / 4;
+  grid-row: 2;
+}
+
+.hrTituloObras {
+  margin-top: 68%;
+  max-width: 60%;
+  text-align: left;
+  grid-column: 3 / 4;
+  grid-row: 2;
+
+}
+.subtituloObras {
+  margin-top: -2%;
+  max-height: 20px;
+  max-width: 60%;
+  font-size: 0.6rem;
+  grid-column: 1 / 4;
+  grid-row: 3;
+}
+.contenidoObras {
+  text-align: left;
+  margin-top: 25px;
+  max-height: 70%;
+  font-size: 0.75rem;
+  grid-column: 1 / 4;
+  grid-row: 3 / 5;
+}
+.nombreCompletoObras {
+  margin-left: -30px;
+  max-width: 20px;
+  max-height: 100%;
+  text-align: end;
+  font-size: 0.65rem;
+  font-weight: bold;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  grid-column: 1;
+  grid-row: 1 / 5;
+}
+
+/*-----------------*/
 
 
 .titulo {
