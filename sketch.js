@@ -36,7 +36,8 @@ const contenidoObras = document.querySelector(".contenidoObras");
 const nombreCompletoObras = document.querySelector(".nombreCompletoObras");
 
 function preload() {
-  ciudad = loadModel('assets/models/modelo_ciudad.stl', true);
+  ciudad = loadModel('assets/models/tinker.obj', true);
+  textura = loadImage('assets/img/MALBA.jpg');
 }
 
 
@@ -50,16 +51,28 @@ createCanvas(x, y, WEBGL);
 smooth();
 angleMode(DEGREES);
 
-easycam = new Dw.EasyCam(this._renderer, {distance:250});
+textSize(width / 3);
+textAlign(CENTER, CENTER);
+
+easycam = new Dw.EasyCam(this._renderer, {distance:500});
+easycam.setPanScale(0);
+easycam.setRotationScale(0.0002);
+easycam.setZoomScale(0.0002);
 document.oncontextmenu = function() { return false; }
 
 }
 
 function draw() {
-  background(0);
+background(25);
 
 noStroke();
 
+// projection
+var cam_dist = easycam.getDistance();
+var oscale = cam_dist * 0.001;
+var ox = width  / 2 * oscale;
+var oy = height / 2 * oscale;
+ortho(-ox, +ox, -oy, +oy, -10000, 10000);
   //easycam.removeMouseListeners();
 
 // LUCES ////
@@ -67,17 +80,25 @@ lights();
 ambientLight(80);
 pointLight(150, 150, 150, -100, -200, -100);
 
-//stroke(150);
 
+  strokeWeight(1);
+
+
+  
   push()
-  fill(200);
-  //strokeWeight(1);
-  //stroke(0);
-  translate(0, 0, 0);
-  rotateX(90);
-  scale(3);
-  model(ciudad);
+  noFill();
+  stroke(255);
+  box(50)
+  noStroke();
+  texture(textura);
+  rotateY(45);
+  //box(25);
+
+  fill(255);
+  stroke(255);
+  text('hola', 0, 0);
   pop();
+
 
 
 /////////////////////////////////
@@ -86,6 +107,7 @@ pointLight(150, 150, 150, -100, -200, -100);
 
 
 }
+
 
 // ACTIVA EL POP UP
 
