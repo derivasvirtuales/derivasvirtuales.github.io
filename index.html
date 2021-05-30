@@ -68,16 +68,11 @@
   <script type="module">
     import * as THREE from 'https://cdn.skypack.dev/three@0.128.0';
     import { MapControls } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/controls/OrbitControls.js';
-    
-    import { OBJLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/OBJLoader.js';
-    import { MTLLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/MTLLoader';
-    import { DDSLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/DDSLoader';
     import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/GLTFLoader.js';
 
     let camera, controls, scene, renderer;
     const DIVISION_GRID = 17;
     const gridHelper = new THREE.GridHelper( window.innerWidth, DIVISION_GRID );
-    const a = new THREE.Vector3( 0, 0, 0 );
     let raycaster, mouse = { x : 0, y : 0 };
 
     init();
@@ -109,248 +104,29 @@
       raycaster = new THREE.Raycaster();
       renderer.domElement.addEventListener( 'click', raycast, false );
 
-      const loader = new GLTFLoader();
-      loader.load( './assets/BellasArtes.gltf',
-      function ( gltf ) { 
-        gltf.scene.position.x = -window.innerWidth/2 + window.innerWidth/DIVISION_GRID * 8.5;
-        gltf.scene.position.y = 0;
-        gltf.scene.position.z = 270 * (window.innerWidth/2 - window.innerWidth/DIVISION_GRID * 8.5);
-        gltf.scene.scale.x = 20;
-        gltf.scene.scale.y = 20;
-        gltf.scene.scale.z = 20;
-        scene.add( gltf.scene ); 
-      },
-      undefined, 
-      function ( error ) { 
-        console.error( error ); 
-      });
-
       const onProgress = function ( xhr ) {
         if ( xhr.lengthComputable ) {
           const percentComplete = xhr.loaded / xhr.total * 100;
           console.log( Math.round( percentComplete, 2 ) + '% downloaded' );
         }
       };
-      const onError = function () { };
 
-      const manager = new THREE.LoadingManager();
-      manager.addHandler( /\.dds$/i, new DDSLoader() );
+      const onError = function (error) {
+        console.error( error )
+      };
 
-      new MTLLoader(manager)
-      .load( './assets/models/edificio1.mtl', function ( materials ) {
-        materials.preload();
-        new OBJLoader(manager)
-          .setMaterials(materials)
-          .load('./assets/models/edificio1.obj', function (object) {
-            object.position.x = -window.innerWidth/2 + window.innerWidth/DIVISION_GRID;
-            object.position.y = a.y;
-            object.position.z = window.innerWidth/2 - window.innerWidth/DIVISION_GRID;
-            object.scale.x = 20;
-            object.scale.y = 20;
-            object.scale.z = 20;
-            object.name = 'Objeto 1';
-            scene.add( object );
-          }, onProgress, onError );
-        }
-      );
-
-      new MTLLoader(manager)
-      .load( './assets/models/edificio2.mtl', function ( materials ) {
-        materials.preload();
-        new OBJLoader(manager)
-          .setMaterials(materials)
-          .load('./assets/models/edificio2.obj', function (object) {
-            object.position.x = -window.innerWidth/2 + window.innerWidth/DIVISION_GRID;
-            object.position.y = a.y;
-            object.position.z = window.innerWidth/2 - window.innerWidth/DIVISION_GRID * 3;
-            object.scale.x = 20;
-            object.scale.y = 20;
-            object.scale.z = 20;
-            object.name = 'Objeto 2';
-            scene.add( object );
-          }, onProgress, onError );
-        }
-      );
-
-      new MTLLoader(manager)
-      .load( './assets/models/edificio3.mtl', function ( materials ) {
-        materials.preload();
-        new OBJLoader(manager)
-          .setMaterials(materials)
-          .load('./assets/models/edificio3.obj', function (object) {
-            object.position.x = -window.innerWidth/2 + window.innerWidth/DIVISION_GRID;
-            object.position.y = a.y;
-            object.position.z = window.innerWidth/2 - window.innerWidth/DIVISION_GRID * 4;
-            object.scale.x = 20;
-            object.scale.y = 20;
-            object.scale.z = 20;
-            object.name = 'Objeto 3';
-            scene.add( object );
-          }, onProgress, onError );
-        }
-      );
-
-      new MTLLoader(manager)
-      .load( './assets/models/edificio4.mtl', function ( materials ) {
-        materials.preload();
-        new OBJLoader(manager)
-          .setMaterials(materials)
-          .load('./assets/models/edificio4.obj', function (object) {
-            object.position.x = -window.innerWidth/2 + window.innerWidth/DIVISION_GRID * 2;
-            object.position.y = a.y;
-            object.position.z = window.innerWidth/2 - window.innerWidth/DIVISION_GRID * 2;
-            object.scale.x = 20;
-            object.scale.y = 20;
-            object.scale.z = 20;
-            object.name = 'Objeto 4';
-            scene.add( object );
-          }, onProgress, onError );
-        }
-      );
-
-      new MTLLoader(manager)
-      .load( './assets/models/edificio5.mtl', function ( materials ) {
-        materials.preload();
-        new OBJLoader(manager)
-          .setMaterials(materials)
-          .load('./assets/models/edificio5.obj', function (object) {
-            object.position.x = -window.innerWidth/2 + window.innerWidth/DIVISION_GRID * 2;
-            object.position.y = a.y;
-            object.position.z = window.innerWidth/2 - window.innerWidth/DIVISION_GRID * 7;
-            object.scale.x = 20;
-            object.scale.y = 20;
-            object.scale.z = 20;
-            object.name = 'Objeto 5';
-            scene.add( object );
-          }, onProgress, onError );
-        }
-      );
-
-      new MTLLoader(manager)
-      .load( './assets/models/edificio6.mtl', function ( materials ) {
-        materials.preload();
-        new OBJLoader(manager)
-          .setMaterials(materials)
-          .load('./assets/models/edificio6.obj', function (object) {
-            object.position.x = -window.innerWidth/2 + window.innerWidth/DIVISION_GRID * 3;
-            object.position.y = a.y;
-            object.position.z = window.innerWidth/2 - window.innerWidth/DIVISION_GRID * 6;
-            object.scale.x = 20;
-            object.scale.y = 20;
-            object.scale.z = 20;
-            object.name = 'Objeto 6';
-            scene.add( object );
-          }, onProgress, onError );
-        }
-      );
-
-      new MTLLoader(manager)
-      .load( './assets/models/edificio7.mtl', function ( materials ) {
-        materials.preload();
-        new OBJLoader(manager)
-          .setMaterials(materials)
-          .load('./assets/models/edificio7.obj', function (object) {
-            object.position.x = -window.innerWidth/2 + window.innerWidth/DIVISION_GRID * 4;
-            object.position.y = a.y;
-            object.position.z = window.innerWidth/2 - window.innerWidth/DIVISION_GRID * 6;
-            object.scale.x = 20;
-            object.scale.y = 20;
-            object.scale.z = 20;
-            object.name = 'Objeto 7';
-            scene.add( object );
-          }, onProgress, onError );
-        }
-      );
-
-      new MTLLoader(manager)
-      .load( './assets/models/edificio8.mtl', function ( materials ) {
-        materials.preload();
-        new OBJLoader(manager)
-          .setMaterials(materials)
-          .load('./assets/models/edificio8.obj', function (object) {
-            object.position.x = -window.innerWidth/2 + window.innerWidth/DIVISION_GRID * 5;
-            object.position.y = a.y;
-            object.position.z = window.innerWidth/2 - window.innerWidth/DIVISION_GRID * 7;
-            object.scale.x = 20;
-            object.scale.y = 20;
-            object.scale.z = 20;
-            object.name = 'Objeto 8';
-            scene.add( object );
-          }, onProgress, onError );
-        }
-      );
-
-      new MTLLoader(manager)
-      .load( './assets/models/edificio3.mtl', function ( materials ) {
-        materials.preload();
-        new OBJLoader(manager)
-          .setMaterials(materials)
-          .load('./assets/models/edificio3.obj', function (object) {
-            object.position.x = -window.innerWidth/2 + window.innerWidth/DIVISION_GRID * 6;
-            object.position.y = a.y;
-            object.position.z = window.innerWidth/2 - window.innerWidth/DIVISION_GRID;
-            object.scale.x = 20;
-            object.scale.y = 20;
-            object.scale.z = 20;
-            object.name = 'Objeto 9';
-            scene.add( object );
-          }, onProgress, onError );
-        }
-      );
-
-      new MTLLoader(manager)
-      .load( './assets/models/edificio2.mtl', function ( materials ) {
-        materials.preload();
-        new OBJLoader(manager)
-          .setMaterials(materials)
-          .load('./assets/models/edificio2.obj', function (object) {
-            object.position.x = -window.innerWidth/2 + window.innerWidth/DIVISION_GRID * 6.5;
-            object.position.y = a.y;
-            object.position.z = window.innerWidth/2 - window.innerWidth/DIVISION_GRID * 8;
-            object.scale.x = 20;
-            object.scale.y = 20;
-            object.scale.z = 20;
-            object.name = 'Objeto 10';
-            scene.add( object );
-          }, onProgress, onError );
-        }
-      );
-
-      new MTLLoader(manager)
-      .load( './assets/models/edificio3.mtl', function ( materials ) {
-        materials.preload();
-        new OBJLoader(manager)
-          .setMaterials(materials)
-          .load('./assets/models/edificio3.obj', function (object) {
-            object.position.x = -window.innerWidth/2 + window.innerWidth/DIVISION_GRID * 6.8;
-            object.position.y = a.y;
-            object.position.z = window.innerWidth/2 - window.innerWidth/DIVISION_GRID * 7;
-            object.scale.x = 20;
-            object.scale.y = 20;
-            object.scale.z = 20;
-            object.name = 'Objeto 11';
-            scene.add( object );
-          }, onProgress, onError );
-        }
-      );
-
-      // new MTLLoader(manager)
-      // .load( './assets/models/edificio4.mtl', function ( materials ) {
-      //   materials.preload();
-      //   new OBJLoader(manager)
-      //     .setMaterials(materials)
-      //     .load('./assets/models/edificio4.obj', function (object) {
-      //       object.position.x = -window.innerWidth/2 + window.innerWidth/DIVISION_GRID * 8.5;
-      //       object.position.y = a.y;
-      //       object.position.z = window.innerWidth/2 - window.innerWidth/DIVISION_GRID * 8.5;
-      //       object.scale.x = 10;
-      //       object.scale.y = 10;
-      //       object.scale.z = 10;
-      //       object.name = 'Objeto 12';
-      //       scene.add( object );
-      //     }, onProgress, onError );
-      //   }
-      // );
+      const loader = new GLTFLoader();
+      loader.load( './assets/models/BellasArtes.gltf', function ( gltf ) {
+        const object = gltf.scene;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = 0;
+        object.scale.x = 20;
+        object.scale.y = 20;
+        object.scale.z = 20;
+        object.name = 'Bellas artes';
+        scene.add( object ); 
+      },onProgress, onError );
 
       const dirLight1 = new THREE.DirectionalLight( 0xffffff );
       dirLight1.position.set( 1, 1, 1 );
@@ -362,9 +138,9 @@
       window.addEventListener( 'resize', onWindowResize );
     }
 
-    function raycast (e) {
-      mouse.x = ( e.clientX / window.innerWidth ) * 2 - 1;
-      mouse.y = - ( e.clientY / window.innerHeight ) * 2 + 1;
+    function raycast (event) {
+      mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+      mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
       raycaster.setFromCamera( mouse, camera );    
       let intersects = raycaster.intersectObjects( scene.children, true );
       for ( let i = 0; i < intersects.length; i++ ) {
