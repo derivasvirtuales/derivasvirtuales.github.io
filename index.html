@@ -4,72 +4,49 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.0/p5.easycam.js"></script>
-
-
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
     <meta name=”theme-color” content=”#000000“/>
     <title>Cartografías Virtuales</title>
-
-
-
   </head>
   <body>
-
     <div class="titulo">
       <h1>CARTOGRAFÍAS VIRTUALES</h1>
       <h2>MUSEOS Y CIUDAD</h2>
       <span id="menu" onclick="openNav()">&#9776; MENU</span>
-      </div>
-
-
-
+    </div>
     <button class="botonEspacios" id="MALBA" onmousemove="moverMALBA()" onmousedown="MALBA()" onmouseout="moverPrincipal()"><b>MALBA</b></button>
     <button class="botonObras" id="ParquedelaMemoria" onmousemove="moverParquedelaMemoria()" onmousedown="ParquedelaMemoria()" onmouseout="moverPrincipal()"><b>Parque de la Memoria</b></button>
     <button class="botonRecorridos" id="SanTelmo" onmousemove="moverSanTelmo()" onmousedown="SanTelmo()" onmouseout="moverPrincipal()"><b>San Telmo</b></button>
-     
-
-
     <div class="popup-wrapper">
       <div class="popup">
           <div class="popup-close">x</div>
           <div class="popup-content">
-
             <div class="wrapperpopup">
-
               <div class="imagenEspacios"><img id="imagenEspacios" src=""></div>
               <div class="tituloEspacios" id="tituloEspacios"></div>
               <div class="hrTituloEspacios"><hr></div>
               <div class="subtituloEspacios" id="subtituloEspacios"></div>
               <div class="contenidoEspacios" id="contenidoEspacios"></div>
               <div class="nombreCompletoEspacios" id="nombreCompletoEspacios"></div>
-
-
               <div class="imagenRecorridos"><img id="imagenRecorridos" src=""></div>
               <div class="tituloRecorridos" id="tituloRecorridos"></div>
               <div class="hrTituloRecorridos"><hr></div>
               <div class="subtituloRecorridos" id="subtituloRecorridos"></div>
               <div class="contenidoRecorridos" id="contenidoRecorridos"></div>
               <div class="nombreCompletoRecorridos" id="nombreCompletoRecorridos"></div>
-
-
               <div class="imagenObras"><img id="imagenObras" src=""></div>
               <div class="tituloObras" id="tituloObras"></div>
               <div class="hrTituloObras"><hr></div>
               <div class="subtituloObras" id="subtituloObras"></div>
               <div class="contenidoObras" id="contenidoObras"></div>
               <div class="nombreCompletoObras" id="nombreCompletoObras"></div>
-
             </div>
-              
           </div>
       </div>
   </div>
-
-
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
     <hr class="recorridoshr">
     <a class="recorridos" href="#" onclick="mostrarRecorridos()"><b>RECORRIDOS URBANOS</b> &#9660;</a>
     <br>
@@ -84,7 +61,6 @@
     <hr class="generalhr">
     <a class="general" href="#"><b>ACERCA DEL PROYECTO</b></a>
     <a class="general" href="#"><b>PUBLICACIÓN</b></a>
-  
   </div>
 
   <script src="sketch.js"></script>
@@ -96,10 +72,13 @@
     import { OBJLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/OBJLoader.js';
     import { MTLLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/MTLLoader';
     import { DDSLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/DDSLoader';
+    import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/GLTFLoader.js';
+
     let camera, controls, scene, renderer;
     const DIVISION_GRID = 17;
     const gridHelper = new THREE.GridHelper( window.innerWidth, DIVISION_GRID );
     const a = new THREE.Vector3( 0, 0, 0 );
+    let raycaster, mouse = { x : 0, y : 0 };
 
     init();
     animate();
@@ -127,6 +106,25 @@
       controls.maxDistance = 500;
       controls.maxPolarAngle = Math.PI / 2;
 
+      raycaster = new THREE.Raycaster();
+      renderer.domElement.addEventListener( 'click', raycast, false );
+
+      const loader = new GLTFLoader();
+      loader.load( './assets/BellasArtes.gltf',
+      function ( gltf ) { 
+        gltf.scene.position.x = -window.innerWidth/2 + window.innerWidth/DIVISION_GRID * 8.5;
+        gltf.scene.position.y = 0;
+        gltf.scene.position.z = 270 * (window.innerWidth/2 - window.innerWidth/DIVISION_GRID * 8.5);
+        gltf.scene.scale.x = 20;
+        gltf.scene.scale.y = 20;
+        gltf.scene.scale.z = 20;
+        scene.add( gltf.scene ); 
+      },
+      undefined, 
+      function ( error ) { 
+        console.error( error ); 
+      });
+
       const onProgress = function ( xhr ) {
         if ( xhr.lengthComputable ) {
           const percentComplete = xhr.loaded / xhr.total * 100;
@@ -150,6 +148,7 @@
             object.scale.x = 20;
             object.scale.y = 20;
             object.scale.z = 20;
+            object.name = 'Objeto 1';
             scene.add( object );
           }, onProgress, onError );
         }
@@ -167,6 +166,7 @@
             object.scale.x = 20;
             object.scale.y = 20;
             object.scale.z = 20;
+            object.name = 'Objeto 2';
             scene.add( object );
           }, onProgress, onError );
         }
@@ -184,6 +184,7 @@
             object.scale.x = 20;
             object.scale.y = 20;
             object.scale.z = 20;
+            object.name = 'Objeto 3';
             scene.add( object );
           }, onProgress, onError );
         }
@@ -201,6 +202,7 @@
             object.scale.x = 20;
             object.scale.y = 20;
             object.scale.z = 20;
+            object.name = 'Objeto 4';
             scene.add( object );
           }, onProgress, onError );
         }
@@ -218,6 +220,7 @@
             object.scale.x = 20;
             object.scale.y = 20;
             object.scale.z = 20;
+            object.name = 'Objeto 5';
             scene.add( object );
           }, onProgress, onError );
         }
@@ -235,6 +238,7 @@
             object.scale.x = 20;
             object.scale.y = 20;
             object.scale.z = 20;
+            object.name = 'Objeto 6';
             scene.add( object );
           }, onProgress, onError );
         }
@@ -252,6 +256,7 @@
             object.scale.x = 20;
             object.scale.y = 20;
             object.scale.z = 20;
+            object.name = 'Objeto 7';
             scene.add( object );
           }, onProgress, onError );
         }
@@ -269,6 +274,7 @@
             object.scale.x = 20;
             object.scale.y = 20;
             object.scale.z = 20;
+            object.name = 'Objeto 8';
             scene.add( object );
           }, onProgress, onError );
         }
@@ -286,6 +292,7 @@
             object.scale.x = 20;
             object.scale.y = 20;
             object.scale.z = 20;
+            object.name = 'Objeto 9';
             scene.add( object );
           }, onProgress, onError );
         }
@@ -303,6 +310,7 @@
             object.scale.x = 20;
             object.scale.y = 20;
             object.scale.z = 20;
+            object.name = 'Objeto 10';
             scene.add( object );
           }, onProgress, onError );
         }
@@ -320,27 +328,29 @@
             object.scale.x = 20;
             object.scale.y = 20;
             object.scale.z = 20;
+            object.name = 'Objeto 11';
             scene.add( object );
           }, onProgress, onError );
         }
       );
 
-      new MTLLoader(manager)
-      .load( './assets/models/edificio4.mtl', function ( materials ) {
-        materials.preload();
-        new OBJLoader(manager)
-          .setMaterials(materials)
-          .load('./assets/models/edificio4.obj', function (object) {
-            object.position.x = -window.innerWidth/2 + window.innerWidth/DIVISION_GRID * 8.5;
-            object.position.y = a.y;
-            object.position.z = window.innerWidth/2 - window.innerWidth/DIVISION_GRID * 8.5;
-            object.scale.x = 10;
-            object.scale.y = 10;
-            object.scale.z = 10;
-            scene.add( object );
-          }, onProgress, onError );
-        }
-      );
+      // new MTLLoader(manager)
+      // .load( './assets/models/edificio4.mtl', function ( materials ) {
+      //   materials.preload();
+      //   new OBJLoader(manager)
+      //     .setMaterials(materials)
+      //     .load('./assets/models/edificio4.obj', function (object) {
+      //       object.position.x = -window.innerWidth/2 + window.innerWidth/DIVISION_GRID * 8.5;
+      //       object.position.y = a.y;
+      //       object.position.z = window.innerWidth/2 - window.innerWidth/DIVISION_GRID * 8.5;
+      //       object.scale.x = 10;
+      //       object.scale.y = 10;
+      //       object.scale.z = 10;
+      //       object.name = 'Objeto 12';
+      //       scene.add( object );
+      //     }, onProgress, onError );
+      //   }
+      // );
 
       const dirLight1 = new THREE.DirectionalLight( 0xffffff );
       dirLight1.position.set( 1, 1, 1 );
@@ -350,6 +360,16 @@
       scene.add( ambientLight );
 
       window.addEventListener( 'resize', onWindowResize );
+    }
+
+    function raycast (e) {
+      mouse.x = ( e.clientX / window.innerWidth ) * 2 - 1;
+      mouse.y = - ( e.clientY / window.innerHeight ) * 2 + 1;
+      raycaster.setFromCamera( mouse, camera );    
+      let intersects = raycaster.intersectObjects( scene.children, true );
+      for ( let i = 0; i < intersects.length; i++ ) {
+        console.log( intersects[i].object.parent.name ); 
+      }
     }
 
     function onWindowResize() {
@@ -367,11 +387,6 @@
     function render() {
       renderer.render( scene, camera );
     }
-
     </script>
-
-    
-
-
   </body>
 </html>
