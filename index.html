@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.0/p5.easycam.js"></script>
+
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
     <meta name=”theme-color” content=”#000000“/>
@@ -15,9 +13,7 @@
       <h2>MUSEOS Y CIUDAD</h2>
       <span id="menu" onclick="openNav()">&#9776; MENU</span>
     </div>
-    <button class="botonEspacios" id="MALBA" onmousemove="moverMALBA()" onmousedown="MALBA()" onmouseout="moverPrincipal()"><b>MALBA</b></button>
-    <button class="botonObras" id="ParquedelaMemoria" onmousemove="moverParquedelaMemoria()" onmousedown="ParquedelaMemoria()" onmouseout="moverPrincipal()"><b>Parque de la Memoria</b></button>
-    <button class="botonRecorridos" id="SanTelmo" onmousemove="moverSanTelmo()" onmousedown="SanTelmo()" onmouseout="moverPrincipal()"><b>San Telmo</b></button>
+  
     <div class="popup-wrapper">
       <div class="popup">
           <div class="popup-close">x</div>
@@ -71,7 +67,7 @@
     import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/GLTFLoader.js';
 
     let camera, controls, scene, renderer;
-    const DIVISION_GRID = 17;
+    const DIVISION_GRID = 10;
     const gridHelper = new THREE.GridHelper( window.innerWidth, DIVISION_GRID );
     let raycaster, mouse = { x : 0, y : 0 };
 
@@ -81,7 +77,7 @@
     function init() {
 
       scene = new THREE.Scene();
-      scene.background = new THREE.Color( 0xcccccc );
+      scene.background = new THREE.Color( 0x696969 );
       scene.fog = new THREE.FogExp2( 0xcccccc, 0.002 );
 
       renderer = new THREE.WebGLRenderer( { antialias: true } );
@@ -89,7 +85,7 @@
       renderer.setSize( window.innerWidth, window.innerHeight );
       document.body.appendChild( renderer.domElement );
 
-      scene.add( gridHelper );
+      //scene.add( gridHelper );
 
       camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, window.innerWidth );
       camera.position.set( 400, 200, 0 );
@@ -124,7 +120,59 @@
         object.scale.x = 20;
         object.scale.y = 20;
         object.scale.z = 20;
-        object.name = 'Bellas artes';
+        object.name = 'BellasArtes';
+        scene.add( object ); 
+      },onProgress, onError );
+
+      const loader2 = new GLTFLoader();
+      loader2.load( './assets/models/OSDEViejo.gltf', function ( gltf ) {
+        const object = gltf.scene;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = 0;
+        object.scale.x = 20;
+        object.scale.y = 20;
+        object.scale.z = 20;
+        object.name = 'OSDEViejo';
+        scene.add( object ); 
+      },onProgress, onError );
+
+      const loader3 = new GLTFLoader();
+      loader3.load( './assets/models/PROA.gltf', function ( gltf ) {
+        const object = gltf.scene;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = 0;
+        object.scale.x = 20;
+        object.scale.y = 20;
+        object.scale.z = 20;
+        object.name = 'PROA';
+        scene.add( object ); 
+      },onProgress, onError );
+
+      const loader4 = new GLTFLoader();
+      loader4.load( './assets/models/IslaFlotante.gltf', function ( gltf ) {
+        const object = gltf.scene;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = 0;
+        object.scale.x = 20;
+        object.scale.y = 20;
+        object.scale.z = 20;
+        object.name = 'IslaFlotante';
+        scene.add( object ); 
+      },onProgress, onError );
+
+      const loader5 = new GLTFLoader();
+      loader5.load( './assets/models/MUNTREFArtesVisuales.gltf', function ( gltf ) {
+        const object = gltf.scene;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = 0;
+        object.scale.x = 20;
+        object.scale.y = 20;
+        object.scale.z = 20;
+        object.name = 'MUNTREFArtesVisuales';
         scene.add( object ); 
       },onProgress, onError );
 
@@ -145,6 +193,9 @@
       let intersects = raycaster.intersectObjects( scene.children, true );
       for ( let i = 0; i < intersects.length; i++ ) {
         console.log( intersects[i].object.parent.name ); 
+        if (intersects[i].object.parent.name == "BellasArtes") { console.log("BellasArtes"); }
+        if (intersects[i].object.parent.name == "OSDEViejo") { console.log("OSDEViejo"); }
+        if (intersects[i].object.parent.name == "PROA") { console.log("PROA"); }
       }
     }
 
@@ -158,6 +209,8 @@
       requestAnimationFrame( animate );
       controls.update();
       render();
+
+      //console.log();
     }
 
     function render() {

@@ -16,34 +16,12 @@ button{
 }
 
 
-#MALBA {
-  background: rgb(253, 224, 6);
-  position: absolute;
-  margin-top: 200px;
-  margin-left: 300px;
-}
-
-
-#SanTelmo {
-  background: rgb(48, 221, 176);
-    position: absolute;
-    margin-top: 400px;
-    margin-left: 1000px;
-  }
-
-#ParquedelaMemoria {
-  background: rgb(244, 172, 204);
-    position: absolute;
-    margin-top: 10%;
-    margin-left: 20%;
-  }
-
 h1, h2, h3 {
-    color: rgb(242, 241, 237);
+    color: black;
 }
 
 span {
-    color:rgb(242, 241, 237);
+    color: black;
 }
 
  
