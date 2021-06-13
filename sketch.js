@@ -6,7 +6,7 @@ function openModal(name)  {
   `<div class="modal-container">
     <div class="info">
       <div class="info-text">
-        <p class="autor">${info[name].autor}</p>
+        <p class="${info[name].autor ? 'autor': ''}">${info[name].autor}</p>
         <p class="titulo-${info[name].colorTexto}">
           ${info[name].titulo.toUpperCase()}
         </p>
