@@ -15,9 +15,6 @@
       <h2>MUSEOS Y CIUDAD</h2>
       <span id="menu" onclick="openNav()">&#9776; MENU</span>
     </div>
-    <button class="botonEspacios" id="MALBA" onmousemove="moverMALBA()" onmousedown="MALBA()" onmouseout="moverPrincipal()"><b>MALBA</b></button>
-    <button class="botonObras" id="ParquedelaMemoria" onmousemove="moverParquedelaMemoria()" onmousedown="ParquedelaMemoria()" onmouseout="moverPrincipal()"><b>Parque de la Memoria</b></button>
-    <button class="botonRecorridos" id="SanTelmo" onmousemove="moverSanTelmo()" onmousedown="SanTelmo()" onmouseout="moverPrincipal()"><b>San Telmo</b></button>
     <div class="popup-wrapper">
       <div class="popup">
           <div class="popup-close">x</div>
@@ -62,9 +59,8 @@
     <a class="general" href="#"><b>ACERCA DEL PROYECTO</b></a>
     <a class="general" href="#"><b>PUBLICACIÓN</b></a>
   </div>
-
   <script src="sketch.js"></script>
-
+  <script src="info-edificios.js"></script>
   <script type="module">
     import * as THREE from 'https://cdn.skypack.dev/three@0.128.0';
     import { MapControls } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/controls/OrbitControls.js';
@@ -72,7 +68,7 @@
 
     let camera, controls, scene, renderer;
     const DIVISION_GRID = 17;
-    const gridHelper = new THREE.GridHelper( window.innerWidth, DIVISION_GRID );
+    const gridHelper = new THREE.GridHelper( 10, 20);
     let raycaster, mouse = { x : 0, y : 0 };
 
     init();
@@ -89,21 +85,16 @@
       renderer.setSize( window.innerWidth, window.innerHeight );
       document.body.appendChild( renderer.domElement );
 
-      scene.add( gridHelper );
+      //scene.add( gridHelper );
 
       camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, window.innerWidth );
-      camera.position.set( 400, 200, 0 );
+      camera.position.set(2, 1, 2);
       controls = new MapControls( camera, renderer.domElement );
-      controls.enableDamping = true;
-      controls.dampingFactor = 0.05;
-      controls.screenSpacePanning = false;
-      controls.minDistance = 100;
-      controls.maxDistance = 500;
-      controls.maxPolarAngle = Math.PI / 2;
+      controls.maxDistance = 5;
+      controls.minDistance = 5;
 
       raycaster = new THREE.Raycaster();
       renderer.domElement.addEventListener( 'click', raycast, false );
-
       const onProgress = function ( xhr ) {
         if ( xhr.lengthComputable ) {
           const percentComplete = xhr.loaded / xhr.total * 100;
@@ -121,10 +112,8 @@
         object.position.x = 0;
         object.position.y = 0;
         object.position.z = 0;
-        object.scale.x = 20;
-        object.scale.y = 20;
-        object.scale.z = 20;
-        object.name = 'Bellas artes';
+        
+        object.name = 'bellas-artes';
         scene.add( object ); 
       },onProgress, onError );
 
@@ -144,7 +133,9 @@
       raycaster.setFromCamera( mouse, camera );    
       let intersects = raycaster.intersectObjects( scene.children, true );
       for ( let i = 0; i < intersects.length; i++ ) {
-        console.log( intersects[i].object.parent.name ); 
+        if(intersects[i].object.parent.type !== 'Scene') {
+          openModal(intersects[i].object.parent.name) 
+        }
       }
     }
 
