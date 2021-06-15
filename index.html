@@ -72,11 +72,12 @@
     init();
     animate();
 
+    
     function init() {
 
       scene = new THREE.Scene();
-      scene.background = new THREE.Color( 0xcccccc );
-      scene.fog = new THREE.FogExp2( 0xcccccc, 0.002 );
+      scene.background = new THREE.Color( 0x676767 );
+      scene.fog = new THREE.FogExp2( 0x676767, 0.003 );
 
       renderer = new THREE.WebGLRenderer( { antialias: true } );
       renderer.setPixelRatio( window.devicePixelRatio );
@@ -84,14 +85,14 @@
       document.body.appendChild( renderer.domElement );
 
       camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, window.innerWidth );
-      camera.position.set( 400, 200, 0 );
+      camera.position.set( 200, 100, 0 );
       controls = new MapControls( camera, renderer.domElement );
       controls.enableDamping = true;
-      controls.dampingFactor = 0.05;
+      controls.dampingFactor = 0.075;
       controls.screenSpacePanning = false;
-      controls.minDistance = 100;
-      controls.maxDistance = 500;
-      controls.maxPolarAngle = Math.PI / 2;
+      controls.minDistance = 50;
+      controls.maxDistance = 300;
+      controls.maxPolarAngle = Math.PI / 3;
 
       raycaster = new THREE.Raycaster();
       renderer.domElement.addEventListener( 'click', raycast, false );
