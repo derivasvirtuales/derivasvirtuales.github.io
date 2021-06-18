@@ -76,8 +76,8 @@
     function init() {
 
       scene = new THREE.Scene();
-      scene.background = new THREE.Color( 0x676767 );
-      scene.fog = new THREE.FogExp2( 0x676767, 0.003 );
+      scene.background = new THREE.Color( 0xcccccc );
+      scene.fog = new THREE.FogExp2( 0xcccccc, 0.003 );
 
       renderer = new THREE.WebGLRenderer( { antialias: true } );
       renderer.setPixelRatio( window.devicePixelRatio );
@@ -92,7 +92,8 @@
       controls.screenSpacePanning = false;
       controls.minDistance = 50;
       controls.maxDistance = 300;
-      controls.maxPolarAngle = Math.PI / 3;
+      controls.maxPolarAngle = Math.PI / 4;
+      controls.minPolarAngle = Math.PI / 4;
 
       raycaster = new THREE.Raycaster();
       renderer.domElement.addEventListener( 'click', raycast, false );
@@ -404,6 +405,7 @@
         }
       }
     }
+
 
     function onWindowResize() {
       camera.aspect = window.innerWidth / window.innerHeight;
