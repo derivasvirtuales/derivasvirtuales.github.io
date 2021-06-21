@@ -74,11 +74,12 @@
     init();
     animate();
 
+    
     function init() {
 
       scene = new THREE.Scene();
-      scene.background = new THREE.Color( 0x696969 );
-      scene.fog = new THREE.FogExp2( 0xcccccc, 0.002 );
+      scene.background = new THREE.Color( 0xcccccc );
+      scene.fog = new THREE.FogExp2( 0xcccccc, 0.003 );
 
       renderer = new THREE.WebGLRenderer( { antialias: true } );
       renderer.setPixelRatio( window.devicePixelRatio );
@@ -86,14 +87,15 @@
       document.body.appendChild( renderer.domElement );
 
       camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, window.innerWidth );
-      camera.position.set( 400, 200, 0 );
+      camera.position.set( 200, 100, 0 );
       controls = new MapControls( camera, renderer.domElement );
       controls.enableDamping = true;
-      controls.dampingFactor = 0.05;
+      controls.dampingFactor = 0.075;
       controls.screenSpacePanning = false;
-      controls.minDistance = 100;
-      controls.maxDistance = 500;
-      controls.maxPolarAngle = Math.PI / 2;
+      controls.minDistance = 50;
+      controls.maxDistance = 300;
+      controls.maxPolarAngle = Math.PI / 4;
+      controls.minPolarAngle = Math.PI / 4;
 
       raycaster = new THREE.Raycaster();
       renderer.domElement.addEventListener( 'click', raycast, false );
@@ -173,6 +175,217 @@
         scene.add( object ); 
       },onProgress, onError );
 
+
+      const loader6 = new GLTFLoader();
+      loader6.load( './assets/models/CasaRosada.gltf', function ( gltf ) {
+        const object = gltf.scene;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = 0;
+        object.scale.x = 20;
+        object.scale.y = 20;
+        object.scale.z = 20;
+        object.name = 'CasaRosada';
+        scene.add( object ); 
+      },onProgress, onError );
+
+      const loader7 = new GLTFLoader();
+      loader7.load( './assets/models/CCK.gltf', function ( gltf ) {
+        const object = gltf.scene;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = 0;
+        object.scale.x = 20;
+        object.scale.y = 20;
+        object.scale.z = 20;
+        object.name = 'CCK';
+        scene.add( object ); 
+      },onProgress, onError );
+
+      const loader8 = new GLTFLoader();
+      loader8.load( './assets/models/CCR.gltf', function ( gltf ) {
+        const object = gltf.scene;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = 0;
+        object.scale.x = 20;
+        object.scale.y = 20;
+        object.scale.z = 20;
+        object.name = 'CCR';
+        scene.add( object ); 
+      },onProgress, onError );
+
+      const loader9 = new GLTFLoader();
+      loader9.load( './assets/models/CornelioSaavedra.gltf', function ( gltf ) {
+        const object = gltf.scene;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = 0;
+        object.scale.x = 20;
+        object.scale.y = 20;
+        object.scale.z = 20;
+        object.name = 'CornelioSaavedra';
+        scene.add( object ); 
+      },onProgress, onError );
+
+      const loader10 = new GLTFLoader();
+      loader10.load( './assets/models/EspacioTelefonica.gltf', function ( gltf ) {
+        const object = gltf.scene;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = 0;
+        object.scale.x = 20;
+        object.scale.y = 20;
+        object.scale.z = 20;
+        object.name = 'EspacioTelefonica';
+        scene.add( object ); 
+      },onProgress, onError );
+
+      const loader11 = new GLTFLoader();
+      loader11.load( './assets/models/FADU.gltf', function ( gltf ) {
+        const object = gltf.scene;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = 0;
+        object.scale.x = 20;
+        object.scale.y = 20;
+        object.scale.z = 20;
+        object.name = 'FADU';
+        scene.add( object ); 
+      },onProgress, onError );
+
+      const loader12 = new GLTFLoader();
+      loader12.load( './assets/models/FOLA.gltf', function ( gltf ) {
+        const object = gltf.scene;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = 0;
+        object.scale.x = 20;
+        object.scale.y = 20;
+        object.scale.z = 20;
+        object.name = 'FOLA';
+        scene.add( object ); 
+      },onProgress, onError );
+
+      const loader13 = new GLTFLoader();
+      loader13.load( './assets/models/FundacionFortabat.gltf', function ( gltf ) {
+        const object = gltf.scene;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = 0;
+        object.scale.x = 20;
+        object.scale.y = 20;
+        object.scale.z = 20;
+        object.name = 'FundacionFortabat';
+        scene.add( object ); 
+      },onProgress, onError );
+
+      const loader14 = new GLTFLoader();
+      loader14.load( './assets/models/MALBA.gltf', function ( gltf ) {
+        const object = gltf.scene;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = 0;
+        object.scale.x = 20;
+        object.scale.y = 20;
+        object.scale.z = 20;
+        object.name = 'MALBA';
+        scene.add( object ); 
+      },onProgress, onError );
+
+      const loader15 = new GLTFLoader();
+      loader15.load( './assets/models/MAMBA.gltf', function ( gltf ) {
+        const object = gltf.scene;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = 0;
+        object.scale.x = 20;
+        object.scale.y = 20;
+        object.scale.z = 20;
+        object.name = 'MAMBA';
+        scene.add( object ); 
+      },onProgress, onError );
+
+      const loader16 = new GLTFLoader();
+      loader16.load( './assets/models/MUNTREF.gltf', function ( gltf ) {
+        const object = gltf.scene;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = 0;
+        object.scale.x = 20;
+        object.scale.y = 20;
+        object.scale.z = 20;
+        object.name = 'MUNTREF';
+        scene.add( object ); 
+      },onProgress, onError );
+
+      const loader17 = new GLTFLoader();
+      loader17.load( './assets/models/OSDE.gltf', function ( gltf ) {
+        const object = gltf.scene;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = 0;
+        object.scale.x = 20;
+        object.scale.y = 20;
+        object.scale.z = 20;
+        object.name = 'OSDE';
+        scene.add( object ); 
+      },onProgress, onError );
+
+      const loader18 = new GLTFLoader();
+      loader18.load( './assets/models/ParqueMemoria.gltf', function ( gltf ) {
+        const object = gltf.scene;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = 0;
+        object.scale.x = 20;
+        object.scale.y = 20;
+        object.scale.z = 20;
+        object.name = 'ParqueMemoria';
+        scene.add( object ); 
+      },onProgress, onError );
+
+
+      const loader19 = new GLTFLoader();
+      loader19.load( './assets/models/RolfArt.gltf', function ( gltf ) {
+        const object = gltf.scene;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = 0;
+        object.scale.x = 20;
+        object.scale.y = 20;
+        object.scale.z = 20;
+        object.name = 'RolfArt';
+        scene.add( object ); 
+      },onProgress, onError );
+
+      const loader20 = new GLTFLoader();
+      loader20.load( './assets/models/SalaPays.gltf', function ( gltf ) {
+        const object = gltf.scene;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = 0;
+        object.scale.x = 20;
+        object.scale.y = 20;
+        object.scale.z = 20;
+        object.name = 'SalaPays';
+        scene.add( object ); 
+      },onProgress, onError );
+
+      const loader21 = new GLTFLoader();
+      loader21.load( './assets/models/SanMartin.gltf', function ( gltf ) {
+        const object = gltf.scene;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = 0;
+        object.scale.x = 20;
+        object.scale.y = 20;
+        object.scale.z = 20;
+        object.name = 'SanMartin';
+        scene.add( object ); 
+      },onProgress, onError );
+
+
       const dirLight1 = new THREE.DirectionalLight( 0xffffff );
       dirLight1.position.set( 1, 1, 1 );
       scene.add( dirLight1 );
@@ -194,6 +407,7 @@
         }
       }
     }
+
 
     function onWindowResize() {
       camera.aspect = window.innerWidth / window.innerHeight;
