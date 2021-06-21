@@ -6,76 +6,77 @@ body {
   cursor: grab;
 }
 
-.titulo {
-  margin-left: 30px;
+.titulo-museos {
+  font-family: 'Bebas Neue';
+  font-size: 30px;
+  color: #4BCFAB;
 }
 
 button{
-    margin: 20px auto;
-    color: rgb(15, 14, 15);
-    border: 0;
-    padding: 6px 10px;
-    cursor: pointer;
+  margin: 20px auto;
+  color: rgb(15, 14, 15);
+  border: 0;
+  padding: 6px 10px;
+  cursor: pointer;
 }
 
 
 h1, h2, h3 {
-    color: black;
+  color: black;
 }
 
 span {
-    color: black;
+  color: black;
 }
 
- 
 .popup-wrapper {
-    background: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    display: none;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: none;
 }
- 
+
 .popup {
-    width: 100%;
-    height: 100%;
-    max-width: 700px;
-    max-height: 500px;
-    background: rgb(242, 241, 237);
-    margin: 5% auto;
-    padding: 20px;
-    margin-top: 5%;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 700px;
+  max-height: 500px;
+  background: rgb(242, 241, 237);
+  margin: 5% auto;
+  padding: 20px;
+  margin-top: 5%;
+  position: relative;
 }
- 
+
 .popup a {
-    background: black;
-    color:rgb(242, 241, 237);
-    text-decoration: none;
-    padding: 6px 10px;
-    margin: 30px auto;
-    display: block;
-    width: 50%;
+  background: black;
+  color:rgb(242, 241, 237);
+  text-decoration: none;
+  padding: 6px 10px;
+  margin: 30px auto;
+  display: block;
+  width: 50%;
 }
- 
+
 .popup a:hover {
-    background: black;
-    transition: all 0.2s;
+  background: black;
+  transition: all 0.2s;
 }
 
 .popup h3 {
-    color: black;
+  color: black;
 }
- 
+
 .popup-close {
-    position: absolute;
-    top: 5px;
-    right: 15px;
-    cursor: pointer;
-    font-size: 2rem;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 2rem;
 }
 
 .wrapperpopup {
@@ -86,9 +87,6 @@ span {
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
 }
-
-/* ESPACIOS DE ARTE */
-/*------------------*/
 
 .imagenEspacios {
   text-align: left;
@@ -212,11 +210,6 @@ span {
   grid-row: 1 / 5;
 }
 
-/*-----------------*/
-
-/* OBRAS*/
-/*--------------------*/
-
 .imagenObras {
   text-align: left;
   margin: auto;
@@ -276,11 +269,9 @@ span {
   grid-row: 1 / 5;
 }
 
-/*-----------------*/
-
-
 .titulo {
-    position: fixed;
+  position: fixed;
+  margin-left: 30px;
 }
 
 #menu {
@@ -289,176 +280,222 @@ span {
 }
 
 .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 21%;
-    left: 0;
-    background-color: rgb(51, 50, 51);
-    overflow-x: hidden;
-    transition: 1s;
-    padding-top: 60px;
-  }
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 21%;
+  left: 0;
+  background-color: rgb(51, 50, 51);
+  overflow-x: hidden;
+  transition: 1s;
+  padding-top: 60px;
+}
   
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 12px;
-    color:rgb(242, 241, 237);
-    display: block;
-    transition: 0.3s;
-  }
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 12px;
+  color:rgb(242, 241, 237);
+  display: block;
+  transition: 0.3s;
+}
 
-  .sidenav hr {
-    margin-left: 32px;
-    margin-right: 160px;
-  }
+.sidenav hr {
+  margin-left: 32px;
+  margin-right: 160px;
+}
 
-  .sidenav a:hover {
-    color:seashell;
-  }
-  
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
+.sidenav a:hover {
+  color:seashell;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
 
 
-  .sidenav .recorridos, .recorridoshr {
-    color: rgb(48, 221, 176);
-  }
-  
-  .sidenav .espacios, .espacioshr {
-    color: rgb(253, 224, 6);
-  }
-  
-  .sidenav .obras, .obrashr {
-    color: rgb(244, 172, 204);
-  }
+.sidenav .recorridos, .recorridoshr {
+  color: rgb(48, 221, 176);
+}
 
-  .sidenav .general, .generalhr {
-    color: rgb(242, 241, 237);
-  }
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
+.sidenav .espacios, .espacioshr {
+  color: rgb(253, 224, 6);
+}
 
-  .modal {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #00000047;
-    cursor:initial;
-  }
+.sidenav .obras, .obrashr {
+  color: rgb(244, 172, 204);
+}
 
-  .modal-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(100% - 400px);
-    height: calc(100% - 50px);
-    display: flex;
-    flex-direction: column;
-    background-color: #e4e4e4;
-    justify-content: space-around;
-  }
+.sidenav .general, .generalhr {
+  color: rgb(242, 241, 237);
+}
 
-  .info {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-  }
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 
-  .info-text {
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000047;
+  cursor:initial;
+}
 
-  .info img {
-    width: 55%;
-  }
+.modal-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 900px;
+  width: calc(100% - 300px);
+  display: flex;
+  flex-direction: column;
+  background-color: #e4e4e4;
+  justify-content: space-around;
+}
 
-  .autor {
-    background-color: black;
-    color: #e4e4e4;
-    padding: 4px 8px;
-    font-size: 12px;
-  }
+.info {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 450px;
+}
 
-  .titulo-rosa {
-    color: #dc88a4;
-    font-size: 27px;
-    margin: 0;
-    width: 215px;
-  }
+.info-text {
+  max-width: 180px;
+  width: 100%;
+  height: 415px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
 
-  .titulo-verde {
-    color: #49b1ac;
-    font-size: 27px;
-    margin: 0;
-    width: 240px;
-  }
+.categoria-museo {
+  font-family: 'Roboto';
+  align-self: flex-start;
+  justify-self: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  font-size: 8px;
+}
 
-  .titulo-amarillo {
-    color: #d8c15b;
-    font-size: 50px;
-    margin: 0;
-  }
+.imagen-container {
+  width: 65%;
+  height: 415px;
+  display: flex;
+  flex-direction: column;
+}
 
-  .subtitulo {
-    font-size: 15px;
-  }
+.imagen-museo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  background-position: center;
+}
 
-  .programa-container {
-    font-size: 12px;
-  }
+.autor {
+  margin: 5px 0;
+  text-align: right;
+  font-family: 'Roboto';
+  font-style: italic;
+  font-size: 10px;
+}
 
-  .programa {
-    margin: 10px 0 0;
-  }
+.info img {
+  width: 60%;
+}
 
-  .lugar {
-    font-weight: bold;
-    margin: 0;
-  }
+.titulo-rosa {
+  color: #dc88a4;
+  font-size: 27px;
+  margin: 0;
+  width: 215px;
+}
 
-  .fecha {
-    margin: 0;
-  }
+.titulo-verde {
+  color: #49b1ac;
+  font-size: 27px;
+  margin: 0;
+  width: 240px;
+}
 
-  .text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.titulo-amarillo {
+  color: #d8c15b;
+  font-size: 50px;
+  margin: 0;
+}
 
-  .text p {
-    text-align: justify;
-    width: 55%;
-  }
+.subtitulo {
+  font-size: 15px;
+}
 
-  .button-container {
-    width: 35%;
-    position: relative;
-    height: 100%;
-    margin: 16px 0;
-  }
+.programa-container {
+  font-size: 8px;
+  font-family: 'Roboto';
+  text-align: center;
+  width: 50px;
+}
 
-  .button-container button {
-    position: absolute;
-    bottom: 16px;
-    right: 0;
-    background-color: #e4e4e4;
-  }
-  
+.programa {
+  margin: 10px 0 0;
+}
+
+.lugar {
+  font-weight: bold;
+  margin: 0;
+  border-top: 2px solid #C5C5C5;
+  padding: 5px 0 2px;
+}
+
+.ubicacion {
+  margin: 0;
+  border-bottom: 2px solid #C5C5C5;
+  padding: 0 0 5px;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+
+.text p {
+  text-align: justify;
+  width: 49%;
+  font-family: Roboto;
+  font-size: 10px;
+  line-height: 12px;
+  margin-bottom: 60px;
+}
+
+.button-container {
+  width: 35%;
+  text-align: center;
+}
+
+.button-container button {
+  background-color: #e4e4e4;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+@media(max-width: 1400px) {
+
+}
