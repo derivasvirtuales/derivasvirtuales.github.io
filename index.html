@@ -71,6 +71,8 @@
     const gridHelper = new THREE.GridHelper( window.innerWidth, DIVISION_GRID );
     let raycaster, mouse = {x:0, y:0, z:0};
 
+    let info;
+
     init();
     animate();
 
@@ -78,13 +80,16 @@
     function init() {
 
       scene = new THREE.Scene();
-      scene.background = new THREE.Color( 0xcccccc );
-      scene.fog = new THREE.FogExp2( 0xcccccc, 0.003 );
+      scene.background = new THREE.Color( 0x404040 );
+      scene.fog = new THREE.FogExp2( 0x404040, 0.003 );
 
       renderer = new THREE.WebGLRenderer( { antialias: true } );
+      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
       renderer.setPixelRatio( window.devicePixelRatio );
       renderer.setSize( window.innerWidth, window.innerHeight );
       document.body.appendChild( renderer.domElement );
+
 
       camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, window.innerWidth );
       camera.position.set( 200, 100, 0 );
@@ -92,10 +97,24 @@
       controls.enableDamping = true;
       controls.dampingFactor = 0.075;
       controls.screenSpacePanning = false;
-      controls.minDistance = 50;
+      controls.minDistance = 125;
       controls.maxDistance = 300;
       controls.maxPolarAngle = Math.PI / 4;
       controls.minPolarAngle = Math.PI / 4;
+
+      const dirLight1 = new THREE.DirectionalLight( 0xffffff );
+      dirLight1.position.set( 0, 1, 1 );
+      dirLight1.castShadow = true;
+      scene.add( dirLight1 );
+
+      //Set up shadow properties for the light
+      dirLight1.shadow.mapSize.width = 512; // default
+      dirLight1.shadow.mapSize.height = 512; // default
+      dirLight1.shadow.camera.near = 0.5; // default
+      dirLight1.shadow.camera.far = 500; // default
+
+      const ambientLight = new THREE.AmbientLight( 0x222222 );
+      scene.add( ambientLight );
 
       raycaster = new THREE.Raycaster();
       renderer.domElement.addEventListener( 'click', raycast, false );
@@ -120,6 +139,16 @@
         object.scale.y = 20;
         object.scale.z = 20;
         object.name = 'BellasArtes';
+        object.castShadow = true; //default is false
+        object.receiveShadow = false; //default
+
+        object.material1 = new THREE.MeshBasicMaterial( {
+
+        color: 0xe0e0ff,
+        wireframe: true
+
+        } );
+
         scene.add( object ); 
       },onProgress, onError );
 
@@ -146,6 +175,13 @@
         object.scale.y = 20;
         object.scale.z = 20;
         object.name = 'PROA';
+
+        object.material1 = new THREE.MeshBasicMaterial( {
+
+color: 0xe0e0ff,
+wireframe: true
+
+} );
         scene.add( object ); 
       },onProgress, onError );
 
@@ -385,13 +421,35 @@
         scene.add( object ); 
       },onProgress, onError );
 
+      const loader22 = new GLTFLoader();
+      loader22.load( './assets/models/obras/info.gltf', function ( gltf ) {
+        const object = gltf.scene;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = 0;
+        object.scale.x = 20;
+        object.scale.y = 20;
+        object.scale.z = 20;
+        object.name = 'info';
+        object.castShadow = true; //default is false
+        object.receiveShadow = false; //default
+        scene.add( object ); 
+      },onProgress, onError );
 
-      const dirLight1 = new THREE.DirectionalLight( 0xffffff );
-      dirLight1.position.set( 1, 1, 1 );
-      scene.add( dirLight1 );
+      const loader23 = new GLTFLoader();
+      loader23.load( './assets/models/PisoMapa.gltf', function ( gltf ) {
+        const object = gltf.scene;
+        object.position.x = 0;
+        object.position.y = 0;
+        object.position.z = 0;
+        object.scale.x = 20;
+        object.scale.y = 20;
+        object.scale.z = 20;
+        object.name = 'PisoMapa';
+        scene.add( object ); 
+      },onProgress, onError );
 
-      const ambientLight = new THREE.AmbientLight( 0x222222 );
-      scene.add( ambientLight );
+      
 
       window.addEventListener( 'resize', onWindowResize );
     }
@@ -418,6 +476,7 @@
     function animate() {
       requestAnimationFrame( animate );
       controls.update();
+        
       render();
     }
 
