@@ -1,9 +1,38 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Bebas Neue', 'Roboto', sans-serif;
   background-color: rgb(25, 25, 25);
   margin: 0;
   padding: 0;
   cursor: grab;
+}
+
+.titulo {
+  position: fixed;
+  margin: 30px;
+  color: #f1f1f1;
+  display: flex;
+  letter-spacing: 1.5px;
+  z-index: 2;
+}
+
+.button-menu {
+  font-size: 25px;
+  background-color: transparent;
+  margin: 0 9px 0 0;
+  padding: 0;
+  display: block;
+  height: fit-content;
+  color: #f1f1f1;
+}
+
+.titulo-menu {
+  margin: 2px 0 0;
+  font-size: 30px;
+}
+
+.subtitulo-menu {
+  font-size: 18px;
+  margin: 0;
 }
 
 .titulo-museos {
@@ -13,6 +42,7 @@ body {
 }
 
 button{
+  transition: display 0.5s ease;
   margin: 20px auto;
   color: rgb(15, 14, 15);
   border: 0;
@@ -20,132 +50,202 @@ button{
   cursor: pointer;
 }
 
-
-h1, h2, h3 {
-  color: black;
-}
-
 span {
   color: black;
 }
 
-.popup-wrapper {
-  background: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+#menu-container {
+  width: 400px;
   height: 100%;
-  overflow: auto;
+  background-color: #333233;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.close-button {
+  transition: display 0.5s ease;
   display: none;
 }
 
-.popup {
+.header-menu {
+  display: flex;
+  align-items: center;
   width: 100%;
-  height: 100%;
-  max-width: 700px;
-  max-height: 500px;
-  background: rgb(242, 241, 237);
-  margin: 5% auto;
-  padding: 20px;
-  margin-top: 5%;
-  position: relative;
+  justify-content: flex-end;
 }
 
-.popup a {
-  background: black;
-  color:rgb(242, 241, 237);
-  text-decoration: none;
-  padding: 6px 10px;
-  margin: 30px auto;
-  display: block;
-  width: 50%;
+.header-menu img {
+  width: 25px;
+  margin: 37px 23px;
 }
 
-.popup a:hover {
-  background: black;
-  transition: all 0.2s;
+.body {
+  margin-top: 120px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
 }
 
-.popup h3 {
-  color: black;
+.open {
+  transition: left 0.5s ease;
+  left: 0;
 }
 
-.popup-close {
-  position: absolute;
-  top: 5px;
-  right: 15px;
+.close {
+  transition: left 0.5s ease;
+  left: -400px;
+}
+
+.header-menu span {
   cursor: pointer;
-  font-size: 2rem;
+  margin: 40px 23px;
 }
 
-.wrapperpopup {
-  margin-top: 35px;
-  margin-left: 35px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
+.icon-close {
+  color: white;
 }
 
-.imagenEspacios {
-  text-align: left;
-  margin: auto;
-  grid-column: 1 / 3;
-  grid-row: 1 / 3;
+.submenu-header {
+  display: flex;
+  align-items: flex-end;
+  width: 87%;
+  justify-content: space-between;
+  margin: 0 auto;
 }
 
-#imagenEspacios {
+.submenu-header img {
+  width: 23px;
+}
+
+.submenu-title {
+  margin: 0;
+}
+
+.title-recorridos {
+  color: #32C7A0;
+}
+
+.title-espacios {
+  color: #E9DC42;
+}
+
+.title-obras {
+  color: #D486B3;
+}
+
+.recorridos-line {
+  background-color: #32C7A0;
+}
+
+.chevron {
+  cursor: pointer;
+}
+
+.chevron-recorridos {
+  color: #32C7A0;
+}
+
+.chevron-espacios {
+  color: #E9DC42;
+}
+
+.chevron-obras {
+  color: #D486B3;
+}
+
+.margin-menu {
+  margin-top: 45px;
+}
+
+.espacios-line {
+  background-color: #E9DC42;
+}
+
+.obras-line {
+  background-color: #D486B3;
+}
+
+.line-top {
+  width: 132px;
+  height: 2px;
+  margin-bottom: 10px;
+  border-radius: 2%;
+}
+
+.list-menu {
+  transition: visibility 0s, opacity 0.2s linear;
+  list-style: none;
+  color: white;
+  font-size: 12px;
+  padding: 0;
+  width: 345px;
+  margin: 20px auto;
+  opacity: 1;
+  height: auto;
+  visibility: visible;
+}
+
+.close-menu {
+  opacity: 0;
+  visibility: hidden;
+  margin: 0 auto;
+  height: 0;
+  transition: visibility 0s, opacity 0.2s linear;
+}
+
+.list-menu li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.list-menu li img {
+  width: 30px;
+}
+
+.list-menu li p {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.list-menu li i {
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.switch {
+  cursor: pointer;
+}
+
+.active-switch {
+  color: rgb(233, 220, 66);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  position: absolute;
+  bottom: 50px;
   width: 100%;
 }
 
-.tituloEspacios {
-  margin-top: 35%;
-  margin-left: 0%;
-  text-align: left;
-  font-size: 2.8rem;
-  font-weight: bold;
-  grid-column: 3 / 4;
-  grid-row: 2;
+.footer img {
+  width: 140px;
+  margin-left: 24px;
 }
 
-.hrTituloEspacios {
-  margin-top: 68%;
-  max-width: 60%;
-  text-align: left;
-  grid-column: 3 / 4;
-  grid-row: 2;
-
+.item-link {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  width: 87%;
+  margin: 15px auto;
+  font-size: 15px;
 }
-.subtituloEspacios {
-  margin-top: -2%;
-  max-height: 20px;
-  max-width: 60%;
-  font-size: 0.6rem;
-  grid-column: 1 / 4;
-  grid-row: 3;
-}
-.contenidoEspacios {
-  text-align: left;
-  margin-top: 25px;
-  max-height: 70%;
-  font-size: 0.75rem;
-  grid-column: 1 / 4;
-  grid-row: 3 / 5;
-}
-.nombreCompletoEspacios {
-  margin-left: -30px;
-  max-width: 20px;
-  max-height: 100%;
-  text-align: end;
-  font-size: 0.65rem;
-  font-weight: bold;
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);
-  grid-column: 1;
-  grid-row: 1 / 5;
-}
-
 
 /* RECORRIDOS URBANOS*/
 /*--------------------*/
@@ -269,16 +369,6 @@ span {
   grid-row: 1 / 5;
 }
 
-.titulo {
-  position: fixed;
-  margin-left: 30px;
-}
-
-#menu {
-  font-size: 1.3rem;
-  cursor:pointer
-}
-
 .sidenav {
   height: 100%;
   width: 0;
@@ -366,8 +456,10 @@ span {
 .info {
   display: flex;
   align-items: flex-end;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 450px;
+  width: 800px;
+  margin: 0 auto;
 }
 
 .info-text {
@@ -442,7 +534,7 @@ span {
 }
 
 .programa-container {
-  font-size: 8px;
+  font-size: 10px;
   font-family: 'Roboto';
   text-align: center;
   width: 50px;
@@ -468,16 +560,17 @@ span {
 .text {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   position: relative;
+  width: 800px;
+  margin: 0 auto;
 }
 
 .text p {
   text-align: justify;
-  width: 49%;
+  width: 520px;
   font-family: Roboto;
-  font-size: 10px;
-  line-height: 12px;
+  font-size: 12px;
   margin-bottom: 60px;
 }
 
