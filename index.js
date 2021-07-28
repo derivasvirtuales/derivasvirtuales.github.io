@@ -21,9 +21,10 @@ function museos(name)  {
       </div>
     </div>
     <div class="text">
+      <img src="./assets/img/iconos/miscelaneas-fichas-museos-01.svg" />
       <p>${info[name].texto}</p>
       <div class="button-container">
-        <button onclick="onClose()">VOLVER</button>
+        <button onclick="onClose()"></button>
       </div>
     </div>
   </div>`

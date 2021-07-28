@@ -449,7 +449,7 @@ span {
   width: calc(100% - 300px);
   display: flex;
   flex-direction: column;
-  background-color: #e4e4e4;
+  background-color: #efefef;
   justify-content: space-around;
 }
 
@@ -481,6 +481,18 @@ span {
   left: 0;
   margin: 0;
   font-size: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.categoria-museo::before {
+  content: '';
+  background: url(./assets/img/iconos/fichas_general.svg);
+  width: 25px;
+  height: 25px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .imagen-container {
@@ -566,12 +578,18 @@ span {
   margin: 0 auto;
 }
 
+.text img {
+  width: 12px;
+  align-self: flex-start;
+  margin-right: 15px;
+}
+
 .text p {
   text-align: justify;
-  width: 520px;
+  width: 570px;
   font-family: Roboto;
   font-size: 12px;
-  margin-bottom: 60px;
+  margin: 0 0 60px;
 }
 
 .button-container {
@@ -580,13 +598,18 @@ span {
 }
 
 .button-container button {
-  background-color: #e4e4e4;
   margin: 0;
   position: absolute;
   bottom: 0;
   right: 0;
   margin-bottom: 20px;
   margin-right: 20px;
+  background-image: url(./assets/img/iconos/boton-volver-museos.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 107px;
+  height: 34px;
 }
 
 @media(max-width: 1400px) {
