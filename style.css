@@ -81,10 +81,19 @@ span {
 }
 
 .body {
-  margin-top: 120px;
+  margin-top: 75px;
   font-family: 'Work Sans', sans-serif;
   font-weight: 500;
   font-size: 15px;
+  overflow-y: scroll;
+  max-height: calc(100vh - 200px);
+  height: 100%;
+}
+
+@media(max-width: 1440px) {
+  .body {
+    max-height: 390px;
+  }
 }
 
 .open {
@@ -230,7 +239,7 @@ span {
   flex-direction: column;
   color: white;
   position: absolute;
-  bottom: 50px;
+  bottom: 20px;
   width: 100%;
 }
 

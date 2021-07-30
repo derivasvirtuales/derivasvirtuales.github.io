@@ -1,3 +1,5 @@
+let canMoveMouse = true;
+
 const info = {
   'IslaFlotante': {
     categoria: 'Contemporáneo',
@@ -473,9 +475,106 @@ let edificios = [
     nombre: 'PisoMapa',
     isVisible: true,
     mouseInteractionAllowed: true,
-    tipo: 'tradicionales'
+    tipo: ''
   }
 ]
 
-let canMoveMouse = true;
+let obras = [
+  {
+    url: './assets/models/PisoMapa.gltf',
+    nombre: 'PisoMapa',
+    isVisible: true,
+    mouseInteractionAllowed: true,
+    tipo: 'Flâneur'
+  },
+  {
+    url: './assets/models/PisoMapa.gltf',
+    nombre: 'PisoMapa',
+    isVisible: true,
+    mouseInteractionAllowed: true,
+    tipo: 'Prácticas_de_archivo'
+  },
+  {
+    url: './assets/models/PisoMapa.gltf',
+    nombre: 'PisoMapa',
+    isVisible: true,
+    mouseInteractionAllowed: true,
+    tipo: 'múltiples'
+  },
+  {
+    url: './assets/models/PisoMapa.gltf',
+    nombre: 'PisoMapa',
+    isVisible: true,
+    mouseInteractionAllowed: true,
+    tipo: 'Poéticas_tecnológicas'
+  },
+  {
+    url: './assets/models/PisoMapa.gltf',
+    nombre: 'PisoMapa',
+    isVisible: true,
+    mouseInteractionAllowed: true,
+    tipo: 'Expografías'
+  },
+  {
+    url: './assets/models/PisoMapa.gltf',
+    nombre: 'PisoMapa',
+    isVisible: true,
+    mouseInteractionAllowed: true,
+    tipo: 'Instalaciones'
+  },
+  {
+    url: './assets/models/PisoMapa.gltf',
+    nombre: 'PisoMapa',
+    isVisible: true,
+    mouseInteractionAllowed: true,
+    tipo: 'Autorretratos'
+  }
+]
+
+let recorridos = [
+  {
+    url: './assets/models/PisoMapa.gltf',
+    nombre: 'PisoMapa',
+    isVisible: true,
+    mouseInteractionAllowed: true,
+    tipo: 'Retiro'
+  },
+  {
+    url: './assets/models/PisoMapa.gltf',
+    nombre: 'PisoMapa',
+    isVisible: true,
+    mouseInteractionAllowed: true,
+    tipo: 'Microcentro'
+  },
+  {
+    url: './assets/models/PisoMapa.gltf',
+    nombre: 'PisoMapa',
+    isVisible: true,
+    mouseInteractionAllowed: true,
+    tipo: 'Puerto_Madero'
+  },
+  {
+    url: './assets/models/PisoMapa.gltf',
+    nombre: 'PisoMapa',
+    isVisible: true,
+    mouseInteractionAllowed: true,
+    tipo: 'La_Boca'
+  },
+  {
+    url: './assets/models/PisoMapa.gltf',
+    nombre: 'PisoMapa',
+    isVisible: true,
+    mouseInteractionAllowed: true,
+    tipo: 'Constitución'
+  },
+  {
+    url: './assets/models/PisoMapa.gltf',
+    nombre: 'PisoMapa',
+    isVisible: true,
+    mouseInteractionAllowed: true,
+    tipo: 'San_Telmo'
+  }
+]
+
+
 
