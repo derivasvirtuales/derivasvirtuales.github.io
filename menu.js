@@ -255,10 +255,8 @@ function openMenu() {
 function handleSubMenu(menuNombre) {
   const menu = document.getElementById(menuNombre);
   const otherMenus = document.getElementsByTagName('ul');
-  console.log(menuNombre);
   for (let item of otherMenus) {
     if(item.id !== menuNombre) {
-      console.log(item.id, menuNombre);
       item.classList.add('close-menu');
     }
   }
