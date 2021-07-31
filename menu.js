@@ -180,12 +180,12 @@ function createMenu() {
     </div>
     <div class="body">
       <div class="recorridos">
-        <div class="submenu-header">
+        <div class="submenu-header" onclick="handleSubMenu('recorridos')">
           <div>
             <div class="recorridos-line line-top"></div>
             <p class="submenu-title title-recorridos">RECORRIDOS URBANOS</p>
           </div>
-          <img src="./assets/img/iconos/desplegable-verde.svg" onclick="handleSubMenu('recorridos')"/>
+          <img src="./assets/img/iconos/desplegable-verde.svg"/>
         </div>
         <ul class="list-menu close-menu" id="recorridos">
           ${listRecorridos.map(item => `
@@ -195,12 +195,12 @@ function createMenu() {
         </ul>
       </div>
       <div class="espacios margin-menu">
-        <div class="submenu-header">
+        <div class="submenu-header" onclick="handleSubMenu('espacios')">
           <div>
             <div class="espacios-line line-top"></div>
             <p class="submenu-title title-espacios">ESPACIOS DE ARTE</p>
           </div>
-          <img src="./assets/img/iconos/desplegable-amarillo.svg" onclick="handleSubMenu('espacios')"/>
+          <img src="./assets/img/iconos/desplegable-amarillo.svg"/>
         </div>
         <ul class="list-menu close-menu" id="espacios">
           ${listEspacios.map(item => `
@@ -210,12 +210,12 @@ function createMenu() {
         </ul>
       </div>
       <div class="obras margin-menu">
-        <div class="submenu-header">
+        <div class="submenu-header" onclick="handleSubMenu('obras')">
           <div>
             <div class="obras-line line-top"></div>
             <p class="submenu-title title-obras">OBRAS Y EXPOSICIONES</p>
           </div>
-          <img src="./assets/img/iconos/desplegable-rosa.svg" onclick="handleSubMenu('obras')"/>
+          <img src="./assets/img/iconos/desplegable-rosa.svg"/>
         </div>
         <ul id="obras" class="list-menu close-menu">
           ${listObras.map(item => `
@@ -254,6 +254,14 @@ function openMenu() {
 
 function handleSubMenu(menuNombre) {
   const menu = document.getElementById(menuNombre);
+  const otherMenus = document.getElementsByTagName('ul');
+  console.log(menuNombre);
+  for (let item of otherMenus) {
+    if(item.id !== menuNombre) {
+      console.log(item.id, menuNombre);
+      item.classList.add('close-menu');
+    }
+  }
   const hasClose = menu.classList.contains('close-menu');
   if(hasClose) {
     menu.classList.remove('close-menu');
@@ -267,7 +275,6 @@ function onSwitch(type, color) {
   const targetEspacios = listEspacios.find(item => item.type === type);
   const targetObras = listObras.find(item => item.type === type);
   const targetRecorridos = listRecorridos.find(item => item.type === type);
-  console.log(targetRecorridos);
   if(targetEspacios) targetEspacios.visible = !targetEspacios.visible;
   if(targetObras) targetObras.visible = !targetObras.visible;
   if(targetRecorridos) targetRecorridos.visible = !targetRecorridos.visible;
