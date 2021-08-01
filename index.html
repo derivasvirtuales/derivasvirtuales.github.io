@@ -42,8 +42,8 @@
       function init() {
         createMenu();
         scene = new THREE.Scene();
-        scene.background = new THREE.Color( 0xcccccc );
-        scene.fog = new THREE.FogExp2( 0xcccccc, 0.003 );
+        scene.background = new THREE.Color( 0x4d4d4d );
+        scene.fog = new THREE.FogExp2( 0x4d4d4d, 0.003 );
 
         renderer = new THREE.WebGLRenderer( { antialias: true } );
         renderer.shadowMap.enabled = true;
@@ -58,7 +58,7 @@
         controls.enableDamping = true;
         controls.dampingFactor = 0.075;
         controls.screenSpacePanning = false;
-        controls.minDistance = 50;
+        controls.minDistance = 150;
         controls.maxDistance = 300;
         controls.maxPolarAngle = Math.PI / 4;
         controls.minPolarAngle = Math.PI / 4;
