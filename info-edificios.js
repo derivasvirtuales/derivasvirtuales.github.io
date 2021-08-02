@@ -481,7 +481,7 @@ let edificios = [
     url: './assets/models/EdificiosRelleno.gltf',
     nombre: 'EdificiosRelleno',
     isVisible: true,
-    mouseInteractionAllowed: false,
+    mouseInteractionAllowed: true,
     tipo: ''
   }
 ]
