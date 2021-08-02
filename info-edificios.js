@@ -476,6 +476,13 @@ let edificios = [
     isVisible: true,
     mouseInteractionAllowed: true,
     tipo: ''
+  },
+  {
+    url: './assets/models/EdificiosRelleno.gltf',
+    nombre: 'EdificiosRelleno',
+    isVisible: true,
+    mouseInteractionAllowed: false,
+    tipo: ''
   }
 ]
 
