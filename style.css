@@ -26,8 +26,7 @@ body {
 }
 
 .titulo-menu {
-  margin: 2px 0 0;
-  font-size: 30px;
+  width: 56%;
 }
 
 .subtitulo-menu {
@@ -88,6 +87,10 @@ span {
   overflow-y: scroll;
   max-height: calc(100vh - 200px);
   height: 100%;
+}
+
+.body::-webkit-scrollbar {
+  width: 0;
 }
 
 @media(max-width: 1440px) {
@@ -254,6 +257,8 @@ span {
   width: 87%;
   margin: 15px auto;
   font-size: 15px;
+  text-decoration: none;
+  color: white;
 }
 
 /* RECORRIDOS URBANOS*/

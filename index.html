@@ -9,14 +9,13 @@
     <script src="https://kit.fontawesome.com/9ae7ac6274.js" crossorigin="anonymous"></script>
     <meta charset="utf-8" />
     <meta name=”theme-color” content=”#000000“/>
-    <title>Cartografías Virtuales</title>
+    <title>Derivas Virtuales</title>
   </head>
   <body>
     <div class="titulo">
       <button id="menu" class="button-menu" onclick="openMenu()">&#9776;</button>
       <div>
-        <h1 class="titulo-menu">CARTOGRAFÍAS VIRTUALES</h1>
-        <h2 class="subtitulo-menu">MUSEOS Y CIUDAD</h2>
+        <img src="./assets/img/Logo-final-05.svg" class="titulo-menu" />
       </div>
     </div>
     <div id="menu-container"></div>
@@ -115,18 +114,19 @@
         mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
         raycaster.setFromCamera( mouse, camera );    
         let intersects = raycaster.intersectObjects( scene.children, true );
-        intersects = intersects.filter(item => item.object.name !== 'Cubo');
+        intersects = intersects.filter(item => item.object.name !== 'Plano' || item.object.name !== 'modeloCiudadRelleno001');
         if(intersects.length > 0) {
           for (var i = 0; i < intersects.length; i++) {
             const object = intersects[i].object;
             const edificio = edificios.find( edificio => edificio.nombre === object.name);
-            if (INTERSECTED === null && object.name !== 'Cubo') {
+            if (INTERSECTED === null && object.name !== 'Plano' || INTERSECTED === null && object.name !== 'modeloCiudadRelleno001') {
               INTERSECTED = object;
-              if(event.type === 'click' && edificio.isVisible) {
+              console.log(edificio, INTERSECTED);
+              if(event.type === 'click' && edificio?.isVisible) {
                 museos(INTERSECTED.name);
                 canMoveMouse = false;
               } else {
-                if(edificio.mouseInteractionAllowed && canMoveMouse && edificio.isVisible) {
+                if(edificio?.mouseInteractionAllowed && canMoveMouse && edificio?.isVisible) {
                   const edificiosNoIntersected = scene.children.filter(item => item.name && item.name !== INTERSECTED.name && item.name !== "PisoMapa");
                   edificiosNoIntersected.forEach(item => {
                     item.children[0].currentHex = item.children[0].material.emissive.getHex();

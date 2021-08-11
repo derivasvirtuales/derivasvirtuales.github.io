@@ -227,7 +227,7 @@ function createMenu() {
     </div>
     <div class="footer">
       <img src="./assets/img/iconos/menu-final.svg"/>
-      <a class="item-link">ACERCA DE CARTOGRAFÍAS</a>
+      <a class="item-link" href="./acercade.html">ACERCA DE DERIVAS VIRTUALES</a>
       <a class="item-link">MAPA DE NAVEGACIÓN</a>
       <a class="item-link">PUBLICACIÓN</a>
     </div>
@@ -306,7 +306,7 @@ function onSwitch(type, color) {
       if(recorrido.tipo === type) {
         if(targetRecorridos.visible) {
           element.src = `./assets/img/iconos/encendido-${color}.svg`;
-          recorrido.isVisible = true;
+          recorrido.isVisible = true; 
         } else {
           element.src = `./assets/img/iconos/apagado.svg`;
           recorrido.isVisible = false;
