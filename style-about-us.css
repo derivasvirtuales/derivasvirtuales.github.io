@@ -8,6 +8,10 @@ header {
   height: 131px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .titulo {
   position: fixed;
   margin: 30px;
@@ -56,7 +60,7 @@ header {
 }
 
 .section-about {
-  max-width: 980px;
+  max-width: 1080px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -95,7 +99,7 @@ header {
 }
 
 .text-ubication {
-  left: 40%;
+  left: 36%;
   z-index: 1;
   top: 0;
   transform: translate(0, 0);
@@ -114,7 +118,7 @@ header {
   margin: 0;
   width: 190px;
   top: -58px;
-  right: 79%;
+  right: 83%;
   height: 190px;
 }
 
@@ -160,7 +164,7 @@ header {
 }
 
 .ac-img {
-  width: 190px;
+  width: 200px;
 }
 
 .apoyo-container {
@@ -171,4 +175,32 @@ header {
 
 .proyecto-container {
   margin-left: 50px;
+}
+
+.apoyo-titulo {
+  margin-bottom: 25px;
+}
+
+footer {
+  margin-top: 85px;
+  margin-bottom: 20px;
+}
+
+.anchor-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.anchor {
+  display: flex;
+}
+
+.anchor img {
+  width: 25px;
+}
+
+.anchor-container p {
+  font: 15px 'Roboto';
+  color: white;
+  margin-left: 10px;
 }
