@@ -65,57 +65,57 @@ const listObras = [
   {
     template: `
       <p>Flâneur</p>
-      <img id="Flâneur" src="./assets/img/iconos/encendido-rosa.svg" />
+      <img id="Flâneur" src="./assets/img/iconos/apagado.svg" />
     `,
-    visible: true,
+    visible: false,
     type: 'Flâneur'
   },
   {
     template: `
       <p>Prácticas de archivo</p>
-      <img id="Prácticas_de_archivo" src="./assets/img/iconos/encendido-rosa.svg" />
+      <img id="Prácticas_de_archivo" src="./assets/img/iconos/apagado.svg" />
     `,
-    visible: true,
+    visible: false,
     type: 'Prácticas_de_archivo'
   },
   {
     template: `
       <p>Libros de artista y múltiples</p>
-      <img id="múltiples" src="./assets/img/iconos/encendido-rosa.svg" />
+      <img id="múltiples" src="./assets/img/iconos/apagado.svg" />
     `,
-    visible: true,
+    visible: false,
     type: 'múltiples'
   },
   {
     template: `
       <p>Poéticas tecnológicas</p>
-      <img id="Poéticas_tecnológicas" src="./assets/img/iconos/encendido-rosa.svg" />
+      <img id="Poéticas_tecnológicas" src="./assets/img/iconos/apagado.svg" />
     `,
-    visible: true,
+    visible: false,
     type: 'Poéticas_tecnológicas'
   },
   {
     template: `
       <p>Expografías creativas</p>
-      <img id="Expografías" src="./assets/img/iconos/encendido-rosa.svg" />
+      <img id="Expografías" src="./assets/img/iconos/apagado.svg" />
     `,
-    visible: true,
+    visible: false,
     type: 'Expografías'
   },
   {
     template: `
       <p>Instalaciones artísticas</p>
-      <img id="Instalaciones" src="./assets/img/iconos/encendido-rosa.svg" />
+      <img id="Instalaciones" src="./assets/img/iconos/apagado.svg" />
     `,
-    visible: true,
+    visible: false,
     type: 'Instalaciones'
   },
   {
     template: `
       <p>Autorretratos</p>
-      <img id="Autorretratos" src="./assets/img/iconos/encendido-rosa.svg" />
+      <img id="Autorretratos" src="./assets/img/iconos/apagado.svg" />
     `,
-    visible: true,
+    visible: false,
     type: 'Autorretratos'
   }
 ]
@@ -124,49 +124,49 @@ const listRecorridos = [
   {
     template: `
       <p>Retiro</p>
-      <img id="Retiro" src="./assets/img/iconos/encendido-verde.svg" />
+      <img id="Retiro" src="./assets/img/iconos/apagado.svg" />
     `,
-    visible: true,
+    visible: false,
     type: 'Retiro'
   },
   {
     template: `
       <p>Microcentro</p>
-      <img id="Microcentro" src="./assets/img/iconos/encendido-verde.svg" />
+      <img id="Microcentro" src="./assets/img/iconos/apagado.svg" />
     `,
-    visible: true,
+    visible: false,
     type: 'Microcentro'
   },
   {
     template: `
       <p>Puerto Madero</p>
-      <img id="Puerto_Madero" src="./assets/img/iconos/encendido-verde.svg" />
+      <img id="Puerto_Madero" src="./assets/img/iconos/apagado.svg" />
     `,
-    visible: true,
+    visible: false,
     type: 'Puerto_Madero'
   },
   {
     template: `
       <p>La Boca</p>
-      <img id="La_Boca" src="./assets/img/iconos/encendido-verde.svg" />
+      <img id="La_Boca" src="./assets/img/iconos/apagado.svg" />
     `,
-    visible: true,
+    visible: false,
     type: 'La_Boca'
   },
   {
     template: `
       <p>Constitución</p>
-      <img id="Constitución" src="./assets/img/iconos/encendido-verde.svg" />
+      <img id="Constitución" src="./assets/img/iconos/apagado.svg" />
     `,
-    visible: true,
+    visible: false,
     type: 'Constitución'
   },
   {
     template: `
       <p>San Telmo</p>
-      <img id="San_Telmo" src="./assets/img/iconos/encendido-verde.svg" />
+      <img id="San_Telmo" src="./assets/img/iconos/apagado.svg" />
     `,
-    visible: true,
+    visible: false,
     type: 'San_Telmo'
   }
 ]
