@@ -90,6 +90,7 @@
         };
 
         const loader = new GLTFLoader();
+
         edificios.forEach(edificio => {
           loader.load( edificio.url, function ( gltf ) {
             const object = gltf.scene;
@@ -102,6 +103,40 @@
             object.castShadow = true;
             object.receiveShadow = false;
             object.name = edificio.nombre;
+            scene.add( object ); 
+          },onProgress, onError );
+        });
+
+        recorridos.forEach(recorrido => {
+          loader.load( recorrido.url, function ( gltf ) {
+            const object = gltf.scene;
+            object.position.x = 0;
+            object.position.y = 0;
+            object.position.z = 0;
+            object.scale.x = 20;
+            object.scale.y = 20;
+            object.scale.z = 20;
+            object.visible = false;
+            object.castShadow = true;
+            object.receiveShadow = false;
+            object.name = recorrido.nombre;
+            scene.add( object ); 
+          },onProgress, onError );
+        });
+
+        obras.forEach(obra => {
+          loader.load( obra.url, function ( gltf ) {
+            const object = gltf.scene;
+            object.position.x = 0;
+            object.position.y = 0;
+            object.position.z = 0;
+            object.scale.x = 20;
+            object.scale.y = 20;
+            object.scale.z = 20;
+            object.visible = false;
+            object.castShadow = true;
+            object.receiveShadow = false;
+            object.name = obra.nombre;
             scene.add( object ); 
           },onProgress, onError );
         });
@@ -119,11 +154,18 @@
           for (var i = 0; i < intersects.length; i++) {
             const object = intersects[i].object;
             const edificio = edificios.find( edificio => edificio.nombre === object.name);
+            const obra = obras.find( obra => obra.nombre === object.name);
+            const recorrido = recorridos.find( recorrido => recorrido.nombre === object.name);
             if (INTERSECTED === null && object.name !== 'Plano' || INTERSECTED === null && object.name !== 'modeloCiudadRelleno001') {
               INTERSECTED = object;
-              console.log(edificio, INTERSECTED);
-              if(event.type === 'click' && edificio?.isVisible) {
-                museos(INTERSECTED.name);
+              if(event.type === 'click' && edificio?.isVisible || event.type === 'click' && obra?.isVisible || event.type === 'click' && recorrido?.isVisible) {
+                if(obra) {
+                  obrasinfo(INTERSECTED.name);
+                } else if(edificio) {
+                  museos(INTERSECTED.name);
+                } else {
+                  recorridosInfo(INTERSECTED.name);
+                }
                 canMoveMouse = false;
               } else {
                 if(edificio?.mouseInteractionAllowed && canMoveMouse && edificio?.isVisible) {
@@ -171,7 +213,7 @@
       function render() {
         filteredBuild.forEach(item => {
           scene.children.forEach(object => {
-            if(object.name === item.nombre) {
+            if(object.name === item?.nombre) {
               object.visible = item.isVisible;
             }
           })

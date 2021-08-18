@@ -218,3 +218,37 @@ footer {
   color: white;
   margin-left: 10px;
 }
+
+.section-nav {
+  height: 100vh;
+}
+
+#footer-nav {
+  max-width: 1080px;
+  margin: 85px auto 20px;
+}
+
+#body-nav {
+  background-image: url('./assets/img/mapa-de-navegacion-fondo.png');
+  background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.text-ubication-nav h1 {
+  font: 60px 'Bebas Neue';
+  color: white;
+  margin: 0;
+}
+
+.text-ubication-nav p {
+  font: 12px 'Roboto';
+  color: white;
+  font-weight: bold;
+  width: 390px;
+}
+
+#header-nav {
+  width: 100%;
+  height: 75px;
+}

@@ -123,11 +123,19 @@ const listObras = [
 const listRecorridos = [
   {
     template: `
-      <p>Retiro</p>
-      <img id="Retiro" src="./assets/img/iconos/apagado.svg" />
+      <p>Constitución</p>
+      <img id="Constitucion" src="./assets/img/iconos/apagado.svg" />
     `,
     visible: false,
-    type: 'Retiro'
+    type: 'Constitucion'
+  },
+  {
+    template: `
+      <p>La Boca</p>
+      <img id="LaBoca" src="./assets/img/iconos/apagado.svg" />
+    `,
+    visible: false,
+    type: 'LaBoca'
   },
   {
     template: `
@@ -140,34 +148,26 @@ const listRecorridos = [
   {
     template: `
       <p>Puerto Madero</p>
-      <img id="Puerto_Madero" src="./assets/img/iconos/apagado.svg" />
+      <img id="PuertoMadero" src="./assets/img/iconos/apagado.svg" />
     `,
     visible: false,
-    type: 'Puerto_Madero'
+    type: 'PuertoMadero'
   },
   {
     template: `
-      <p>La Boca</p>
-      <img id="La_Boca" src="./assets/img/iconos/apagado.svg" />
+      <p>Retiro</p>
+      <img id="Retiro" src="./assets/img/iconos/apagado.svg" />
     `,
     visible: false,
-    type: 'La_Boca'
-  },
-  {
-    template: `
-      <p>Constitución</p>
-      <img id="Constitución" src="./assets/img/iconos/apagado.svg" />
-    `,
-    visible: false,
-    type: 'Constitución'
+    type: 'Retiro'
   },
   {
     template: `
       <p>San Telmo</p>
-      <img id="San_Telmo" src="./assets/img/iconos/apagado.svg" />
+      <img id="SanTelmo" src="./assets/img/iconos/apagado.svg" />
     `,
     visible: false,
-    type: 'San_Telmo'
+    type: 'SanTelmo'
   }
 ]
 
@@ -228,7 +228,7 @@ function createMenu() {
     <div class="footer">
       <img src="./assets/img/iconos/menu-final.svg"/>
       <a class="item-link" href="./acercade.html">ACERCA DE DERIVAS VIRTUALES</a>
-      <a class="item-link">MAPA DE NAVEGACIÓN</a>
+      <a class="item-link" href="./navegacion.html">MAPA DE NAVEGACIÓN</a>
       <a class="item-link">PUBLICACIÓN</a>
     </div>
   `;
@@ -269,6 +269,7 @@ function handleSubMenu(menuNombre) {
 }
 
 function onSwitch(type, color) {
+  console.log(type);
   const element = document.getElementById(type);
   const targetEspacios = listEspacios.find(item => item.type === type);
   const targetObras = listObras.find(item => item.type === type);
@@ -290,19 +291,20 @@ function onSwitch(type, color) {
       return build;
     });
   } else if(color === 'rosa') {
-    obras.forEach(obra => {
+    filteredBuild = obras.map(obra => {
       if(obra.tipo === type) {
         if(targetObras.visible) {
           element.src = `./assets/img/iconos/encendido-${color}.svg`;
-          obra.isVisible = true;
+          obra.isVisible = true; 
         } else {
           element.src = `./assets/img/iconos/apagado.svg`;
           obra.isVisible = false;
         }
       }
-    });
+      return obra;
+    })
   } else {
-    recorridos.forEach(recorrido => {
+    filteredBuild = recorridos.map(recorrido => {
       if(recorrido.tipo === type) {
         if(targetRecorridos.visible) {
           element.src = `./assets/img/iconos/encendido-${color}.svg`;
@@ -312,6 +314,7 @@ function onSwitch(type, color) {
           recorrido.isVisible = false;
         }
       }
-    });
+      return recorrido;
+    })
   }
 }

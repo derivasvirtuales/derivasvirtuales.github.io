@@ -467,6 +467,10 @@ span {
   justify-content: space-around;
 }
 
+.recorridos {
+  flex-direction: row;
+}
+
 .info {
   display: flex;
   align-items: flex-end;
@@ -514,6 +518,12 @@ span {
   height: 415px;
   display: flex;
   flex-direction: column;
+}
+
+.imagen-recorridos {
+  width: 413px;
+  height: 600px;
+  margin: 40px;
 }
 
 .imagen-museo {
@@ -592,10 +602,21 @@ span {
   margin: 0 auto;
 }
 
+.text-recorridos {
+  width: 100%;
+  position: relative;
+}
+
 .text img {
   width: 12px;
   align-self: flex-start;
   margin-right: 15px;
+}
+
+.text-obras img {
+  width: 25px;
+  align-self: flex-start;
+  margin-right: 10px;
 }
 
 .text p {
@@ -609,6 +630,13 @@ span {
 .button-container {
   width: 35%;
   text-align: center;
+}
+
+.button-container-recorridos {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 45px;
 }
 
 .button-container button {
@@ -626,6 +654,90 @@ span {
   height: 34px;
 }
 
-@media(max-width: 1400px) {
+.button-obras button {
+  background-image: url(./assets/img/iconos/boton-volver-obras.svg);
+}
 
+.button-container-recorridos button {
+  background-image: url(./assets/img/iconos/boton-volver-recorridos.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 100px;
+  height: 35px;
+}
+
+.autor-obra {
+  margin-bottom: 8px;
+  color: white;
+  background-color: black;
+  width: fit-content;
+  padding: 6px;
+  font: 10px 'Bebas Neue';
+  font-weight: bold;
+}
+
+.titulo-obras {
+  font-size: 30px;
+  color: #D486B3;
+  margin: 0;
+}
+
+.tipo-obra {
+  margin: 6px 0 0;
+  padding-bottom: 6px;
+  font: 10px 'Roboto';
+  font-weight: bold;
+  border-bottom: 2px solid #D486B3;
+  width: fit-content;
+}
+
+.caracteristicas {
+  font: 8px 'Roboto';
+  margin: 3px 0;
+}
+
+.exposicion {
+  margin-top: 10px;
+}
+
+.museo {
+  font-weight: bold;
+}
+
+.text-container-recorridos {
+  display: flex;
+  align-items: flex-start;
+  width: 350px;
+  text-align: justify;
+}
+
+.text-container-recorridos img {
+  width: 8%;
+}
+
+.text-container-recorridos p {
+  margin: 0;
+  font: 12px 'Roboto';
+}
+
+.info-recorridos {
+  height: auto;
+}
+
+.text-recorridos-center {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+.container-titulo-recorridos {
+  width: 350px;
+  margin-left: 28px;
+  margin-bottom: 20px;
+}
+
+.container-titulo-recorridos h3 {
+  color: #30DDB0;
 }
