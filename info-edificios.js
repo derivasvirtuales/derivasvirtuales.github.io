@@ -1544,7 +1544,7 @@ let obras = [
 const infoRecorridos = {
   'MarcadoConstitucion': {
     subCategoria: 'Constitución',
-    zona: 'Arte Cinema',
+    zona: 'Arte Cinema – Estación Constitución – Canal 13',
     texto: 'Zona híbrida y de conflicto en que conviven grupos de distintos sectores sociales y geográficos. Es uno de los lugares más concurridos de la ciudad, ya que contiene la estación Constitución, que funciona como epicentro de la comunicación ferrocarril entre el Gran Buenos Aires y CABA. La densidad de su población, el déficit habitacional y el abandono de la gestión porteña han potenciado el carácter anárquico y caótico. Testigo de una época de gran desarrollo comercial e industrial (que se refleja en el edificio que ocupa la Facultad de Ciencias Sociales de la UBA, antes una fábrica de galletitas), a lo largo de 150 años, el barrio ha ido acumulando arquitecturas disímiles y estilos dispares. Un hecho clave del destino de Constitución fue la construcción, durante la dictadura cívico-militar, de las autopistas 25 de Mayo y la 9 de Julio Sur, que han mutilado el tejido urbano y social del barrio. Frente a la autopista, encontramos la manzana de Canal 13, medio masivo marcado por hechos sociales y políticos. Atravesando la plaza Constitución, sobre la calle Salta, se encuentra la sala Arte Cinema (abierta en 2009 y gestionada por el INCAA), que se erige en un edificio donde funcionó el Teatro Variedades.',
     imagen: {
       src: './assets/img/Recorridos/Recorridos_constitucion.jpg',
@@ -1553,7 +1553,7 @@ const infoRecorridos = {
   },
   'MarcadorLaBoca': {
     subCategoria: 'La Boca',
-    zona: 'Museo del Cine',
+    zona: 'Museo del Cine – Puente Transbordador – Caminito – Museo Quinquela',
     texto: 'Barrio turístico que se presenta como un signo de «lo porteño». A finales de los noventa, la zona se renovó con la intención de mejorar la ribera y se tomaron medidas estatales para incrementar el turismo cultural. Desde ese momento, aconteció un proceso de gentrificación —que se suele emplear en las ciudades contemporáneas—, que implica expulsar a la gente local para crear proyectos inmobiliarios rentables. Dentro de este contexto, se generó la Milla Cultural del Sur: una iniciativa estatal que traza un recorrido por museos instalados en el sur de la Capital Federal (y que incluye los barrios de La Boca, Puerto Madero y San Telmo). Aparecen hitos como el Puente Transbordador Nicolás Avellaneda, sobre el Riachuelo, un símbolo del barrio; el Museo Quinquela Martín, un espacio público que se mimetiza completamente con el entorno; Fundación Proa, una iniciativa privada que surge con la renovación del barrio; y galerías como Munar y la Usina del Arte, que componen el circuito artístico.',
     imagen: {
       src: './assets/img/Recorridos/Recorridos_la_boca.jpg',
@@ -1562,7 +1562,7 @@ const infoRecorridos = {
   },
   'MarcadoMicrocentro': {
     subCategoria: 'Microcentro',
-    zona: 'Plaza de Mayo',
+    zona: 'Plaza de Mayo – Catedral – Casa Rosada – Ministerio de Defensa – Cabildo',
     texto: 'Esta zona constituye el área fundacional de la Ciudad de Buenos Aires, caracterizada por la concentración de edificios administrativos públicos y de oficinas alrededor del centro histórico de la Plaza de Mayo. Inmersa en múltiples estímulos visuales y sonoros, en ella conviven variadas capas de información: la Catedral Metropolitana, la Casa Rosada y el Museo Casa Rosada (ex Museo del Bicentenario en la Aduana Taylor), el Banco Nación, la AFIP, las manifestaciones —y las históricas rondas de las Madres— alrededor de la Pirámide de Mayo, los excombatientes de Malvinas. Todos interactúan en el mismo nivel geográfico de la ciudad. Este territorio concentra aspectos históricos, sociales, políticos y económicos que definen al conjunto de estos espacios y evidencian las transformaciones en la concentración y distribución de la riqueza y el poder a lo largo de los últimos siglos. Cada uno de estos lugares es depositario de una cantidad de significaciones imaginarias que hacen a la identidad del ámbito urbano y ponen de manifiesto la capacidad receptiva y aglomerante de estos espacios como zonas de intercambio social.',
     imagen: {
       src: './assets/img/Recorridos/Recorridos_microcentro.jpg',
@@ -1571,7 +1571,7 @@ const infoRecorridos = {
   },
   'MarcadorPuertoMadero': {
     subCategoria: 'Puerto Madero',
-    zona: 'Faena Art Center',
+    zona: 'Servicio de Seguridad / Centro de Monitoreo – Faena Art Center – Torre YPF',
     texto: 'Se presenta como una ciudad diseñada dentro de la gran ciudad. Como un espacio de ocio y consumo. Es un «no lugar» por excelencia, ya que no permite realizar una lectura simbólica e histórica: desaparece la geografía urbana y se borra la memoria y su pasado portuario. Se trata de un espacio de poder diseñado que busca construir una imagen corporativa que repercute en el espacio arquitectónico. En este sistema, se apela a la repetición de los materiales, a la regularidad y el ordenamiento. En ese sentido, la identidad e historia del barrio están construidas en torno a determinados actores sociales: museos (Colección de Arte Amalia Lacroze de Fortabat), hoteles (Faena Hotel), universidades (UCA), bancos (Galicia, Itaú, entre otros), restaurantes y lugares de ocio. A su vez, exhibe una tipología urbana y un modelo de ciudad en que el orden y la seguridad se exponen como un valor, hecho que se refleja en el Sistema Integral de Seguridad: un espacio destinado al monitoreo que recibe y graba en directo todo lo que sucede en esa parte de la ciudad. ',
     imagen: {
       src: './assets/img/Recorridos/Recorridos_puerto_madero.jpg',
@@ -1580,7 +1580,7 @@ const infoRecorridos = {
   },
   'MarcadorSanTelmo': {
     subCategoria: 'San Telmo',
-    zona: 'Parroquia San Telmo',
+    zona: 'Parroquia San Telmo – Plaza Dorrego – Paseo de la Memoria – Confederación General del Trabajo – CCEBA',
     texto: 'Barrio de importante valor histórico. En la actualidad se ve impregnado de espacios destinados exclusivamente al turismo que fueron transformando la identidad del espacio. Este hecho, fruto de procesos de gentrificación, impacta sobre San Telmo en una conversión orientada al marketing turístico. Algunos edificios ubicados sobre la calle Balcarce, que han contribuido a la construcción del barrio y de sus habitantes, fueron modificados para suplir una función administrativa que despoja por completo el sentido original. Dentro de esta zona, se destaca el «Paseo de la Memoria» del ex Club Atlético de San Telmo, que, desde 2014, fue declarado Lugar Histórico Nacional, luego de ser reconocido como un antiguo centro de detención y tortura en el año 1977. Este sitio hoy se encuentra completamente deteriorado ante las transformaciones urbanas que lo han atravesado y que implican problemas directos tanto en su preservación como en su mantenimiento.',
     imagen: {
       src: './assets/img/Recorridos/Recorridos_san_telmo.jpg',
@@ -1589,7 +1589,7 @@ const infoRecorridos = {
   },
   'MarcadoRetiro': {
     subCategoria: 'Retiro',
-    zona: 'Galerías Pacífico',
+    zona: 'Galerías Pacífico – Monumento Caídos en Malvinas – Peatonal Florida – Fundación Klemm – Plaza General San Martín',
     texto: 'Incluye varios hitos urbanos heterogéneos en tiempo, historia y concepto. El Monumento (Cenotafio) a los Caídos en Malvinas, situado en la Plaza General San Martín, es un espacio de memoria que se constituye como monumento conmemorativo; un espacio cerrado y estático que no habilita la interacción con el público, sino que se propone como pura contemplación. Está emplazado en una zona de gran tráfico urbano, ubicado frente a la Torre de los Ingleses. Se trata de un territorio conflictivo, modificado a lo largo de los años, donde conviven diversas instituciones, empresas y arquitecturas (desde el Kavanagh, el Hotel Sheraton y el Plaza Hotel, en la zona Catalinas Norte, hasta el Círculo Militar y el Ministerio de Relaciones Exteriores). Continuando por la emblemática peatonal Florida —que supo ser un epicentro comercial porteño con numerosos cines—, encontramos sitios como la Fundación Klemm (basada en la colección privada de Federico Klemm); el shopping Galerías Pacífico, con su gran cúpula pintada por Spilimbergo, Berni, Castagnino, Urruchúa y Colmeiro (edificio que fue utilizado como ex centro de detención clandestino durante la dictadura militar); y, en la intersección de avenida Córdoba y Florida, el Centro Naval que data de 1882.',
     imagen: {
       src: './assets/img/Recorridos/Recorridos_retiro.jpg',

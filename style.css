@@ -463,7 +463,7 @@ span {
   width: calc(100% - 300px);
   display: flex;
   flex-direction: column;
-  background-color: #efefef;
+  background-color: #ffffff;
   justify-content: space-around;
 }
 
@@ -490,6 +490,10 @@ span {
   position: relative;
 }
 
+.info-text-obras {
+  margin-left: 11px;
+}
+
 .categoria-museo {
   font-family: 'Roboto';
   align-self: flex-start;
@@ -514,8 +518,8 @@ span {
 }
 
 .imagen-container {
-  width: 65%;
-  height: 415px;
+  width: 500px;
+  height: 400px;
   display: flex;
   flex-direction: column;
 }
@@ -607,16 +611,10 @@ span {
   position: relative;
 }
 
-.text img {
+.image-text-museos {
   width: 12px;
   align-self: flex-start;
   margin-right: 15px;
-}
-
-.text-obras img {
-  width: 25px;
-  align-self: flex-start;
-  margin-right: 10px;
 }
 
 .text p {
@@ -652,6 +650,7 @@ span {
   background-size: contain;
   width: 107px;
   height: 34px;
+  background-color: white;
 }
 
 .button-obras button {
@@ -666,6 +665,11 @@ span {
   width: 100px;
   height: 35px;
 }
+
+.button-recorridos button {
+  background-image: url(./assets/img/iconos/button-recorridos.svg);
+}
+
 
 .autor-obra {
   margin-bottom: 8px;
@@ -738,6 +742,47 @@ span {
   margin-bottom: 20px;
 }
 
-.container-titulo-recorridos h3 {
-  color: #30DDB0;
+.titulo-recorridos {
+  color: #FDCA48;
+  margin-bottom: 0;
+  margin-left: 35px;
+  font-size: 43px;
+}
+
+.image-text-obras {
+  width: 25px;
+  align-self: flex-start;
+  margin-right: 5px;
+}
+
+.container-info-recorridos {
+  display: flex;
+}
+
+.container-info-recorridos img {
+  width: 20%;
+}
+
+.tipo-recorrido {
+  font-weight: 100;
+  border: 0;
+  font: 10px 'Roboto';
+}
+
+.image-text-recorridos {
+  width: 13px;
+  height: 100%;
+  align-self: flex-start;
+  margin-right: 5px;
+  margin-top: -5px;
+}
+
+.imagen-texto-container-rec {
+  height: fit-content;
+  display: flex;
+  margin: 0 0 60px;
+}
+
+.imagen-texto-container-rec p {
+  margin: 0;
 }
