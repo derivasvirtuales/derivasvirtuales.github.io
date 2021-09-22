@@ -1,6 +1,7 @@
 let filteredBuild = [];
 let visible = true;
 let type = '';
+let setCamera = false;
 
 const listEspacios = [
   {
@@ -229,7 +230,7 @@ function createMenu() {
       <img src="./assets/img/iconos/menu-final.svg"/>
       <a class="item-link" href="./acercade.html">ACERCA DE DERIVAS VIRTUALES</a>
       <a class="item-link" href="./navegacion.html">MAPA DE NAVEGACIÓN</a>
-      <a class="item-link">PUBLICACIÓN</a>
+      <a class="item-link" href="https://drive.google.com/file/d/1QnO-wGAJE5Ypdm3wzGbDxyMZue0J71Qx/view" >PUBLICACIÓN</a>
     </div>
   `;
 }
@@ -242,6 +243,14 @@ function closeMenu() {
     container.classList.remove('open');
     container.classList.add('close');
   }
+}
+
+function centrarMapa() {
+  setCamera = true;
+}
+
+function closePopUp() {
+  document.getElementById('popUp').remove();
 }
 
 function openMenu() {
@@ -269,7 +278,6 @@ function handleSubMenu(menuNombre) {
 }
 
 function onSwitch(type, color) {
-  console.log(type);
   const element = document.getElementById(type);
   const targetEspacios = listEspacios.find(item => item.type === type);
   const targetObras = listObras.find(item => item.type === type);

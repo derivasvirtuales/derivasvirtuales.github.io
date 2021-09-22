@@ -19,6 +19,7 @@
       </div>
     </div>
     <div id="menu-container"></div>
+    <div class="pop-up-home" onclick="closePopUp()" id="popUp"><img src="./assets/img/pop-up home.jpg"/></div>
     <script src="index.js"></script>
     <script src="menu.js"></script>
     <script src="info-edificios.js"></script>
@@ -40,6 +41,7 @@
 
       function init() {
         createMenu();
+
         scene = new THREE.Scene();
         scene.background = new THREE.Color( 0x000000 );
         scene.fog = new THREE.FogExp2( 0x000000, 0.003 );
@@ -81,7 +83,6 @@
         const onProgress = function ( xhr ) {
           if ( xhr.lengthComputable ) {
             const percentComplete = xhr.loaded / xhr.total * 100;
-            // aqui debo hacer un loder.
           }
         };
 
@@ -211,6 +212,13 @@
       }
 
       function render() {
+        if(setCamera) {
+          camera.position.z = 200;
+          camera.position.y = 100;
+          camera.position.x = 0;
+          setCamera = false;
+        }
+        
         filteredBuild.forEach(item => {
           scene.children.forEach(object => {
             if(object.name === item?.nombre) {
@@ -221,5 +229,9 @@
         renderer.render( scene, camera );
       }
     </script>
+    <div class="iconos-pagina-inicio">
+      <img src="./assets/img/iconos/boton_info.svg" class="boton-info-click" onclick="centrarMapa()"/>
+      <img src="./assets/img/iconos/centrar-mapa-01.svg" class="boton-centrar" />
+    </div>
   </body>
 </html>

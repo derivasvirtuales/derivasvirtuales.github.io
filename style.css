@@ -786,3 +786,145 @@ span {
 .imagen-texto-container-rec p {
   margin: 0;
 }
+
+.iconos-pagina-inicio {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  width: 70px;
+}
+
+.iconos-pagina-inicio img {
+  cursor: pointer;
+}
+
+.boton-info-click {
+  width: 23px;
+  height: 23px;
+  margin-right: 18px;
+}
+
+.boton-centrar {
+  width: 23px;
+  height: 23px;
+}
+
+.info-vertical {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-vertical .text-container {
+  display: flex;
+  flex-direction: column;
+  margin: 21px;
+}
+
+.info-vertical .image-button-container {
+  margin: 21px;
+  position: relative;
+}
+
+.info-vertical .text-container .title {
+  width: 326px;
+  margin-bottom: 61px;
+}
+
+.info-vertical .text-container .text-ver {
+  width: 440px;
+  margin-bottom: 40px;
+}
+
+.imagen-texto-container-ver {
+  display: flex;
+}
+
+.imagen-texto-container-ver p {
+  margin: 0;
+  text-align: justify;
+  font: 12px 'Roboto';
+}
+
+.info-vertical .image-container {
+  width: 332px;
+  height: 465px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.container-info-recorridos-ver {
+  display: flex;
+}
+
+.container-info-recorridos-ver img {
+  width: 9%;
+}
+
+.button-container-ver {
+  text-align: end;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.button-container-ver button {
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100px;
+  height: 35px;
+  background-color: white;
+}
+
+.button-container-ver-recorridos button {
+  background-image: url(./assets/img/iconos/button-recorridos.svg);
+}
+
+.button-container-ver-obras button {
+  background-image: url(./assets/img/iconos/boton-volver-obras.svg);
+}
+
+.categoria-museo-ver {
+  position: relative;
+  margin-bottom: 130px;
+}
+
+.titulo-obras-ver {
+  margin: 0 0 0 35px;
+  font-size: 30px;
+  color: #D486B3;
+}
+
+.tipo-obra-ver {
+  margin-left: 35px;
+}
+
+.tipo-obra-info {
+  margin-left: 35px;
+}
+
+.programa-container-ver {
+  margin-left: 35px;
+}
+
+.categoria-recorrido {
+  top: 22px;
+  left: 22px;
+}
+
+.pop-up-home {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  background-color: #060606e0;
+  display: flex;
+  z-index: 3;
+  align-items: center;
+}
+
+.pop-up-home img {
+  display: block;
+  margin: 0 auto;
+}

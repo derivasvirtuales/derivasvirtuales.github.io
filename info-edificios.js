@@ -2,51 +2,33 @@ let canMoveMouse = true;
 
 const info = {
   'IslaFlotante': {
-    categoria: 'Contemporáneo',
+    categoria: 'Fundaciones y Galerías',
     nombre: 'Isla Flotante',
     lugar: {
       barrio: 'Barrio',
-      ubicacion: 'Palermo'
+      ubicacion: 'La Boca'
     },
     imagen: {
       src: "./assets/img/museos/isla-flotante.jpg",
       autor: `Mariel Szlifman`
     },
-    texto: `Se sitúa en el edificio que funcionó como Pabellón de Armas y Aviación, y 
-    luego como Escuela de Guerra Naval, dentro del predio de la Ex-Esma. La ESMA fue 
-    uno de los centros de detención, tortura y exterminio más importantes que implementó 
-    la última dictadura <i>cívico militar</i> en la Argentina entre 1976 y 1983. En este espacio, 
-    se realizan diversas actividades culturales en torno a la historia, la memoria, 
-    los derechos humanos y el arte para resignificar este lugar marcado por el terrorismo de 
-    estado. El CCMHC posee una colección permanente de obras de artes visuales y también 
-    siete salas para exposiciones temporales exhibidas en el área “Espacio de Arte Federico Venturi”. 
-    La curaduría de las muestras temporales reúne diferentes campos artísticos, en exposiciones que 
-    potencian la memoria del espacio desde el presente de modo simbólico, articulando el contenido con el contexto expositivo y su identidad.`,
+    texto: `Funciona desde el 2012 como un espacio de exhibición y taller para artistas jóvenes de la escena local, a la vez que se hace presente en ferias de arte nacionales e internacionales. De 2015 a 2018, se instaló en un antiguo local de La Boca, debajo del Puente Avellaneda. Esta galería, junto con otros espacios de arte, contribuyó al crecimiento del circuito artístico de esta área, originalmente impulsado por el gran proyecto artístico, urbano y comunitario de Benito Quinquela Martín (cerca de 1930); y, desde 1996, por la Fundación Proa —instalada en la Vuelta de Rocha—. Estos hechos aislados se potenciaron en 2012 con la creación de la Milla Cultural del Sur, un programa del Gobierno de la Ciudad de Buenos Aires para apoyar a los museos públicos y privados situados entre Puerto Madero, San Telmo y La Boca.`,
   },
   'BellasArtes': {
-    categoria: 'Contemporáneo',
-    nombre: 'Bellas Artes',
+    categoria: 'Tradicionales',
+    nombre: 'Museo Nacional de Bellas Artes',
     lugar: {
       barrio: 'Barrio',
       ubicacion: 'Palermo'
     },
     imagen: {
       src: "./assets/img/museos/bellasArtes.jpg",
-      autor: `Mariel Szlifman`
+      autor: `Celeste Bonzano`
     },
-    texto: `Se sitúa en el edificio que funcionó como Pabellón de Armas y Aviación, y 
-    luego como Escuela de Guerra Naval, dentro del predio de la Ex-Esma. La ESMA fue 
-    uno de los centros de detención, tortura y exterminio más importantes que implementó 
-    la última dictadura cívico militar en la Argentina entre 1976 y 1983. En este espacio, 
-    se realizan diversas actividades culturales en torno a la historia, la memoria, 
-    los derechos humanos y el arte para resignificar este lugar marcado por el terrorismo de 
-    estado. El CCMHC posee una colección permanente de obras de artes visuales y también 
-    siete salas para exposiciones temporales exhibidas en el área “Espacio de Arte Federico Venturi”. 
-    La curaduría de las muestras temporales reúne diferentes campos artísticos, en exposiciones que 
-    potencian la memoria del espacio desde el presente de modo simbólico, articulando el contenido con el contexto expositivo y su identidad.`,
+    texto: `Museo público que alberga la mayor colección de arte del país, con más de doce mil piezas de artistas nacionales e internacionales. Inaugurado en 1896, funcionó en dos sedes hasta instalarse en 1933 en la actual, la antigua Casa de Bombas de Recoleta, remodelada por el arquitecto Alejandro Bustillo. La institución establece su museografía y su identidad en pleno auge del museo tradicional, evidenciadas en su contenedor, en sus salas de arte, en el programa estético basado en escuelas y estilos, así como también en una «mirada dirigida» apoyada en el discurso pedagógico. Hacia fines del siglo XX y con la gestión de Jorge Glusberg, se actualizó su modelo museográfico con una ampliación de ofertas artísticas a partir del pabellón de exposiciones temporales, con el otorgamiento de premios y con el ingreso de la fotografía a la colección.`,
   },
-  'OsdeViejo': {
-    categoria: 'Contemporáneo',
+  'OSDEViejo': {
+    categoria: 'Fundaciones y Galerías',
     nombre: 'Espacio de Arte Fundación Osde (sede anterior)',
     lugar: {
       barrio: 'Barrio',
@@ -71,27 +53,32 @@ const info = {
     },
     texto: `Espacio de arte privado fundado en 1996 y emplazado en el barrio de La Boca, perteneciente a la empresa Tenaris-Techint. No posee colección propia y su programa artístico se basa en exposiciones temporales locales e internacionales de corrientes artísticas modernas y contemporáneas. Está emplazada en una antigua casona de estilo italiano del siglo XIX, refuncionalizada a modo de «open space» en el que conviven salas expositivas, auditorio, librería y café. Su arquitectura se caracteriza por la transparencia espacial que habilita un vínculo entre su interior y exterior. En el proceso de reforma y acondicionamiento, se rescataron materialidades (concreto-madera) y usos de su arquitectura anterior para mantener una memoria edilicia y para establecer una relación con su contexto urbano. A su vez, en una segunda reforma y ampliación, hubo un rediseño de su marca conforme a procesos de «<i>branding cultural</i>» y se apostó por un diseño de identidad que toma como inspiración tipográfica los remaches (y el estilo portuario) del Puente Transbordador Nicolás Avellaneda. De esta manera, se generó un diálogo estético y cultural con este símbolo del barrio y se reforzó la identidad de marca.`,
   },
-  'MUNTREF_Artes_Visuales': {
-    categoria: 'Contemporáneo',
-    nombre: 'Muntref Artes Visuales',
+  'MUNTREFArtesVisuales': {
+    categoria: 'Universitarios',
+    nombre: 'MUNTREF. Museo de Artes Visuales',
     lugar: {
       barrio: 'Barrio',
-      ubicacion: 'Palermo'
+      ubicacion: 'Caseros'
     },
     imagen: {
+      vertical: true,
       src: "./assets/img/museos/muntref.jpg",
       autor: `Mariel Szlifman`
     },
-    texto: `Se sitúa en el edificio que funcionó como Pabellón de Armas y Aviación, y 
-    luego como Escuela de Guerra Naval, dentro del predio de la Ex-Esma. La ESMA fue 
-    uno de los centros de detención, tortura y exterminio más importantes que implementó 
-    la última dictadura cívico militar en la Argentina entre 1976 y 1983. En este espacio, 
-    se realizan diversas actividades culturales en torno a la historia, la memoria, 
-    los derechos humanos y el arte para resignificar este lugar marcado por el terrorismo de 
-    estado. El CCMHC posee una colección permanente de obras de artes visuales y también 
-    siete salas para exposiciones temporales exhibidas en el área “Espacio de Arte Federico Venturi”. 
-    La curaduría de las muestras temporales reúne diferentes campos artísticos, en exposiciones que 
-    potencian la memoria del espacio desde el presente de modo simbólico, articulando el contenido con el contexto expositivo y su identidad.`,
+    texto: `Espacio-museo de la UNTREF (Universidad Nacional de Tres de Febrero), institución pública educativa que se ubica en la localidad bonaerense de Caseros, fuera de Capital Federal. Dispone de sedes en Sáenz Peña y en El Palomar, en el partido de Tres de Febrero, y está vinculado con el Hotel de Inmigrantes —en el barrio de Retiro— y con el Centro Cultural Borges. Es una universidad que presenta un proyecto académico, social y político amplio, considerando el servicio educativo pero también cultural. La sala expositiva es un espacio proyectado para exhibir arte moderno y contemporáneo, principalmente argentino; se vincula con proyectos de estudiantes y profesores de la misma institución, así como externos —de artistas nacionales e internacionales—, con el objetivo de lograr un alcance e impacto social con sus acciones.`,
+  },
+  'MUNTREF': {
+    categoria: 'Arquitecturas como proyecto',
+    nombre: 'MUNTREF. Centro de Arte Contemporáneo',
+    lugar: {
+      barrio: 'Barrio',
+      ubicacion: 'Retiro'
+    },
+    imagen: {
+      src: "./assets/img/museos/MUNTREFCentrodeArte.jpg",
+      autor: `Ernesto Monasterio`
+    },
+    texto: `Ubicado en el antiguo Hotel de Inmigrantes (en Retiro), funciona desde 2013 en conjunto con el Museo de Inmigrantes. Es un espacio que alberga y exhibe —en su exposición permanente— archivos y documentación de la historia de las inmigraciones de nuestro país, recuperados por la Universidad Nacional de Tres de Febrero. Desde su contenedor hay una restauración arquitectónica e histórica con el objetivo de resguardar la memoria del lugar, a través de elementos del espacio original (como las ventanas, que generan una relación entre interior y exterior) combinados con salas acondicionadas para exhibir arte. Como programa museográfico, el Centro de Arte Contemporáneo presenta muestras temporales de arte contemporáneo basadas siempre en un diálogo entre los artistas y el espacio, así como también funciona regularmente el festival Bienal de la Imagen en Movimiento, los Premios Braque y la Bienal Sur.`
   },
   'MALBA': {
     categoria: 'Contemporáneo',
@@ -132,8 +119,8 @@ const info = {
     texto: `Espacio de arte perteneciente a una antigua familia de empresarios, dueños de la compañía de cemento Loma Negra, emplazado en el contexto urbano de Puerto Madero. El proyecto nace a partir de una iniciativa privada en torno a la colección personal y se configuró como una «arquitectura de autor», en una alianza entre el arquitecto uruguayo Rafael Viñoly y la coleccionista-mecenas Amalia Fortabat. El objetivo era construir un espacio que se posicione como ícono dentro de la escena mediática local e internacional. Se planteó, así, un nuevo discurso e identidad para la colección, junto con una nueva forma de exhibirla. El espacio fue especialmente diseñado y construido para este fin. La arquitectura responde a criterios propios del contexto en que se emplaza, respetando la altura de la arquitectura inglesa de la zona, pero incorporando materialidades contemporáneas como acero y vidrio. A su vez, la configuración arquitectónica afecta el diseño expositivo, ya que, al momento de su construcción, no hubo una política museográfica, más allá de la colección. Esto da como resultado un espacio arquitectónico que se va transformando para poder albergar diferentes muestras temporales.`,
   },
   'CasaRosada': {
-    categoria: 'Contemporáneo',
-    nombre: 'Casa Rosada',
+    categoria: 'Arquitecturas como proyectos',
+    nombre: 'Museo Casa Rosada',
     lugar: {
       barrio: 'Barrio',
       ubicacion: 'Monserrat'
@@ -145,7 +132,7 @@ const info = {
     texto: `Inaugurado en 2011 como Museo del Bicentenario —en el contexto de los festejos del Bicentenario realizados durante la presidencia de Cristina Fernández de Kirchner—, se emplaza sobre las ruinas de la antigua Aduana Taylor (1855) y sobre el Fuerte de Buenos Aires (siglo XVIII). Esto implica la recuperación y puesta en valor del patrimonio cultural e histórico integrado a las nuevas exigencias del contexto urbano contemporáneo. El diseño arquitectónico fue realizado por B4FS Arquitectos y supervisado por la Comisión Nacional de Museos, de Monumentos y de Lugares Históricos. En una primera etapa, el aspecto arqueológico entró en diálogo con un repertorio de obras de arte —con variedad de soportes plásticos y audiovisuales, como las obras de Alfredo Bettanin y Clorindo Testa o la reconstrucción del mural de Siqueiros, Ejercicio Plástico (1933)—, con una serie cronológica de documentales y con objetos y testimonios históricos de carácter «museable». Esta convivencia propuso una reinterpretación de los hechos objetivos que privilegiaron un relato heterogéneo, múltiple y desjerarquizado. Así, la puesta en escena museística se dispuso, en su origen, conforme a  una idea de resignificar el patrimonio arqueológico (con la presencia de materialidades originales) activado mediante una lectura contemporánea. En una segunda etapa —marcada por la asunción de Mauricio Macri— se reemplazaron las obras de arte, en su mayoría, por fotografías de archivo y por mayor presencia de objetos testimoniales pertenecientes a las diferentes presidencias argentinas.`,
   },
   'CCK': {
-    categoria: 'Contemporanea',
+    categoria: 'Arquitecturas como proyecto',
     nombre: 'Centro Cultural Kirchner',
     lugar: {
       barrio: 'Barrio',
@@ -158,33 +145,34 @@ const info = {
     texto: `Centro cultural de gestión pública inaugurado en  2015 a partir de la refuncionalización del edificio del Correo Central (que abrió en 1928 y fue declarado Monumento Histórico Nacional). Originalmente ideado como Centro Cultural del Bicentenario, se constituye como parte de un corredor cultural junto con el Museo Casa Rosada, la Casa Rosada y el núcleo cívico-político en torno a Plaza de Mayo. Hay una recuperación patrimonial del ex Palacio de Correos y Telégrafos, proyectado a partir de un concurso para la puesta en valor del edificio y a cargo del estudio de arquitectura B4FS (también encargados del Museo Casa Rosada). Con el objetivo de preservar la memoria del sitio, se diseñaron dos áreas: noble e industrial. Está emplazado en una zona urbana significativa, marcada por una serie de capas arqueológicas, históricas y sociales frente al creciente Puerto Madero. Dentro del Centro Cultural Kirchner, funciona una programación cultural amplia pensada para un público popular y masivo que incluye exposiciones de arte, conciertos y conferencias, entre otras múltiples actividades. `,
   },
   'CCR': {
-    categoria: 'Contemporano',
+    categoria: 'Centros culturales',
     nombre: 'Centro Cultural Recoleta',
     lugar: {
       barrio: 'Barrio',
       ubicacion: 'Recoleta'
     },
     imagen: {
+      vertical: true,
       src: "./assets/img/museos/centro-cultural-recoleta.jpg",
       autor: `Mariel Szlifman`
     },
     texto: `Inaugurado en 1980, funciona como un lugar versátil de múltiples actividades y exposiciones temporales en el que exhiben artistas jóvenes y consagrados. El espacio posee una amplia historia que data del siglo XVIII: fue un convento de los monjes franciscanos; hacia 1822, una escuela de agricultura, jardín botánico, prisión y cuartel; en 1834, se convirtió en el primer Hospital de Clínicas y asilo para enfermos mentales; y en 1944, un hogar de ancianos. Para su adecuación arquitectónica, a fines del siglo XIX, fue ampliado por el arquitecto Juan Buschiazzo y, a fines del siglo XX, acondicionado para funcionar como centro cultural por los arquitectos y artistas Clorindo Testa, Jaques Bedel y Luis Benedit. Hacia los ochenta, alineado con la apertura democrática, el espacio comenzó a incluir diversas prácticas artísticas. En la actualidad, se caracteriza por una programación que ofrece diferentes experiencias centralizadas en un público joven y diverso: muestras, eventos, recitales, festivales y, desde 1989, la Bienal de Arte Joven. En 2017, con el cambio de gestión, se contrató al estudio Gorricho Diseño para repensar la identidad visual de la institución, con el objetivo de construir un perfil descontracturado y rupturista que pudiese reflejarse en los múltiples canales de comunicación que este posee, así como también incluir a sus distintos públicos. Como resultado, se rediseñó el logotipo —que adoptó forma de rayo con el fin de adaptarlo de forma simple a múltiples soportes y materialidades—, se optó por el uso de una tipografía diseñada por la argentina Julieta Ulanovsky —inspirada en los carteles de calle de CABA— y se eligió una paleta cromática vibrante, entre una serie de decisiones que permiten la fácil adaptación del sistema a las variadas propuestas.`,
   },
   'Conti': {
-    categoria: '',
+    categoria: 'Memoria',
     nombre: 'Centro Cultural de la Memoria Haroldo Conti',
     lugar: {
       barrio: 'Barrio',
       ubicacion: 'Nuñez'
     },
     imagen: {
-      src: "./assets/img/museos/",
+      src: "./assets/img/museos/centro-cultural-de-la-memoria-haroldo-conti.jpg",
       autor: `Equipo CCMHC`
     },
     texto: `Se sitúa en el edificio que funcionó como Pabellón de Armas y Aviación y luego como Escuela de Guerra Naval, dentro del predio de la ex-ESMA. La ESMA fue uno de los centros de detención, tortura y exterminio más importantes que implementó la última dictadura cívico-militar en la Argentina entre 1976 y 1983. En este espacio se realizan diversas actividades culturales en torno a la historia, a la memoria, a los derechos humanos y al arte para resignificar este lugar marcado por el terrorismo de Estado. El Centro Cultural de la Memoria Haroldo Conti posee una colección permanente de obras de artes visuales y también siete salas para exposiciones temporales exhibidas en el área Espacio de arte Franco Venturi. La curaduría de las muestras temporales reúne diferentes campos artísticos, en exposiciones que potencian la memoria del espacio desde el presente de modo simbólico, articulando el contenido con el contexto expositivo y con su identidad.`,
   },
   'CornelioSaavedra': {
-    categoria: '',
+    categoria: 'Tradicionales',
     nombre: 'Museo Histórico Cornelio Saavedra',
     lugar: {
       barrio: 'Barrio',
@@ -197,20 +185,21 @@ const info = {
     texto: `Museo histórico perteneciente a la Ciudad de Buenos Aires, inaugurado en 1921 y creado a partir del legado de las colecciones de Zemborain a la —por entonces denominada— Municipalidad de la Ciudad. Desde 1942, se instala en medio del Parque General Paz, en una casona perteneciente a la chacra de Saavedra. Esta antigua casona —construida entre 1870 y 1880— da cuenta de una arquitectura típica de la segunda mitad del siglo XIX. Su programa museístico está basado en la colección de platería urbana y rural, mobiliario, objetos de arte y decorativos (en dos ambientaciones de un salón porteño), vestimenta y elementos de las modas y costumbres del siglo XIX. Desde 2016, recuperó como patrimonio cultural la obra Buenos Aires a vista de pájaro (1915), de Jean Désiré Dulin.`
   },
   'EspacioTelefonica': {
-    categoria: '',
+    categoria: 'Fundaciones y Galerías',
     nombre: 'Fundación Telefónica Movistar',
     lugar: {
       barrio: 'Barrio',
       ubicacion: 'Recoleta'
     },
     imagen: {
+      vertical: true,
       src: "./assets/img/museos/fundacion-telefonica.jpg",
       autor: `Mariel Szlifman`
     },
     texto: `Espacio de arte perteneciente a una de las empresas mundiales más grandes de telecomunicaciones, servicio que fue privatizado en nuestro país en la década del noventa. Este hecho presenta una relación entre lo corporativo y el arte. Se encuentra ubicado en un viejo edificio de Recoleta que solía ser una agencia de telefonía y que luego combinó oficinas con el espacio de arte, que cuenta con sedes en otras partes del mundo. Su arquitectura conserva vestigios de sus usos anteriores vinculados a la arquitectura del hierro. El espacio presenta características de una nueva museología, corriente que piensa nuevas funciones del museo en que las instituciones privadas suplen los espacios públicos por falta de financiamiento. En 2014 se realizó una reapertura que provocó un cambio en su discurso corporativo para apelar a la cultura digital. También se incorporó una intervención en la fachada: Hermes, el Mensajero de Hernán Marina, que habilitó un nuevo espacio para la presentación de la producción artística. Esto establece una nueva relación entre la fachada-arquitectura y la obra que se expone en el exterior de la institución, con el fin de difundir los proyectos a la comunidad y visibilizarlos. En la actualidad, y bajo otra gestión institucional, el espacio cambió su nombre de Espacio Fundación Telefónica a Fundación Telefónica Movistar. `,
   },
   'FADU': {
-    categoria: '',
+    categoria: 'universitarios',
     nombre: 'Salas de Exposición FADU',
     lugar: {
       barrio: 'Barrio',
@@ -223,7 +212,7 @@ const info = {
     texto: `Salas de exposición ubicadas en la planta baja de la FADU (Facultad de Arquitectura, Diseño y Urbanismo) del Pabellón III de Ciudad Universitaria, pertenecientes a la Subsecretaría de Cultura de la universidad. Construidas y acondicionadas para ofrecer nuevas instalaciones a los estudiantes de Arquitectura y Diseño, estas salas están orientadas a la exhibición de muestras temporales, en convivencia con las actividades educativas. La Sala Baliero se emplaza al ingreso del pabellón y funciona como una vidriera, ya que sus amplios ventanales permiten visualizar lo que se exhibe en este lugar de paso y de gran circulación de la universidad. Por su parte, la Sala Pinacoteca, inaugurada en 2017, se instala junto a la biblioteca y se configura como un espacio flexible, ya que posee paneles que permiten reconfigurar el espacio para cada nueva exposición, a la vez que sus amplios ventanales habilitan un diálogo con el contexto.`,
   },
   'FOLA': {
-    categoria: '',
+    categoria: 'Fundaciones y Galerías',
     nombre: 'FOLA. Fototeca Latinoamericana',
     lugar: {
       barrio: 'Barrio',
@@ -236,7 +225,7 @@ const info = {
     texto: `Galería y sala de exposiciones de gestión privada inaugurada en 2015 con la inquietud de generar un espacio para la fotografía contemporánea fuera del ámbito comercial. Cuenta con una colección de más de 300 obras de unos 130 artistas de la región latinoamericana. Como programa expositivo, se exhiben obras de colecciones personales y piezas a partir de convenios con otras instituciones, así como se curan exposiciones temporales con el objetivo de cubrir un programa anual de siete a diez proyectos. La gestión institucional contempla muestras, premios, publicaciones y festivales, entre otras actividades, así como ventas y exposiciones de fotografías de los socios de la institución. Se ubica en el barrio de Palermo, en un antiguo terreno público vendido al proyecto comercial Distrito Arcos.`,
   },
   'MAMBA': {
-    categoria: '',
+    categoria: 'Arquitecturas como proyecto',
     nombre: 'Muse de arte moderno de buenos aires',
     lugar: {
       barrio: 'Barrio',
@@ -249,7 +238,7 @@ const info = {
     texto: `Ubicado en el barrio de San Telmo, en la Milla Cultural del Sur (que engloba la zona de San Telmo, Puerto Madero y La Boca), el Moderno surgió en 1956 por iniciativa del gestor Rafael Squirru sin disponer de una sede propia; por lo tanto, fue itinerando hasta el año 1989, cuando, finalmente, se instaló en la ex Tabacalera Piccardo. Cuenta con una importante colección permanente de más de siete mil obras de arte moderno y contemporáneo argentino e internacional de los siglos XX y XXI, así como también con piezas de diseño gráfico e industrial. El edificio, de corte industrial, fue refuncionalizado como museo en numerosas ocasiones y conserva algunos elementos del uso anterior, como las columnas de hierro. Recientemente, se desarrolló una construcción de la marca desde su imagen: rediseño de logotipo, de señalética, de folletería y de elementos que hacen a la comunicación del museo hacia su público y entorno. Esto presenta una relación entre el museo y el diseño basado en el denominado «branding cultural», que apunta a desarrollar una idea de marca que articula aspectos históricos, culturales y sociales. A su vez, el museo cuenta con su propio departamento de curaduría que responde a las necesidades de creación y diseño de las diferentes exhibiciones.`,
   },
   'OSDE': {
-    categoria: '',
+    categoria: 'Fundaciones y Galerías',
     nombre: 'Espacio de Arte Fundación Osde (sede actual)',
     lugar: {
       barrio: 'Barrio',
@@ -262,7 +251,7 @@ const info = {
     texto: `Funciona desde 2004 y pertenece a la empresa privada de salud OSDE. Hasta 2019, el espacio de arte se ubicaba en un antiguo edificio que albergó a la Mueblería Maple. Allí convivían las oficinas de la empresa y la fundación, con un gran espacio expositivo, junto con otros como «La Salita» —una sala que conservaba memorias de la mueblería— y la vidriera, un espacio expositivo en contacto directo con la calle. En la actualidad se ubica en el barrio de Retiro, en la intersección de Esmeralda y Arroyo, zona donde se alojan históricas galerías de arte, en un espacio que aparece como una gran vidriera. Se realizan cuatro muestras temporales al año, acompañadas de un exhaustivo trabajo curatorial que se renueva y resignifica para cada exposición. Si bien se trabaja con curadores invitados, una de las cuatro muestras anuales es realizada por algún integrante perteneciente al equipo de la fundación. A su vez, para cada exposición se genera una propuesta, una programación y un diseño específico, junto con la publicación de un catálogo —distribuido digitalmente de forma gratuita— y actividades complementarias de extensión cultural. `,
   },
   'ParqueMemoria': {
-    categoria: '',
+    categoria: 'memoria',
     nombre: 'Parque de la Memoria',
     lugar: {
       barrio: 'Barrio',
@@ -275,7 +264,7 @@ const info = {
     texto: `Espacio público construido para homenajear a las víctimas del terrorismo de Estado de la última dictadura militar argentina. Su ubicación no es azarosa, ya que se encuentra emplazado al lado del Río de la Plata —relacionado con los llamados «vuelos de la muerte»— y está diseñado para que, desde ciertos puntos de vista, se visualice la cancha de River, vinculado simbólicamente con el deporte que, en épocas de dictadura, se utilizó para ocultar crímenes. A diferencia de otros espacios, este fue diseñado de cero y alberga diferentes obras con gran carga alegórica. El Parque funciona como una gran instalación donde conviven múltiples elementos: el Monumento a las Víctimas del Terrorismo de Estado, el Programa de Arte Público y sus esculturas, la Sala PAyS y el diseño del paisaje, que evidencia un recorrido y una puesta en escena para que el espectador interactúe, se desplace y establezca nuevas relaciones de sentido. De esta forma, se construye un discurso sobre la historia y la memoria que se ve reflejado en el diseño y en la curaduría. `,
   },
   'RolfArt': {
-    categoria: '',
+    categoria: 'Fundaciones y Galerías',
     nombre: 'Galería Rolf Art',
     lugar: {
       barrio: 'Barrio',
@@ -288,7 +277,7 @@ const info = {
     texto: `Empresa de arte fundada en 2009 por Florencia Giordana Braun y emplazada en Retiro, en una zona que nuclea variadas galerías tradicionales, en la intersección de Arroyo y Esmeralda. Esta comprende una galería de arte, una productora y un espacio dedicado a la investigación que se centra en los artistas, en las muestras y en el montaje de obras. El interés principal es la fotografía, entendida desde lo «expandido», ya que también representan artistas que poseen obras en video y otros medios. La galería tiene como objetivo la exhibición, difusión y comercialización de la obra de los artistas que representa. Esto se evidencia en la fachada del espacio, que está en contacto directo con la calle y se presenta como una gran vidriera que habilita e invita a la comercialización de obras. A su vez, como parte de estos objetivos, la institución participa en ferias nacionales e internacionales. `,
   },
   'SalaPays': {
-    categoria: '',
+    categoria: 'memoria',
     nombre: 'Sala PAyS',
     lugar: {
       barrio: 'Barrio',
@@ -301,7 +290,7 @@ const info = {
     texto: `La Sala Presentes, Ahora y Siempre fue inaugurada en 2010. Se ubica dentro del Parque de la Memoria —Costanera Sur de la Ciudad de Buenos Aires— y es uno de los hitos que constituyen este lugar, junto con el Monumento a las Víctimas del Terrorismo de Estado y el Programa de Arte Público. Es un espacio de arte sin colección permanente basado en un programa educativo y curatorial en torno a la relación arte-memoria. El contenedor fue diseñado como un espacio libre y flexible, adaptable a las diversas exposiciones temporales, que buscan abordar la temática de la memoria política y los derechos humanos de manera simbólica a través de diferentes expresiones artísticas contemporáneas. A lo largo de los años, el espacio fue reformulado, generando dos áreas diferenciadas que le permitieron a la gestión institucional programar dos exposiciones simultáneas. Dentro de la sala, también funciona la base de datos de consulta pública sobre las víctimas del terrorismo de Estado.`,
   },
   'SanMartin': {
-    categoria: '',
+    categoria: 'Centros culturales',
     nombre: 'Teatro Municipal General San Martín',
     lugar: {
       barrio: 'Barrio',
@@ -321,84 +310,91 @@ let edificios = [
     nombre: 'BellasArtes',
     mouseInteractionAllowed: true,
     isVisible: true,
-    tipo: 'contemporaneo'
+    tipo: 'tradicionales'
   },
   {
-    url: './assets/models/OsdeViejo.gltf',
-    nombre: 'OsdeViejo',
+    url: './assets/models/OSDEViejo.gltf',
+    nombre: 'OSDEViejo',
     isVisible: true,
     mouseInteractionAllowed: true,
-    tipo: 'tradicionales'
+    tipo: 'galerias'
   },
   {
     url: './assets/models/PROA.gltf',
     nombre: 'PROA',
     mouseInteractionAllowed: true,
     isVisible: true,
-    tipo: 'memoria'
+    tipo: 'contemporaneo'
   },
   {
     url: './assets/models/IslaFlotante.gltf',
     nombre: 'IslaFlotante',
     mouseInteractionAllowed: true,
     isVisible: true,
-    tipo: 'arquitecturas'
+    tipo: 'galerias'
   },
   {
-    url: './assets/models/MUNTREF_Artes_Visuales.gltf',
-    nombre: 'MUNTREF_Artes_Visuales',
+    url: './assets/models/MUNTREFArtesVisuales.gltf',
+    nombre: 'MUNTREFArtesVisuales',
     isVisible: true,
     mouseInteractionAllowed: true,
-    tipo: 'culturales'
+    tipo: 'universitarios'
+  },
+  {
+    url: './assets/models/MUNTREF.gltf',
+    nombre: 'MUNTREF',
+    isVisible: true,
+    mouseInteractionAllowed: true,
+    tipo: 'arquitecturas'
   },
   {
     url: './assets/models/CasaRosada.gltf',
     nombre: 'CasaRosada',
     mouseInteractionAllowed: true,
     isVisible: true,
-    tipo: 'galerias'
+    tipo: 'arquitecturas'
   },
   {
     url: './assets/models/CCK.gltf',
     nombre: 'CCK',
     isVisible: true,
     mouseInteractionAllowed: true,
-    tipo: 'universitarios'
+    tipo: 'arquitecturas'
   },
   {
     url: './assets/models/CCR.gltf',
     nombre: 'CCR',
     mouseInteractionAllowed: true,
     isVisible: true,
-    tipo: 'contemporaneo'
+    tipo: 'culturales'
   },
   {
     url: './assets/models/CornelioSaavedra.gltf',
     nombre: 'CornelioSaavedra',
     isVisible: true,
     mouseInteractionAllowed: true,
-    tipo: 'galerias'
+    tipo: 'tradicionales'
   },
   {
     url: './assets/models/EspacioTelefonica.gltf',
     nombre: 'EspacioTelefonica',
     isVisible: true,
     mouseInteractionAllowed: true,
-    tipo: 'universitarios'
+    tipo: 'galerias'
   },
   {
     url: './assets/models/FADU.gltf',
     nombre: 'FADU',
     mouseInteractionAllowed: true,
     isVisible: true,
-    tipo: 'contemporaneo'
+    tipo: 'universitarios'
   },
   {
     url: './assets/models/FOLA.gltf',
     nombre: 'FOLA',
     mouseInteractionAllowed: true,
     isVisible: true,
-    tipo: 'arquitecturas'
+    tipo: 'galerias'
   },
   {
     url: './assets/models/FundacionFortabat.gltf',
@@ -412,54 +408,48 @@ let edificios = [
     nombre: 'MALBA',
     isVisible: true,
     mouseInteractionAllowed: true,
-    tipo: 'galerias'
+    tipo: 'contemporaneo'
   },
   {
     url: './assets/models/MAMBA.gltf',
     nombre: 'MAMBA',
     isVisible: true,
     mouseInteractionAllowed: true,
-    tipo: 'galerias'
+    tipo: 'arquitecturas'
   },
   {
     url: './assets/models/OSDE.gltf',
     nombre: 'OSDE',
     isVisible: true,
     mouseInteractionAllowed: true,
-    tipo: 'arquitecturas'
+    tipo: 'galerias'
   },
   {
     url: './assets/models/ParqueMemoria.gltf',
     nombre: 'ParqueMemoria',
     isVisible: true,
     mouseInteractionAllowed: true,
-    tipo: 'arquitecturas'
+    tipo: 'memoria'
   },
   {
     url: './assets/models/RolfArt.gltf',
     nombre: 'RolfArt',
     isVisible: true,
     mouseInteractionAllowed: true,
-    tipo: 'memoria'
+    tipo: 'galerias'
   },
   {
     url: './assets/models/SalaPays.gltf',
     nombre: 'SalaPays',
     isVisible: true,
-    tipo: 'tradicionales'
+    tipo: 'memoria'
   },
   {
     url: './assets/models/SanMartin.gltf',
     nombre: 'SanMartin',
     isVisible: true,
     mouseInteractionAllowed: true,
-    tipo: 'tradicionales'
-  },
-  {
-    url: './assets/models/obras/info.gltf',
-    nombre: 'info',
-    isVisible: true,
-    tipo: 'tradicionales'
+    tipo: 'culturales'
   },
   {
     url: './assets/models/PisoMapa.gltf',
@@ -474,6 +464,13 @@ let edificios = [
     isVisible: true,
     mouseInteractionAllowed: true,
     tipo: ''
+  },
+  {
+    url: './assets/models/Conti.gltf',
+    nombre: 'Conti',
+    isVisible: true,
+    mouseInteractionAllowed: true,
+    tipo: 'memoria'
   }
 ]
 
@@ -528,20 +525,20 @@ const infoObras = {
   },
   'InfoObras_BuenosAiresTour': {
     subCategoria: 'Flâneur',
-    nombre: 'Diane Arbus',
-    titulo: 'Recuerdos superpuestos',
-    tipo: 'Fotografías',
+    nombre: 'Jorge Macchi',
+    titulo: 'Buenos Aires Tour',
+    tipo: 'Instalación',
     caracteristicas: {
-      exposicion: 'Diane Arbus. En el principio',
+      exposicion: 'Perspectiva',
       museo: 'Museo de Arte Latinoamericano de Buenos Aires',
-      fecha: '2017'
+      fecha: '2004'
     },
     imagen: {
-      src: "./assets/img/Obras/10.jpg",
-      autor: `Ernesto Monasterio`
+      vertical: true,
+      src: "./assets/img/Obras/13.jpg",
+      autor: `Mariel Szlifman`
     },
-    texto: 'Exposición retrospectiva de la artista estadounidense Diane Arbus, que presentó un cuerpo de más de cien fotografías realizadas en 35 mm y formato medio de los primeros siete años de carrera de la artista. A modo de visión personal de las calles de Nueva York, Arbus busca desafiar los conceptos de belleza y anormalidad. Se destacan algunas obras como Beso de Baby Doll (1956), Rubia en una pantalla a punto de ser besada (1958), Bela Lugoni como Drácula en la TV (1958) y Hombre siendo estrangulado en la pantalla (1958), en donde aparece un medio retratando otro medio. El diseño expositivo distingue la muestra al proporcionar un recorrido poco habitual por el espacio de la sala, aspecto que pone de manifiesto la flexibilidad de la planta del museo. Este se plantea como una gran instalación en donde predomina la relación del cuerpo del espectador con la apreciación de la obra expuesta. Dividida en columnas 3-4-3 pintadas de gris de piso a techo y con una iluminación tenue y dirigida a cada una de las fotografías, se trabajó con un diseño laberíntico que, además de delimitar un recorrido, le prohibía al espectador visualizar todas las obras en conjunto.'
-  },
+    texto: 'Instalación que expande la obra original Buenos Aires Tour (2004) en formato de libro de artista y que forma parte de la colección del Malba. Este trabajo nace de la rotura de un vidrio sobre un mapa de la Ciudad de Buenos Aires para generar una guía con ocho itinerarios en los que se marcan distintos puntos de interés. Se pueden asociar los recorridos que propone el artista a la figura del flâneur, ya que se plantea una geografía subjetiva a través de un mapa que permite experimentar una deriva por la ciudad, lo urbano y lo histórico. A partir de dicha guía, se ponen en relación los puntos elegidos con archivos encontrados, fotografías, objetos, escritos (con la colaboración de María Negroni) y sonidos (realizados por el compositor Edgardo Rudnitzky). La instalación realizada en el Malba (2016) se puede interpretar dentro de la categoría de site specific, ya que el recorrido fue pintado en las paredes del museo y los diferentes elementos que la componían se expandían en el espacio de la sala. En esta intervención se incorporó: el mapa interactivo con sonidos, videos en plasmas y la exhibición del libro con sus componentes desplegados —estampillas, postales, posters y mapas desplegables—. '},
   'InfoExpo_VivianMaier': {
     subCategoria: 'Flâneur',
     nombre: 'Vivian Maier',
@@ -553,6 +550,7 @@ const infoObras = {
       fecha: '2017'
     },
     imagen: {
+      vertical: true,
       src: "./assets/img/Obras/34.jpg",
       autor: `Mariel Szlifman`
     },
@@ -617,6 +615,7 @@ const infoObras = {
       fecha: '2016'
     },
     imagen: {
+      vertical: true,
       src: "./assets/img/Obras/30.jpg",
       autor: `Mariel Szlifman`
     },
@@ -633,6 +632,7 @@ const infoObras = {
       fecha: '2019'
     },
     imagen: {
+      vertical: true,
       src: "./assets/img/Obras/39.jpg",
       autor: `Mariel Szlifman`
     },
@@ -649,6 +649,7 @@ const infoObras = {
       fecha: '2019'
     },
     imagen: {
+      vertical: true,
       src: "./assets/img/Obras/44.jpg",
       autor: `Antonelia Adosi`
     },
@@ -761,6 +762,7 @@ const infoObras = {
       fecha: '2013'
     },
     imagen: {
+      vertical: true,
       src: "./assets/img/Obras/6.jpg",
       autor: `Jorge La Ferla`
     },
@@ -873,6 +875,7 @@ const infoObras = {
       fecha: '2014'
     },
     imagen: {
+      vertical: true,
       src: "./assets/img/Obras/33.jpg",
       autor: `Mariel Szlifman`
     },
@@ -905,6 +908,7 @@ const infoObras = {
       fecha: '2019'
     },
     imagen: {
+      vertical: true,
       src: "./assets/img/Obras/38.jpg",
       autor: `Mariel Szlifman`
     },
@@ -921,6 +925,7 @@ const infoObras = {
       fecha: '2016'
     },
     imagen: {
+      vertical: true,
       src: "./assets/img/Obras/47.jpg",
       autor: `Mariel Szlifman`
     },
@@ -969,6 +974,7 @@ const infoObras = {
       fecha: '2016'
     },
     imagen: {
+      vertical: true,
       src: "./assets/img/Obras/43.jpg",
       autor: `Mariel Szlifman`
     },
@@ -1017,6 +1023,7 @@ const infoObras = {
       fecha: '1933'
     },
     imagen: {
+      vertical: true,
       src: "./assets/img/Obras/4.jpg",
       autor: `Archivo Museo Casa Rosada`
     },
@@ -1049,6 +1056,7 @@ const infoObras = {
       fecha: '2019'
     },
     imagen: {
+      vertical: true,
       src: "./assets/img/Obras/21.jpg",
       autor: `Antonelia Adosi`
     },
@@ -1129,6 +1137,7 @@ const infoObras = {
       fecha: '1947'
     },
     imagen: {
+      vertical: true,
       src: "./assets/img/Obras/11.jpg",
       autor: `Mariel Szlifman`
     },
@@ -1161,6 +1170,7 @@ const infoObras = {
       fecha: '2014'
     },
     imagen: {
+      vertical: true,
       src: "./assets/img/Obras/15.jpg",
       autor: `Mariel Szlifman`
     },
@@ -1193,6 +1203,7 @@ const infoObras = {
       fecha: '2015'
     },
     imagen: {
+      vertical: true,
       src: "./assets/img/Obras/19.jpg",
       autor: `Mariel Szlifman`
     },
@@ -1547,6 +1558,7 @@ const infoRecorridos = {
     zona: 'Arte Cinema – Estación Constitución – Canal 13',
     texto: 'Zona híbrida y de conflicto en que conviven grupos de distintos sectores sociales y geográficos. Es uno de los lugares más concurridos de la ciudad, ya que contiene la estación Constitución, que funciona como epicentro de la comunicación ferrocarril entre el Gran Buenos Aires y CABA. La densidad de su población, el déficit habitacional y el abandono de la gestión porteña han potenciado el carácter anárquico y caótico. Testigo de una época de gran desarrollo comercial e industrial (que se refleja en el edificio que ocupa la Facultad de Ciencias Sociales de la UBA, antes una fábrica de galletitas), a lo largo de 150 años, el barrio ha ido acumulando arquitecturas disímiles y estilos dispares. Un hecho clave del destino de Constitución fue la construcción, durante la dictadura cívico-militar, de las autopistas 25 de Mayo y la 9 de Julio Sur, que han mutilado el tejido urbano y social del barrio. Frente a la autopista, encontramos la manzana de Canal 13, medio masivo marcado por hechos sociales y políticos. Atravesando la plaza Constitución, sobre la calle Salta, se encuentra la sala Arte Cinema (abierta en 2009 y gestionada por el INCAA), que se erige en un edificio donde funcionó el Teatro Variedades.',
     imagen: {
+      vertical: true,
       src: './assets/img/Recorridos/Recorridos_constitucion.jpg',
       autor: 'Mariel Szlifman'
     }
@@ -1583,8 +1595,9 @@ const infoRecorridos = {
     zona: 'Parroquia San Telmo – Plaza Dorrego – Paseo de la Memoria – Confederación General del Trabajo – CCEBA',
     texto: 'Barrio de importante valor histórico. En la actualidad se ve impregnado de espacios destinados exclusivamente al turismo que fueron transformando la identidad del espacio. Este hecho, fruto de procesos de gentrificación, impacta sobre San Telmo en una conversión orientada al marketing turístico. Algunos edificios ubicados sobre la calle Balcarce, que han contribuido a la construcción del barrio y de sus habitantes, fueron modificados para suplir una función administrativa que despoja por completo el sentido original. Dentro de esta zona, se destaca el «Paseo de la Memoria» del ex Club Atlético de San Telmo, que, desde 2014, fue declarado Lugar Histórico Nacional, luego de ser reconocido como un antiguo centro de detención y tortura en el año 1977. Este sitio hoy se encuentra completamente deteriorado ante las transformaciones urbanas que lo han atravesado y que implican problemas directos tanto en su preservación como en su mantenimiento.',
     imagen: {
+      vertical: true,
       src: './assets/img/Recorridos/Recorridos_san_telmo.jpg',
-      autor: 'Mariel Szlifman'
+      autor: 'Antonelia Adosi'
     }
   },
   'MarcadoRetiro': {
