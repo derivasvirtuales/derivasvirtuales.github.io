@@ -1171,7 +1171,7 @@ const infoObras = {
     },
     imagen: {
       vertical: true,
-      src: "./assets/img/Obras/15jpg",
+      src: "./assets/img/Obras/15.jpg",
       autor: `Mariel Szlifman`
     },
     texto: 'Exposición que plantea un recorrido por la historia del arte argentino a través de la figura del yo del artista, en torno a una variedad e hibridez de medios y soportes: pintura, fotografía, video, cine experimental, obras sonoras e instalaciones. La problemática principal es la del autorretrato, que se presenta desde distintas aristas: desde el relato biográfico, el espejo, el taller, hasta la idea del cuerpo como territorio. Autorretrato (1984), de Marcos López; Doble autorretrato (1998), de Oscar Bony; o S/T (1973), de Liliana Porter, son obras centrales para abordar este género por la estructura enunciativa a partir del medio fotográfico. Resultan interesantes estos casos donde se establece una relación compleja entre mímesis-desemejanza hacia la idea de una autoficción, que, a su vez, permiten pensar el autorretrato como un álter ego dentro de un entorno narrativo.'
