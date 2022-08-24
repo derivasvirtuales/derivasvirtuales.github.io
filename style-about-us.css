@@ -1,0 +1,535 @@
+body {
+  margin: 0;
+  background-color: black;
+}
+
+/* Empeiza MENU--------------------------------------> */
+.titulo {
+  width: 12%;
+  position: fixed;
+  margin: 2%  0 0 0;
+  padding-left: 3.5%;
+  color: #f1f1f1;
+  display: flex;
+  align-items: start;
+  letter-spacing: 1.5px;
+  z-index: 2;
+}
+
+.derivasMainLogo{
+  width: 100%;
+}
+.derivasMainLogo img {
+  width: 100%;
+}
+
+.button-menu {
+  font-size: 25px;
+  background-color: transparent;
+  margin: 3% 2% 0 0;
+  padding: 0;
+  display: block;
+  height: fit-content;
+  color: #f1f1f1;
+}
+
+.titulo-menu {
+  width: 56%;
+}
+
+.subtitulo-menu {
+  font-size: 18px;
+  margin: 0;
+}
+
+.titulo-museos {
+  font-family: 'Bebas Neue';
+  font-size: 30px;
+  color: #4BCFAB;
+}
+
+button {
+  transition: display 0.5s ease;
+  margin: 20px auto;
+  color: rgb(15, 14, 15);
+  border: 0;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+span {
+  color: black;
+}
+
+#menu-container {
+  width: 400px;
+  height: 100%;
+  background-color: #333233;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.close-button {
+  transition: display 0.5s ease;
+  display: none;
+}
+
+.header-menu {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header-menu img {
+  width: 6%;
+  margin-right: 5%;;
+}
+
+.body {
+  margin-top: 10%;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  overflow-y: scroll;
+  max-height: calc(100vh - 200px);
+  height: 40%;
+}
+
+.body::-webkit-scrollbar {
+  width: 0;
+}
+
+@media(max-width: 1440px) {
+  .body {
+    max-height: 390px;
+  }
+  .footer {
+    max-height: 390px;
+  }
+}
+
+.open {
+  transition: left 0.5s ease;
+  left: 0;
+}
+
+.close {
+  transition: left 0.5s ease;
+  left: -400px;
+}
+
+.header-menu span {
+  cursor: pointer;
+  margin: 40px 23px;
+}
+
+.icon-close {
+  color: white;
+}
+
+.submenu-header {
+  display: flex;
+  align-items: flex-end;
+  width: 87%;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.submenu-header img {
+  width: 23px;
+}
+
+.submenu-title {
+  margin: 0;
+}
+
+.title-recorridos {
+  color: #32C7A0;
+}
+
+.title-espacios {
+  color: #E9DC42;
+}
+
+.title-obras {
+  color: #D486B3;
+}
+
+.recorridos-line {
+  background-color: #32C7A0;
+}
+
+.chevron {
+  cursor: pointer;
+}
+
+.chevron-recorridos {
+  color: #32C7A0;
+}
+
+.chevron-espacios {
+  color: #E9DC42;
+}
+
+.chevron-obras {
+  color: #D486B3;
+}
+
+.margin-menu {
+  margin-top: 45px;
+}
+
+.espacios-line {
+  background-color: #E9DC42;
+}
+
+.obras-line {
+  background-color: #D486B3;
+}
+
+.line-top {
+  width: 132px;
+  height: 2px;
+  margin-bottom: 10px;
+  border-radius: 2%;
+}
+
+.list-menu {
+  transition: visibility 0s, opacity 0.2s linear;
+  list-style: none;
+  color: white;
+  font-size: 12px;
+  padding: 0;
+  width: 345px;
+  margin: 20px auto;
+  opacity: 1;
+  height: auto;
+  visibility: visible;
+}
+
+.close-menu {
+  opacity: 0;
+  visibility: hidden;
+  margin: 0 auto;
+  height: 0;
+  transition: visibility 0s, opacity 0.2s linear;
+}
+
+.list-menu li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.list-menu li img {
+  width: 30px;
+}
+
+.list-menu li p {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.list-menu li i {
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.switch {
+  cursor: pointer;
+}
+
+.active-switch {
+  color: rgb(233, 220, 66);
+}
+
+.accessLink {
+  height: 85%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: white;
+}
+
+.accessLink img {
+  width: 45%;
+  margin-left: 15%;
+  
+}
+
+.item-link {
+  width: 50%;
+  margin-left: 15%;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.footer{
+  margin-top: 40%;
+  max-height: calc(100vh - 200px);
+  height: 20%;
+}
+.footer img{
+  width: 45%;
+  margin-left: 15%;
+}
+.footer p {
+  width: 75%;
+  margin-left: 15%;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 12px;
+  font-weight: normal;
+  text-decoration: none;
+  color: white;
+}
+.ig-link{
+  width: 30%;
+  margin-left: 15%;
+}
+.ig-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.ig-link .ig-container img{
+  width: 15%;
+  margin-left: 0%;
+}
+.ig-link .ig-container h3{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 12px;
+  font-weight: normal;
+  text-decoration: none;
+  color: white;
+}
+
+/* termina MENU ------------------------> */
+
+
+.section-about {
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.text-ubication-nav{
+  height: 50%;
+  width: 25%;
+  margin: 10% 0 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.text-ubication-nav h1 {
+  font: 4.5vh 'Bebas Neue';
+  color: white;
+  margin: 0;
+  font-size: 5vh;
+}
+
+.text-ubication-nav p {
+  font: 1.75vh 'Roboto';
+  color: white;
+  font-style: normal;
+  font-weight: 400;
+  
+}
+
+.text-ubication-nav .text-ubication-nav-subtitle {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.75vh;
+  color: white;
+  border-left: solid 2px;
+  padding-left: 3%;
+}
+.navegation-map{
+  height: 100%;
+  width: 70%;
+  background-image: url(./assets/img/mapa-de-navegacion-fondo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+footer {
+  height: 10vh;
+}
+/* ABOUT US ---------------------------------------------> */
+.section-aboutUs{
+  height: 200vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.SA-text-ubication-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.SA-main-container{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.anchor-container p {
+  font: 1.75vh 'Roboto';
+  color: white;
+  margin-left: 4%;
+}
+.text-about {
+  color: #adadad;
+  text-align: justify;
+  font: 15px 'Roboto';
+  line-height: 16.8px;
+  margin-top: 15px;
+}
+
+.text-about:first-child {
+  margin: 0;
+}
+
+.text-about-container {
+  margin-top: 120px;
+  display: flex;
+}
+
+.about-imagen {
+  margin-right: 20px;
+  margin-left: 25px;
+  height: 120px;
+}
+
+.info-pais {
+  color: white;
+  width: 120px;
+  right: 0;
+  position: absolute;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  font: 15px 'Roboto';
+  font-weight: bold;
+}
+
+
+
+.title-about {
+  font: 88px 'Bebas Neue';
+  color: #30DDB0;
+  margin: 0;
+}
+
+.container-info {
+  display: flex;
+  position: relative;
+}
+
+.inner-text {
+  position: absolute;
+  width: 520px;
+  right: -138px;
+}
+
+.out-text {
+  align-self: flex-end;
+  position: relative;
+  right: 90px;
+}
+
+.image-container img {
+  width: 460px;
+}
+
+.text-ubication-container {
+  position: relative;
+  height: 104px;
+}
+
+.text-ubication {
+  left: 36%;
+  z-index: 1;
+  top: 0;
+  transform: translate(0, 0);
+  position: absolute;
+}
+
+.creditos-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 200px;
+}
+
+.creditos-imagen {
+  position: absolute;
+  margin: 0;
+  width: 190px;
+  top: -58px;
+  right: 83%;
+  height: 190px;
+}
+
+.imagen-entre-creditos {
+  margin: 20px 0 10px;
+  width: 25px;
+}
+
+.creditos-container-info {
+  display: flex;
+}
+
+.info-right {
+  margin-left: 120px;
+}
+
+.fondo-img {
+  width: 300px;
+}
+
+.ac-img {
+  width: 200px;
+}
+
+.apoyo-container {
+  display: flex;
+  align-self: flex-end;
+  margin-top: 120px;
+}
+
+.proyecto-container {
+  margin-left: 50px;
+}
+
+
+.anchor-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.anchor {
+  display: flex;
+}
+
+.anchor img {
+  width: 25px;
+}

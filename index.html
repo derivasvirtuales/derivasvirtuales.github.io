@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9ae7ac6274.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+    <meta name=”theme-color” content=”#000000“/>
+    <title>Derivas Virtuales</title>
+  </head>
+  <body>
+    <div class="titulo">
+      <button id="menu" class="button-menu" onclick="openMenu()">&#9776;</button>
+      <div class="derivasMainLogo">
+        <img src="./assets/img/Logo-final-05.svg" class="titulo-menu" />
+      </div>
+    </div>
+    <div id="menu-container"></div>
+    <div class="pop-up-home open-popUp" onclick="closePopUp()" id="popUp">
+      <div class="pop-up-ficture">
+       <div class="pop-up-header"> <h3 class="pop-up-title">DERIVAS VIRTUALES<br> NAVEGANDO EL ESPACIO URBANO Y EXPOSITIVO</h3> <img src="./assets/img/iconos/cerrar-popup.svg" class="btn-cerrar-popup"></div>
+        	<hr class="pop-up-linea">
+          <p>Un entorno interactivo para explorar obras, exposiciones, espacios de arte y recorridos porteños sobre una cartografía re-imaginada.</p>
+        <ul>
+          <li><img src="./assets/img/iconos/icono_click.svg" class="btn-icono-popup"> Hace clic izquierdo con el mouse y mantenelo apretado para desplazarte por el mapa.</li>
+          <li><img src="./assets/img/iconos/icono-round.svg" class="btn-icono-popup">Con el clic derecho y el movimiento del mouse rotas la vista del mapa.</li>
+          <li><img src="./assets/img/iconos/icono-mouse.svg" class="btn-icono-popup">La rueda del mouse te permite hacer zoom in/out.</li>
+          <li><img src="./assets/img/iconos/icono-filter.svg" class="btn-icono-popup">Podés usar los filtros para elegir qué contenido ver.</li>
+          <li><img src="./assets/img/iconos/icono_cube.svg" class="btn-icono-popup">Cliqueá los objetos para obtener más información.</li>
+          <li><img src="./assets/img/iconos/icono-popup.svg" class="btn-icono-popup">Cliqueá este ícono para centrar el mapa nuevamente</li>
+          
+        </ul>
+        <p class="txt-recordamos">
+          Recomendamos interactuar con esta plataforma desde un ordenador para una mejor experiencia
+        </p>
+      </div>
+    </div>
+    <div class="pop-up-button-open"  onclick="openPopUp()" >
+      <img src="assets/img/iconos/pop-up-button.svg" alt="Ayuda">
+    </div>
+
+
+    <script src="index.js"></script>
+    <script src="menu.js"></script>
+    <script src="info-edificios.js"></script>
+    <script type="module">
+      import * as THREE from 'https://cdn.skypack.dev/three@0.128.0';
+      import { MapControls } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/controls/OrbitControls.js';
+      import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/GLTFLoader.js';
+
+      let camera, controls, scene, renderer;
+      const DIVISION_GRID = 10;
+      const gridHelper = new THREE.GridHelper( window.innerWidth, DIVISION_GRID );
+      let raycaster; 
+      let mouse = {x:0, y:0, z:0};
+      let INTERSECTED = null;
+      let isVisible = true;
+
+      init();
+      animate();
+
+      function init() {
+        createMenu();
+        createSubmenuFiltros();
+
+        scene = new THREE.Scene();
+        scene.background = new THREE.Color( 0x000000 );
+        scene.fog = new THREE.FogExp2( 0x000000, 0.003 );
+
+        renderer = new THREE.WebGLRenderer( { antialias: true } );
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+        renderer.setPixelRatio( window.devicePixelRatio );
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        document.body.appendChild( renderer.domElement );
+
+        camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, window.innerWidth );
+        camera.position.set( 200, 100, 0 );
+        controls = new MapControls( camera, renderer.domElement );
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.075;
+        controls.screenSpacePanning = false;
+        controls.minDistance = 150;
+        controls.maxDistance = 300;
+        controls.maxPolarAngle = Math.PI / 4;
+        controls.minPolarAngle = Math.PI / 4;
+
+        const dirLight1 = new THREE.DirectionalLight( 0xffffff );
+        dirLight1.position.set( 0, 1, 1 );
+        dirLight1.castShadow = true;
+        scene.add( dirLight1 );
+
+        dirLight1.shadow.mapSize.width = 512; // default
+        dirLight1.shadow.mapSize.height = 512; // default
+        dirLight1.shadow.camera.near = 0.5; // default
+        dirLight1.shadow.camera.far = 500; // default
+
+        const ambientLight = new THREE.AmbientLight( 0x222222 );
+        scene.add( ambientLight );
+
+        raycaster = new THREE.Raycaster();
+        document.addEventListener('mousemove', raycast, false);
+        renderer.domElement.addEventListener('click', raycast, false);
+        const onProgress = function ( xhr ) {
+          if ( xhr.lengthComputable ) {
+            const percentComplete = xhr.loaded / xhr.total * 100;
+          }
+        };
+
+        const onError = function (error) {
+          console.error( error )
+        };
+
+        const loader = new GLTFLoader();
+
+        edificios.forEach(edificio => {
+          loader.load( edificio.url, function ( gltf ) {
+            const object = gltf.scene;
+            object.position.x = 0;
+            object.position.y = 0;
+            object.position.z = 0;
+            object.scale.x = 20;
+            object.scale.y = 20;
+            object.scale.z = 20;
+            object.castShadow = true;
+            object.receiveShadow = false;
+            object.name = edificio.nombre;
+            scene.add( object ); 
+          },onProgress, onError );
+        });
+
+        recorridos.forEach(recorrido => {
+          loader.load( recorrido.url, function ( gltf ) {
+            const object = gltf.scene;
+            object.position.x = 0;
+            object.position.y = 0;
+            object.position.z = 0;
+            object.scale.x = 20;
+            object.scale.y = 20;
+            object.scale.z = 20;
+            object.visible = false;
+            object.castShadow = true;
+            object.receiveShadow = false;
+            object.name = recorrido.nombre;
+            scene.add( object ); 
+          },onProgress, onError );
+        });
+
+        obras.forEach(obra => {
+          loader.load( obra.url, function ( gltf ) {
+            const object = gltf.scene;
+            object.position.x = 0;
+            object.position.y = 0;
+            object.position.z = 0;
+            object.scale.x = 20;
+            object.scale.y = 20;
+            object.scale.z = 20;
+            object.visible = false;
+            object.castShadow = true;
+            object.receiveShadow = false;
+            object.name = obra.nombre;
+            scene.add( object ); 
+          },onProgress, onError );
+        });
+
+        window.addEventListener( 'resize', onWindowResize );
+      }
+      function raycast (event) {
+        mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+        mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+        raycaster.setFromCamera( mouse, camera );    
+        let intersects = raycaster.intersectObjects( scene.children, true );
+        intersects = intersects.filter(item => item.object.name !== 'Plano' || item.object.name !== 'modeloCiudadRelleno001');
+        if(intersects.length > 0) {
+          for (var i = 0; i < intersects.length; i++) {
+            const object = intersects[i].object;
+            const edificio = edificios.find( edificio => edificio.nombre === object.name);
+            const obra = obras.find( obra => obra.nombre === object.name);
+            const recorrido = recorridos.find( recorrido => recorrido.nombre === object.name);
+            if (INTERSECTED === null && object.name !== 'Plano' || INTERSECTED === null && object.name !== 'modeloCiudadRelleno001') {
+              INTERSECTED = object;
+              if(event.type === 'click' && edificio?.isVisible || event.type === 'click' && obra?.isVisible || event.type === 'click' && recorrido?.isVisible) {
+                if(obra) {
+                  obrasinfo(INTERSECTED.name);
+                } else if(edificio) {
+                  museos(INTERSECTED.name);
+                } else {
+                  recorridosInfo(INTERSECTED.name);
+                }
+                canMoveMouse = false;
+              } else {
+                if(edificio?.mouseInteractionAllowed && canMoveMouse && edificio?.isVisible) {
+                  const edificiosNoIntersected = scene.children.filter(item => item.name && item.name !== INTERSECTED.name && item.name !== "PisoMapa");
+                  edificiosNoIntersected.forEach(item => {
+                    item.children[0].currentHex = item.children[0].material.emissive.getHex();
+                    //setTimeout(() => item.children[0].material.emissive.setHex( 0xff0000 ), 200);
+                  })
+                  edificio.mouseInteractionAllowed = false;
+                }
+              }
+            } else {
+              edificios = edificios.map(edificio => {
+                if(edificio.nombre !== INTERSECTED?.name) edificio.mouseInteractionAllowed = true;
+                return edificio;
+              });
+              INTERSECTED = null;
+            }
+          } 
+        } else {
+          edificios = edificios.map(edificio => {
+            edificio.mouseInteractionAllowed = true;
+            return edificio;
+          });
+          scene.children.forEach(item => {
+            if(item.name) {
+              item.children[0].material.emissive.setHex( item.children[0].currentHex );
+            }
+          })
+        }
+      }
+
+      function onWindowResize() {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize( window.innerWidth, window.innerHeight );
+      }
+
+      
+
+      function animate() {
+        requestAnimationFrame( animate );
+        controls.update();
+        render();
+      }
+
+      function render() {
+        if(setCamera) {
+          camera.position.z = 200;
+          camera.position.y = 100;
+          camera.position.x = 0;
+          setCamera = false;
+        }
+        
+        filteredBuild.forEach(item => {
+          scene.children.forEach(object => {
+            if(object.name === item?.nombre) {
+              object.visible = item.isVisible;
+            }
+          })
+        })
+
+            
+        renderer.render( scene, camera );
+      }
+    </script>
+    <div class="iconos-pagina-inicio">
+      <div class="filtros-button-container"  id="filtros-button" onclick="openFiltros()">
+        <div class="filtros-button" id="filtrosButtonContainer">
+          <h3>Filtros</h3>
+        </div>
+      </div>
+      <div class="boton-centrar-img-container">
+        <img src="./assets/img/iconos/centrar-mapa-black.svg" class="boton-centrar" onclick="centrarMapa()"/>
+      </div>
+    </div>
+    <div class="filtros-desplegable-container close-filtros" id="menu-de-filtros">
+    </div>
+  </body>
+</html>

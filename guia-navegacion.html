@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="Styles/styles.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Guia de navegación - Derivas Virtuales</title>
+</head>
+<body class="fondo-navegacion">
+  <div class="titulo">
+    <button id="menu" class="button-menu" onclick="openMenu()">&#9776;</button>
+    <div class="derivasMainLogo">
+      <a href="./index.html" class="derivasMainLogo">
+        <img src="./assets/img/Logo-final-05.svg" class="titulo-menu" /></a>
+    </div>
+  </div>
+  <div id="menu-container"></div>
+  <div class="contenido-pag">
+    <div class="row">
+      <div class="col-md-12 col-lg-3">
+        <h1 class="navegacion-titulo">UNA GUIA PARA NAVEGAR
+        DERIVAS VIRTUALES
+    </h1>
+    <p class="navegacion-subtitulo">Obra en red que se constituye como un 
+      entorno virtual interactivo e invita al usuario
+      a explorar, a modo de flâneur, obras,
+      exposiciones, espacios de arte y recorridos
+      sobre una cartografía imaginada.
+    </p>
+    <p class="navegacion-text">Recorre el mapa segun tu propia deriva. Descubri los 
+      espacios de arte que lo integran.</p>
+    <p class="navegacion-text">Activá las categorías curatoriales propuestas 
+      para navegar la cartografía. Explorá las obras y las
+       exposiciones de arte.</p>
+    <p class="navegacion-text">Desplazate por el mapa y conocé una
+       mirada sobre el paisaje mediático que rodea
+      estos objetos culturales.</p>
+      </div>
+      <div class="col-md-12 col-lg-9 img-row-categorias">
+        <img class="img-navegacion" src="./assets/img/categorias-guia.svg" alt="">
+        <div style="height: 30px;"></div>
+      </div>
+    </div>
+  </div>
+  <footer id="footer-navegacion">
+    <div class="navegacion-copy">
+      <img src="./assets/img/iconos/cr.svg" alt=""><p>2021-2022 DERIVAS VIRTUALES</p>
+      
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="index.js"></script>
+  <script src="menu.js"></script>
+  <script type="module">
+    createMenu()
+  </script>
+</body>
+</html>

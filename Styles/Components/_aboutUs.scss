@@ -1,0 +1,244 @@
+.section-aboutUs{
+    height: 200vh;
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .SA-main-container{
+        height: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .imgNcredits-container{
+            height: 100%;
+            width: 40%;
+            margin-right: 5%;
+            display: flex;
+            flex-direction: column;
+            .img-container{
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            }
+            .creditos-container{
+                height: 55%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-left: 25%;
+
+                .creditos-imagen{
+                    height: 25%;
+                    position: relative;
+                    top: 15%;
+                    left: -30%;
+                }
+                .creditos-titulo{
+                    width: 60%;
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 1.75vh;
+                    color: #20DCD1;
+                }
+
+                .creditos-container-info{
+                    width: 60%;
+                    .creditos-info-box{
+                        
+                        .imagen-entre-creditos{
+                            margin: 20px 0 10px;
+                            width: 25px;
+                        }
+                        .creditos-texto{
+                            font-family: 'Roboto';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 1.75vh;
+                            color: #E9E9E9;
+                            margin: 20px 0 5px;
+                        }
+                        .creditos-info{
+                            font-family: 'Roboto';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 1.75vh;
+                            color: white;
+                        }
+                        .etapas{
+                            font-size: 1.5vh;
+                        }
+                    }
+                }
+            }
+        }
+        .info-container{
+            height: 100%;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .title-container{
+                height: 10%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                .title-box{
+                    display: flex;
+                    flex-direction: row;
+                    .title-about {
+                        font-family: 'Bebas Neue';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 8vh;
+                        color: #20DCD1;
+                    }
+                }
+                .info-pais{
+                    color: white;
+                    height: 3%;
+                    width: 15%;
+                    top: 15%;
+                    right: 5%;
+                    position: absolute;
+                    text-align: center;
+                    margin: 0;
+                    padding: 10px 0;
+                    border-top: 1px solid white;
+                    border-bottom: 1px solid white;
+                    font: 1.75vh 'Roboto';
+                    font-weight: bold;
+                }
+            }
+            .text-about-container{
+                height: 50%;
+                width: 100%;
+                .text-about-imagen{
+                    height: 20%;
+                    position: absolute;
+                    top: 63%;
+                    left: 53%;
+                }
+                div{
+                    width: 100%;
+                    .text-about{
+                        margin-top: 5%;
+                        font-family: 'Roboto';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 1.50vh;
+                        color: white;
+                    }
+                }
+            }
+            .apoyo-container{
+                height: 10%;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                .proyecto-container-left{
+                    height: 100%;
+                    width: 40%;
+                    display: flex;
+                    flex-direction: column;
+                    text-decoration: none;
+                    justify-content: space-between;
+
+                    .apoyo-titulo{
+                        width: 100%;
+                        font-family: 'Roboto';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 1.75vh;
+                        color: #20DCD1;
+                        margin-bottom: 25px;
+                    }
+                    img{
+                        width: 100%;
+                    }
+                }
+                .proyecto-container-rigth{
+                    height: 100%;
+                    width: 40%;
+                    display: flex;
+                    flex-direction: column;
+                    text-decoration: none;
+                    justify-content: space-between;
+
+                    .apoyo-titulo{
+                        width: 100%;
+                        font-family: 'Roboto';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 1.75vh;
+                        color: #20DCD1;
+                        margin-bottom: 25px;
+                    }
+                    img{
+                        width: 100%;
+                        margin-bottom: 40%;
+                    }
+                }
+            }
+        }
+    }
+    .about-footer{
+        height: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .img-footer{
+            width: 90%;
+        }
+        .copy-container{
+            height: 100%;
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            p{
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 1.5vh;
+                color: white;
+            }
+            .copy-ig-a{
+                height: 80%;
+                width: 10%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                text-decoration: none;
+                img{
+                    height: 20%;
+                     
+                }
+                p{
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 1.5vh;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+  
+  
+  
+  
+
+
+
+  

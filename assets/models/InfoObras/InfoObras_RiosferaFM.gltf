@@ -1,0 +1,133 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.7.33",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "InfoObras_RiosferaFM",
+            "rotation" : [
+                -0.1464465856552124,
+                0.3535534143447876,
+                0.3535533547401428,
+                0.8535534143447876
+            ],
+            "scale" : [
+                0.16694223880767822,
+                0.16694222390651703,
+                0.16694223880767822
+            ],
+            "translation" : [
+                -8.212944984436035,
+                0.25854846835136414,
+                -8.931456565856934
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "EXPO Y OBRAS",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.9734455347061157,
+                    0.1912016123533249,
+                    0.6795425415039062,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "C\u00edrculo.015",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 15,
+            "max" : [
+                0.866025447845459,
+                1.381739854812622,
+                0.5000000596046448
+            ],
+            "min" : [
+                -0.8660253882408142,
+                0,
+                -1
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 15,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 15,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 30,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 180,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 180,
+            "byteOffset" : 180
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 120,
+            "byteOffset" : 360
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 60,
+            "byteOffset" : 480
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 540,
+            "uri" : "data:application/octet-stream;base64,AAAAAAAAAAAAAIC/17NdvwAAAAABAAA/2LNdPwAAAAD9//8+AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIC/17NdvwAAAAABAAA/17NdvwAAAAABAAA/17NdvwAAAAABAAA/2LNdPwAAAAD9//8+2LNdPwAAAAD9//8+2LNdPwAAAAD9//8+q6qqMtrcsD8AAICyq6qqMtrcsD8AAICyq6qqMtrcsD8AAICyAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAGnlQv883rr5WufA+AAAAAAAAgD8AAACAGnlQP843rr5TufA+aytJs9A3rr5VuXC/AAAAAAAAgD8AAACAGnlQP843rr5TufA+GnlQv883rr5WufA+aytJs9A3rr5VuXC/AAAAAAAAgD8AAACAGnlQv883rr5WufA+aytJs9A3rr5VuXC/GnlQP843rr5TufA+AAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AAACAAsAAAALAAQAAgABAAcAAgAHAAsAAQAAAAQAAQAEAAcAAwAJAAwACgAGAA0ACAAFAA4ABwALAAQA"
+        }
+    ]
+}

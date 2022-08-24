@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9ae7ac6274.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="style-about-us.css">
+  <title>Acerca de Derivas Virtuales</title>
+</head>
+<body>
+  <div class="titulo">
+    <button id="menu" class="button-menu" onclick="openMenu()">&#9776;</button>
+    <a href="./index.html" class="derivasMainLogo">
+      <img src="./assets/img/Logo-final-05.svg" class="titulo-menu" />
+    </a> 
+  </div>
+  <div id="menu-container"></div>
+  <section class="section-about">
+    <div class="text-ubication-nav">
+      <h1>UNA GUIA PARA NAVEGAR <br>
+          DERIVAS VIRTUALES
+      </h1>
+      <p class="text-ubication-nav-subtitle">Obra en red que se constituye como un <br>
+        entorno virtual interactivo e invita al usuario<br>
+        a explorar, a modo de flâneur, obras,<br>
+        exposiciones, espacios de arte y recorridos<br>
+        sobre una cartografía imaginada.
+      </p>
+      <p>Recorre el mapa segun tu propia deriva. Descubri los <br>
+        espacios de arte que lo integran.</p>
+      <p>Activá las categorías curatoriales propuestas <br>
+        para navegar la cartografía. Explorá las obras y las<br>
+         exposiciones de arte.</p>
+      <p>Desplazate por el mapa y conocé una<br>
+         mirada sobre el paisaje mediático que rodea<br>
+        estos objetos culturales.</p>
+    </div>
+    <div class="navegation-map">
+
+    </div>
+  </section>
+  <footer id="footer-nav">
+    <div class="anchor-container">
+      <p>© 2021 DERIVAS VIRTUALES</p>
+    </div>
+  </footer>
+
+  <!---------------- Scripts -------------------->
+  <script src="index.js"></script>
+  <script src="menu.js"></script>
+  <script src="info-edificios.js"></script>
+  <script type="module">
+    createMenu()
+  </script>
+</body>
+</html>
