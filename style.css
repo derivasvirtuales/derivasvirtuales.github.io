@@ -933,12 +933,11 @@ color: white;
 .subtitulo {
   font-size: 15px;
 }
-
 .programa-container {
   font-size: 12px;
   font-family: 'Roboto';
   font-size: 600;
-  max-width: 100px;
+  max-width: 200px;
 
 }
 
@@ -1262,7 +1261,7 @@ color: white;
     line-height: 36px;
     font-weight: 400;
     color: #FFAE63;
-    max-width: 200px;
+    max-width: 265px;
     margin-top: 0;
     margin-bottom: 20px;
   }
@@ -1329,6 +1328,7 @@ color: white;
   line-height: 36px;
   font-family: 'Bebas Neue';
   color: #FC79D7;
+  font-weight: 400;
   margin: 0;
   max-width: 250px;
 }
@@ -1458,7 +1458,7 @@ color: #0E0D0D;
   font: 12px 'Roboto';
   line-height: 14px;
   color: #0E0D0D;
-  max-width: 250px;
+  max-width: 260px;
 
 }
 .top-recorridos-1 {
@@ -1512,6 +1512,14 @@ color: #0E0D0D;
   margin-bottom: 25px;
 }
 
+.modal-recorridos .text {
+  margin: 10px 40px;
+}
+@media (max-width: 1450px) {
+  .modal-recorridos .text {
+    margin: 5px 40px;
+  }
+}
 /* 
 @media (max-width: 991px) {
 body {background-color: #0E0D0D;}

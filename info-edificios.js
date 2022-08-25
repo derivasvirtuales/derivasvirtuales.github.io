@@ -37,10 +37,10 @@ const info = {
   },
   'OSDEViejo': {
     categoria: 'Fundaciones y Galerías',
-    nombre: 'Espacio de Arte Fundación Osde (sede anterior)',
+    nombre: 'Espacio de Arte Fundación Osde',
     lugar: {
       barrio: 'Barrio',
-      ubicacion: 'San Nicolás'
+      ubicacion: 'San Nicolás (Sede Anterior)'
     },
     web: {
       sitioWeb: 'Sitio Oficial',
@@ -307,10 +307,10 @@ const info = {
   },
   'OSDE': {
     categoria: 'Fundaciones y Galerías',
-    nombre: 'Espacio de Arte Fundación Osde (sede actual)',
+    nombre: 'Espacio de Arte Fundación Osde',
     lugar: {
       barrio: 'Barrio',
-      ubicacion: 'Retiro'
+      ubicacion: 'Retiro (Sede Actual)'
     },
     web: {
       sitioWeb: 'Sitio Oficial',
@@ -570,7 +570,7 @@ const infoObras = {
     tipo: 'Dibujo',
     caracteristicas: {
       exposicion: 'Buenos Aires, a vista de pájaro: Jean Désiré Dulin',
-      curaduria:'Anonimo',
+      curaduria:'Institución',
       museo: 'Museo Histórico Cornelio Saavedra',
       fecha: '1915'
     },
@@ -587,7 +587,7 @@ const infoObras = {
     tipo: 'Pintura',
     caracteristicas: {
       exposicion: 'Colección del Museo Casa Rosada',
-      curaduria:'Anonimo',
+      curaduria:'Institución',
       museo: 'Museo Casa Rosada',
       fecha: '1990'
     },
@@ -656,7 +656,7 @@ const infoObras = {
     tipo: 'Película',
     caracteristicas: {
       exposicion: 'Roma',
-      curaduria:'Anonimo',
+      curaduria:'Institución',
       museo: 'Teatro Municipal General San Martín',
       fecha: '1972'
     },
@@ -845,7 +845,7 @@ const infoObras = {
     tipo: 'Fotografías y videoinstalación',
     caracteristicas: {
       exposicion: 'El canto de Jano ',
-      curaduria:'Anonimo',
+      curaduria:'Institución',
       museo: 'Isla Flotante (sede anterior)',
       fecha: '2015'
     },
@@ -902,6 +902,7 @@ const infoObras = {
       fecha: '2019'
     },
     imagen: {
+      vertical: true,
       src: "./assets/img/Obras/20.jpg",
       autor: `Antonelia Adosi`
     },
@@ -914,7 +915,7 @@ const infoObras = {
     tipo: 'Videoinstalaciones',
     caracteristicas: {
       exposicion: 'Estado de emergencia',
-      curaduria:'Anonimo',
+      curaduria:'Institución',
       museo: 'Fundación Telefónica Movistar',
       fecha: '2014'
     },
@@ -931,7 +932,7 @@ const infoObras = {
     tipo: 'Instalación fílmica',
     caracteristicas: {
       exposicion: 'Clamor',
-      curaduria:'Anonimo',
+      curaduria:'Institución',
       museo: 'Centro Cultural Recoleta',
       fecha: '2015'
     },
@@ -1000,7 +1001,7 @@ const infoObras = {
     tipo: 'Instalación mixta',
     caracteristicas: {
       exposicion: 'Premio UNTREF a las Artes Electrónicas',
-      curaduria:'Anonimo',
+      curaduria:'Institución',
       museo: 'MUNTREF. Museo de Artes Visuales',
       fecha: '2016'
     },
@@ -1035,7 +1036,7 @@ const infoObras = {
     tipo: 'Fotografías',
     caracteristicas: {
       exposicion: 'Festival de la Luz 2016',
-      curaduria:'Anonimo',
+      curaduria:'Institución',
       museo: 'Centro Cultural de la Memoria Haroldo Conti',
       fecha: '2016'
     },
@@ -1096,7 +1097,7 @@ const infoObras = {
       src: "./assets/img/Obras/43.jpg",
       autor: `Mariel Szlifman`
     },
-    texto: 'Exposición colectiva site specific que incorporó como parte de su concepto el entorno de La Boca y Fundación Proa. La curaduría estuvo a cargo del Grupo Etcétera (colectivo de artistas), que, para esta muestra, buscó generar relaciones entre los artistas, la institución y la audiencia. Se tomó como punto de partida la crítica museística, el diálogo entre lo privado y lo público, así como la relación entre el exterior y el interior del espacio de arte. Participaron cuatro artistas a los que se les propuso cumplir diferentes roles y encarnar personajes que, por lo general, visitan este espacio de arte: «vecina», «turista», «profesional» y «errante». Resultan de interés las obras de Gian Paolo Minelli y Eduardo Molinari. Minelli, en el rol de «errante» y con una actitud de flâneur, realizó una lectura fotográfica del entorno de la institución de acuerdo con su propio modo de ver e incorporó a la exposición fotografías desde los años noventa hasta la actualidad que evidenciaban el proceso de gentrificación del barrio. Molinari, desenvolviéndose en el papel del «profesional», inició una investigación institucional a partir de la organización «A.I.A. (Agencia de Investigaciones Artísticas)» para potenciar una praxis de archivo. La obra se exhibió como una instalación que adoptó la forma de una oficina temporaria que incluía archivos, fotografías, collages y mobiliario. Estas obras convivían en el segundo y tercer piso de Proa y se relacionaban entre sí gracias al proceso curatorial que articuló el diálogo conceptual entre ellas a través del relato como hilo conductor.'
+    texto: 'Exhibición site specific que dialogó con el contexto de La Boca. La curaduría buscó generar relaciones entre los artistas, la institución y la audiencia. Se tomó como punto de partida la crítica museística, el diálogo entre lo privado y lo público, así como la relación entre el exterior y el interior del espacio de arte. Participaron cuatro artistas a los que se les propuso cumplir diferentes roles y encarnar personajes que, por lo general, visitan este espacio de arte: «vecina», «turista», «profesional» y «errante». Gian Paolo Minelli, en el rol de «errante» y con una actitud de flâneur, realizó una lectura del entorno de Proa de acuerdo con su propio modo de ver e incorporó fotografías desde los años noventa hasta la actualidad que evidenciaban el proceso de gentrificación. Eduardo Molinari, desenvolviéndose en el papel del «profesional», inició una investigación institucional a partir de la organización «A.I.A. (Agencia de Investigaciones Artísticas)» para potenciar una praxis de archivo. La obra se exhibió como una instalación que adoptó la forma de una oficina temporaria que incluía archivos, fotografías, collages y mobiliario. Estas obras convivían en el segundo y tercer piso de Proa.'
   },
   'InfoObras_30000': {
     subCategoria: 'Instalaciones artísticas',
@@ -1105,7 +1106,7 @@ const infoObras = {
     tipo: 'Instalación site specific',
     caracteristicas: {
       exposicion: 'Programa de Arte Público',
-      curaduria:'Anonimo',
+      curaduria:'Institución',
       museo: 'Parque de la Memoria',
       fecha: '1999-2009'
     },
@@ -1122,7 +1123,7 @@ const infoObras = {
     tipo: 'Instalación site specific',
     caracteristicas: {
       exposicion: 'Programa de Arte Público',
-      curaduria:'Anonimo',
+      curaduria:'Institución',
       museo: 'Parque de la Memoria',
       fecha: '1999-2010'
     },
@@ -1139,7 +1140,7 @@ const infoObras = {
     tipo: 'Mural',
     caracteristicas: {
       exposicion: 'Colección del Museo Casa Rosada ',
-      curaduria:'Anonimo',
+      curaduria:'Institución',
       museo: 'Museo Casa Rosada',
       fecha: '1933'
     },
@@ -1209,7 +1210,7 @@ const infoObras = {
     tipo: 'Instalación audiovisual mixta',
     caracteristicas: {
       exposicion: 'Intervención en La Salita',
-      curaduria:'Anonimo',
+      curaduria:'Institución',
       museo: 'Espacio de Arte Fundación Osde (sede anterior)',
       fecha: '2014'
     },
@@ -1335,7 +1336,7 @@ const infoObras = {
       fecha: '2015'
     },
     imagen: {
-      vertical: true,
+
       src: "./assets/img/Obras/19.jpg",
       autor: `Mariel Szlifman`
     },
@@ -1353,6 +1354,7 @@ const infoObras = {
       fecha: '2014'
     },
     imagen: {
+      vertical: true,
       src: "./assets/img/Obras/45.jpg",
       autor: `Mariel Szlifman`
     },
