@@ -152,7 +152,7 @@ const info = {
   },
   'CasaRosada': {
     categoria: 'Refuncionalizados',
-    nombre: 'Museo Casa Rosada',
+    nombre: 'Museo del Bicentenario',
     lugar: {
       barrio: 'Barrio',
       ubicacion: 'Monserrat'
@@ -165,7 +165,7 @@ const info = {
       src: "./assets/img/museos/museo-casa-rosada.jpg",
       autor: `Ernesto Monasterio`
     },
-    texto: `Inaugurado en 2011 como Museo del Bicentenario —en el contexto de los festejos del Bicentenario realizados durante la presidencia de Cristina Fernández de Kirchner—, se emplaza sobre las ruinas de la antigua Aduana Taylor (1855) y sobre el Fuerte de Buenos Aires (siglo XVIII). Esto implica la recuperación y puesta en valor del patrimonio cultural e histórico integrado a las nuevas exigencias del contexto urbano contemporáneo. El diseño arquitectónico fue realizado por B4FS Arquitectos y supervisado por la Comisión Nacional de Museos, de Monumentos y de Lugares Históricos. En una primera etapa, el aspecto arqueológico entró en diálogo con un repertorio de obras de arte —con variedad de soportes plásticos y audiovisuales, como las obras de Alfredo Bettanin y Clorindo Testa o la reconstrucción del mural de Siqueiros, Ejercicio Plástico (1933)—, con una serie cronológica de documentales y con objetos y testimonios históricos de carácter «museable». Esta convivencia propuso una reinterpretación de los hechos objetivos que privilegiaron un relato heterogéneo, múltiple y desjerarquizado. Así, la puesta en escena museística se dispuso, en su origen, conforme a  una idea de resignificar el patrimonio arqueológico (con la presencia de materialidades originales) activado mediante una lectura contemporánea. En una segunda etapa —marcada por la asunción de Mauricio Macri— se reemplazaron las obras de arte, en su mayoría, por fotografías de archivo y por mayor presencia de objetos testimoniales pertenecientes a las diferentes presidencias argentinas.`,
+    texto: `Inaugurado en 2011 —en el contexto de los festejos del Bicentenario realizados durante la presidencia de Cristina Fernández de Kirchner—, se emplaza sobre las ruinas de la antigua Aduana Taylor (1855) y el Fuerte de Buenos Aires (siglo XVIII). Esto implica la recuperación y puesta en valor del patrimonio cultural e histórico integrado a las nuevas exigencias del contexto urbano contemporáneo. El diseño arquitectónico fue realizado por B4FS Arquitectos y supervisado por la Comisión Nacional de Museos, de Monumentos y de Lugares Históricos. En una primera etapa, el aspecto arqueológico entró en diálogo con un repertorio de obras de arte de soportes plásticos y audiovisuales —como las obras de Alfredo Bettanin y Clorindo Testa o la reconstrucción del mural “Ejercicio Plástico” (1933)—, con una serie cronológica de documentales, objetos y testimonios históricos de carácter «museable». Esta convivencia propuso una reinterpretación de los hechos objetivos que privilegiaron un relato heterogéneo, múltiple y desjerarquizado. Así, la puesta en escena museística se dispuso, en su origen, conforme a una idea de resignificar el patrimonio arqueológico activado mediante una lectura contemporánea. En una segunda etapa —marcada por la asunción de Mauricio Macri— se reemplazaron las obras de arte, en su mayoría, por fotografías de archivo y por mayor presencia de objetos testimoniales de las presidencias argentinas.`,
   },
   'CCK': {
     categoria: 'Refuncionalizados',
@@ -200,7 +200,7 @@ const info = {
       src: "./assets/img/museos/centro-cultural-recoleta.jpg",
       autor: `Mariel Szlifman`
     },
-    texto: `Inaugurado en 1980, funciona como un lugar versátil de múltiples actividades y exposiciones temporales en el que exhiben artistas jóvenes y consagrados. El espacio posee una amplia historia que data del siglo XVIII: fue un convento de los monjes franciscanos; hacia 1822, una escuela de agricultura, jardín botánico, prisión y cuartel; en 1834, se convirtió en el primer Hospital de Clínicas y asilo para enfermos mentales; y en 1944, un hogar de ancianos. Para su adecuación arquitectónica, a fines del siglo XIX, fue ampliado por el arquitecto Juan Buschiazzo y, a fines del siglo XX, acondicionado para funcionar como centro cultural por los arquitectos y artistas Clorindo Testa, Jaques Bedel y Luis Benedit. Hacia los ochenta, alineado con la apertura democrática, el espacio comenzó a incluir diversas prácticas artísticas. En la actualidad, se caracteriza por una programación que ofrece diferentes experiencias centralizadas en un público joven y diverso: muestras, eventos, recitales, festivales y, desde 1989, la Bienal de Arte Joven. En 2017, con el cambio de gestión, se contrató al estudio Gorricho Diseño para repensar la identidad visual de la institución, con el objetivo de construir un perfil descontracturado y rupturista que pudiese reflejarse en los múltiples canales de comunicación que este posee, así como también incluir a sus distintos públicos. Como resultado, se rediseñó el logotipo —que adoptó forma de rayo con el fin de adaptarlo de forma simple a múltiples soportes y materialidades—, se optó por el uso de una tipografía diseñada por la argentina Julieta Ulanovsky —inspirada en los carteles de calle de CABA— y se eligió una paleta cromática vibrante, entre una serie de decisiones que permiten la fácil adaptación del sistema a las variadas propuestas.`,
+    texto: `Inaugurado en 1980, funciona como un lugar versátil de múltiples actividades y exposiciones temporales en el que exhiben artistas jóvenes y consagrados. El espacio, que posee una amplia historia que data del siglo XVIII, se fue adaptando a diferentes usos. A fines del siglo XIX, el espacio fue ampliado por Juan Buschiazzo y, a fines del siglo XX, acondicionado por Clorindo Testa, Jaques Bedel y Luis Benedit para funcionar como centro cultural. Hacia los ochenta, alineado con la apertura democrática, comenzó a incluir diversas prácticas artísticas. En la actualidad, su programación ofrece diferentes experiencias para un público joven y diverso: muestras, eventos, recitales, festivales y, desde 1989, la Bienal de Arte Joven. En 2017, se contrató al estudio Gorricho Diseño para repensar la identidad visual de la institución, con el objetivo de construir un perfil descontracturado y rupturista que pudiese reflejarse en los múltiples canales de comunicación e incluir a sus distintos públicos. Se rediseñó el logotipo, se utilizó una tipografía diseñada por la argentina Julieta Ulanovsky, y se eligió una paleta cromática vibrante, entre una serie de decisiones que permiten la fácil adaptación del sistema a las variadas propuestas.`,
   },
   'Conti': {
     categoria: 'Memoria',
@@ -252,7 +252,7 @@ const info = {
       src: "./assets/img/museos/fundacion-telefonica.jpg",
       autor: `Mariel Szlifman`
     },
-    texto: `Espacio de arte perteneciente a una de las empresas mundiales más grandes de telecomunicaciones, servicio que fue privatizado en nuestro país en la década del noventa. Este hecho presenta una relación entre lo corporativo y el arte. Se encuentra ubicado en un viejo edificio de Recoleta que solía ser una agencia de telefonía y que luego combinó oficinas con el espacio de arte, que cuenta con sedes en otras partes del mundo. Su arquitectura conserva vestigios de sus usos anteriores vinculados a la arquitectura del hierro. El espacio presenta características de una nueva museología, corriente que piensa nuevas funciones del museo en que las instituciones privadas suplen los espacios públicos por falta de financiamiento. En 2014 se realizó una reapertura que provocó un cambio en su discurso corporativo para apelar a la cultura digital. También se incorporó una intervención en la fachada: Hermes, el Mensajero de Hernán Marina, que habilitó un nuevo espacio para la presentación de la producción artística. Esto establece una nueva relación entre la fachada-arquitectura y la obra que se expone en el exterior de la institución, con el fin de difundir los proyectos a la comunidad y visibilizarlos. En la actualidad, y bajo otra gestión institucional, el espacio cambió su nombre de Espacio Fundación Telefónica a Fundación Telefónica Movistar. `,
+    texto: `Espacio de arte perteneciente a una de las empresas mundiales más grandes de telecomunicaciones, servicio que fue privatizado en nuestro país en la década del noventa. Se encuentra ubicado en un viejo edificio de Recoleta que solía ser una agencia de telefonía y que luego combinó oficinas corporativas con el espacio de arte, que cuenta con sedes en otras partes del mundo. Su arquitectura conserva vestigios de sus usos anteriores vinculados a la arquitectura del hierro. El espacio presenta características de una nueva museología, corriente que piensa nuevas funciones del museo en que las instituciones privadas suplen los espacios públicos por falta de financiamiento. En 2014 se realizó una reapertura que provocó un cambio en su discurso para apelar a la cultura digital. También se incorporó una intervención en la fachada: "Hermes, el Mensajero" de Hernán Marina. Esto establece una nueva relación entre la fachada-arquitectura y la obra que se expone en el exterior de la institución, con el fin de difundir los proyectos a la comunidad. En la actualidad, y bajo otra gestión institucional, el espacio cambió su nombre de Espacio Fundación Telefónica a Fundación Telefónica Movistar.`,
   },
   'FADU': {
     categoria: 'universitarios',
@@ -588,7 +588,7 @@ const infoObras = {
     caracteristicas: {
       exposicion: 'Colección del Museo Casa Rosada',
       curaduria:'Institución',
-      museo: 'Museo Casa Rosada',
+      museo: 'Museo del Bicentenario',
       fecha: '1990'
     },
     imagen: {
@@ -599,7 +599,7 @@ const infoObras = {
   },
   'InfoExpo_DianeArbus': {
     subCategoria: 'Flâneur',
-    nombre: 'Diane Arbus',
+    nombre: 'Diane Arbus. En el principio',
     titulo: 'Recuerdos superpuestos',
     tipo: 'Fotografías',
     caracteristicas: {
@@ -647,7 +647,7 @@ const infoObras = {
       src: "./assets/img/Obras/34.jpg",
       autor: `Mariel Szlifman`
     },
-    texto: 'La exposición reunió una serie de fotografías de Vivian Maier de los años cincuenta montadas en el espacio de arte en tres sectores: autorretratos, niños e imágenes urbanas. Estos ejes estructuran el trabajo de la aficionada fotógrafa, que en vida nunca reveló sus imágenes (y produjo más de cien mil tomas). Las fotografías de Maier se destacan por el registro particular del paisaje urbano (de Chicago, por ejemplo) y de sus personajes, y por establecer una relación entre su cuerpo y la ciudad a través del medio maquínico, especialmente en sus autorretratos. Con respecto a las imágenes exhibidas en esta muestra, el acuerdo entre la institución y el coleccionista fue complejo, ya que los negativos originales que se encontraban en Nueva York no podían ser sacados de ese país; por tanto, las copias de gelatina de plata debían realizarse allí y luego enviarse a Buenos Aires. La galería decidió realizar copias impresas a partir de archivos digitales, proceso que produce cierta «hibridez», dado que los originales se digitalizaron para luego imprimir las copias en copias impresas. Este aspecto pone de manifiesto el valor de la copia y la posibilidad de reproducción ilimitada del archivo digital, sumado al hecho de que los archivos pertenecen a un coleccionista privado (John Maloof). '
+    texto: 'La exposición reunió una serie de fotografías de Maier de los años cincuenta montadas en el espacio de arte en tres sectores: autorretratos, niños e imágenes urbanas. Estos ejes estructuran el trabajo de la aficionada fotógrafa, que en vida nunca reveló sus imágenes (y produjo más de cien mil tomas). Sus imágenes se destacan por el registro particular del paisaje urbano (de Chicago, por ejemplo) y de sus personajes, y por establecer una relación entre su cuerpo y la ciudad a través del medio maquínico, especialmente en sus autorretratos. Con respecto a las fotografías exhibidas, el acuerdo entre la institución y el coleccionista (John Maloof) fue complejo, ya que los negativos originales que se encontraban en Nueva York no podían ser sacados de ese país. La galería decidió realizar copias impresas a partir de archivos digitales, proceso que produce cierta «hibridez», dado que los originales se digitalizaron para luego imprimir las copias. Este aspecto pone de manifiesto el valor de la copia y la posibilidad de reproducción ilimitada del archivo digital, sumado al hecho de que los archivos pertenecen a un coleccionista privado. '
   },
   'InfoObras_Roma': {
     subCategoria: 'Flâneur',
@@ -656,15 +656,15 @@ const infoObras = {
     tipo: 'Película',
     caracteristicas: {
       exposicion: 'Roma',
-      curaduria:'Institución',
+      curaduria:'Sala Lugones',
       museo: 'Teatro Municipal General San Martín',
-      fecha: '1972'
+      fecha: '2010'
     },
     imagen: {
       src: "./assets/img/Obras/42.jpg",
       autor: `Still de pelicula`
     },
-    texto: 'Roma es uno de los films más emblemáticos en la historia cinematográfica de Federico Fellini. Es un «falso» documental narrado desde la ficción. Se trabaja tanto en locaciones de la ciudad como en estudio para reconstruir aquello que ya no se puede filmar. El director italiano realiza una lectura desde el medio cinematográfico (“La ciudad duerme, el hombre de la cámara viene a despertarla”, en palabras de Jean-Louis Comolli) y construye una visión de la ciudad de Roma conforme a su propia mirada. Así, se evidencia el problema de representar la ciudad: el director, que es provinciano, trabaja con una concepción de lo urbano donde lo público y lo privado conviven de modo fragmentado. Los aspectos característicos del cine clásico y narrativo quedan abolidos, ya que el montaje utilizado no responde a una lógica lineal o racional, sino que opera con fracciones que constituyen nuevas temporalidades. Fellini descompone el lenguaje y trabaja con la elipsis temporal. Al mismo tiempo, se piensa al cine como un arte plebeyo —evidenciado a través de espectáculos de varietés—, tal como era considerado en sus inicios. Por momentos, el director se pone en escena tomando decisiones para develar cómo funciona dicho procedimiento delante de la cámara. La película fue proyectada en nuestro país en su materialidad fílmica original en la Sala Lugones, uno de los pocos espacios de exhibición en la ciudad en el que todavía esto es posible.'
+    texto: 'Roma (1972) es uno de los films más emblemáticos en la historia cinematográfica de Federico Fellini. Es un «falso» documental narrado desde la ficción. Se trabaja tanto en locaciones de la ciudad como en estudio para reconstruir aquello que ya no se puede filmar. El director italiano realiza una lectura desde el medio cinematográfico (“La ciudad duerme, el hombre de la cámara viene a despertarla”, en palabras de Jean-Louis Comolli) y construye una visión de la ciudad de Roma conforme a su propia mirada. Así, se evidencia el problema de representar la ciudad: el director, que es provinciano, trabaja con una concepción de lo urbano donde lo público y lo privado conviven de modo fragmentado. Los aspectos característicos del cine clásico y narrativo quedan abolidos, ya que el montaje utilizado no responde a una lógica lineal o racional, sino que opera con fracciones que constituyen nuevas temporalidades. Fellini descompone el lenguaje y trabaja con la elipsis temporal. Al mismo tiempo, se piensa al cine como un arte plebeyo —evidenciado a través de espectáculos de varietés—, tal como era considerado en sus inicios. Por momentos, el director se pone en escena tomando decisiones para develar cómo funciona dicho procedimiento delante de la cámara. La película fue proyectada en nuestro país en su materialidad fílmica original en la Sala Lugones, uno de los pocos espacios de exhibición en la ciudad en el que todavía esto es posible.'
   },
   'InfoExpo_OperacionFracaso': {
     subCategoria: 'Prácticas de archivo',
@@ -739,7 +739,7 @@ const infoObras = {
   'InfoExpo_Ninfas': {
     subCategoria: 'Prácticas de archivo',
     nombre: 'Exposición colectiva',
-    titulo: 'Ninfas, serpientes, constelaciones. La teoría artística de Aby Warbug',
+    titulo: 'Ninfas, serpientes, constelaciones. La teoría artística de Aby Warburg',
     tipo: 'Pinturas, fotografías y esculturas',
     caracteristicas: {
       exposicion: 'Ninfas, serpientes, constelaciones. La teoría artística de Aby Warbug',
@@ -751,7 +751,7 @@ const infoObras = {
       src: "./assets/img/Obras/44.jpg",
       autor: `Antonelia Adosi`
     },
-    texto: 'Exposición que indagó acerca de la forma en que las imágenes nos interpelan, construyen estructuras sociales y son claves espirituales de cada época. Se toma como punto de partida al historiador Aby Warburg quien, a partir de expresiones alegóricas y de su proyecto de atlas Mnemosyne, generaba un vínculo entre visualidades, textos e historia. La muestra se basó en una curaduría de investigación. José Emilio Burucúa, como curador, trabajó con un equipo compuesto por Roberto Casazza, Nicolás Kwiatkowski, Federico Ruvituso y Sandra Szir. Las obras incluidas provenían de colecciones del mismo museo y de museos de arte públicos (con colecciones de arte clásicas), junto con otras obras del siglo XX que funcionaban como contraposición de tiempos e imaginarios. De esta forma, la propuesta curatorial interrogó una serie de obras de patrimonio argentino —de diferentes épocas y estilos— que se sustentaba en el método propuesto por Warburg: un trabajo de investigación que, a partir de reproducciones de obras de diferentes épocas y tipologías artísticas, generaba una forma de pensamiento acronológico, antienciclopédico y antiescuela. A pesar de que la exposición se realizó en el Museo de Bellas Artes, se buscó romper con los esquemas expográficos tradicionales. Las obras se organizan de acuerdo con diferentes tópicos: «ninfa», «cielos estrellados» y «el héroe», combinando variados soportes y materialidades. '
+    texto: 'Exposición que indagó acerca de la forma en que las imágenes nos interpelan, construyen estructuras sociales y son claves espirituales de cada época. Se toma como punto de partida al historiador Aby Warburg quien, a partir de su proyecto Atlas Mnemosyne, generaba un vínculo entre visualidades, textos e historia. La muestra se basó en una curaduría de investigación compuesta por: José Emilio Burucúa, Roberto Casazza, Nicolás Kwiatkowski, Federico Ruvituso y Sandra Szir. Las obras incluidas provenían de colecciones del mismo museo y de museos de arte públicos (con colecciones de arte clásicas), junto con obras del siglo XX que funcionaban como contraposición de tiempos e imaginarios. De esta forma, la propuesta curatorial interrogó una serie de obras de patrimonio argentino que se sustentaba en el método de Warburg: un trabajo de investigación que, a partir de reproducciones de obras de diferentes épocas y tipologías artísticas, generaba una forma de pensamiento acronológico, antienciclopédico y antiescuela. Las obras se organizan de acuerdo con diferentes tópicos: «ninfa», «cielos estrellados» y «el héroe», combinando variados soportes y materialidades. '
   },
   'InfoExpo_PorqueYoEscribo': {
     subCategoria: 'Libros de artista y múltiples',
@@ -1097,7 +1097,7 @@ const infoObras = {
       src: "./assets/img/Obras/43.jpg",
       autor: `Mariel Szlifman`
     },
-    texto: 'Exhibición site specific que dialogó con el contexto de La Boca. La curaduría buscó generar relaciones entre los artistas, la institución y la audiencia. Se tomó como punto de partida la crítica museística, el diálogo entre lo privado y lo público, así como la relación entre el exterior y el interior del espacio de arte. Participaron cuatro artistas a los que se les propuso cumplir diferentes roles y encarnar personajes que, por lo general, visitan este espacio de arte: «vecina», «turista», «profesional» y «errante». Gian Paolo Minelli, en el rol de «errante» y con una actitud de flâneur, realizó una lectura del entorno de Proa de acuerdo con su propio modo de ver e incorporó fotografías desde los años noventa hasta la actualidad que evidenciaban el proceso de gentrificación. Eduardo Molinari, desenvolviéndose en el papel del «profesional», inició una investigación institucional a partir de la organización «A.I.A. (Agencia de Investigaciones Artísticas)» para potenciar una praxis de archivo. La obra se exhibió como una instalación que adoptó la forma de una oficina temporaria que incluía archivos, fotografías, collages y mobiliario. Estas obras convivían en el segundo y tercer piso de Proa.'
+    texto: 'Exhibición que dialogó con el contexto de La Boca. La curaduría generó relaciones entre los artistas, la institución y la audiencia. Se tomó como punto de partida la crítica museística, el diálogo entre lo privado y lo público, así como la relación entre el exterior y el interior del espacio de arte. Participaron cuatro artistas a los que se les propuso cumplir diferentes roles y encarnar personajes que, por lo general, visitan este espacio de arte. Gian Paolo Minelli, en el rol de «errante» y con una actitud de flâneur, realizó una lectura del entorno de Proa e incorporó fotografías desde los años noventa hasta la actualidad que evidencian el proceso de gentrificación. Eduardo Molinari, en el papel del «profesional», inició una investigación institucional a partir de la «A.I.A. (Agencia de Investigaciones Artísticas)» para potenciar una praxis de archivo. La obra se exhibió como una instalación que adoptó la forma de una oficina temporaria con archivos, fotografías, collages y mobiliario. Estas obras convivían en el segundo y tercer piso de Proa.'
   },
   'InfoObras_30000': {
     subCategoria: 'Instalaciones artísticas',
@@ -1141,15 +1141,15 @@ const infoObras = {
     caracteristicas: {
       exposicion: 'Colección del Museo Casa Rosada ',
       curaduria:'Institución',
-      museo: 'Museo Casa Rosada',
-      fecha: '1933'
+      museo: 'Museo del Bicentenario',
+      fecha: '2011'
     },
     imagen: {
       vertical: true,
       src: "./assets/img/Obras/4.jpg",
       autor: `Archivo Museo Casa Rosada`
     },
-    texto: 'Mural realizado por David A. Siqueiros —junto con Antonio Berni, Lino Spilimbergo, Juan Carlos Castagnino y Enrique Lázaro— en los años treinta. Proyectado originalmente en el sótano de la casa de Natalio Botana (fundador del diario Crítica), en la actualidad está emplazado en el Museo Casa Rosada. La obra se destaca por varios motivos: el pasaje del ámbito privado al público, el carácter site specific que es reinstalado y rememorado a través de la construcción de un contenedor vidriado que lo protege y la transformación del mural en un objeto museable. A su vez, el mural se distingue por su carácter inmersivo, porque se apropia tanto del espacio físico (piso, techo y paredes) como del conceptual, y resulta imprescindible la interacción del sujeto con la obra. Si tomamos en cuenta el momento de ejecución, se considera de relevancia que fue prefigurada mediante máquinas de imágenes, gracias a la proyección de fotografías sobre el espacio que les permitió a Siqueiros y a sus ayudantes pintar a mano alzada sobre imágenes técnicas.'
+    texto: 'Mural realizado por David A. Siqueiros —junto con Antonio Berni, Lino Spilimbergo, Juan Carlos Castagnino y Enrique Lázaro— en los años treinta. Proyectado originalmente en el sótano de la casa de Natalio Botana en 1933 (fundador del diario Crítica). La obra se destaca por varios motivos: el pasaje del ámbito privado al público, el carácter site specific que es reinstalado y rememorado a través de la construcción de un contenedor vidriado que lo protege y la transformación del mural en un objeto museable. A su vez, el mural se distingue por su carácter inmersivo, porque se apropia tanto del espacio físico (piso, techo y paredes) como del conceptual, y resulta imprescindible la interacción del sujeto con la obra. Si tomamos en cuenta el momento de ejecución, se considera de relevancia que fue prefigurada mediante máquinas de imágenes, gracias a la proyección de fotografías sobre el espacio que les permitió a Siqueiros y a sus ayudantes pintar a mano alzada sobre imágenes técnicas.'
   },
   'InfoObras_300Metros': {
     subCategoria: 'Instalaciones artísticas',
@@ -1246,13 +1246,13 @@ const infoObras = {
       exposicion: 'Mundo Propio. Fotografía moderna argentina 1927-1962',
       curaduria:'Facundo de Zuviría',
       museo: 'Museo de Arte Latinoamericano de Buenos Aires',
-      fecha: '1927'
+      fecha: '2019'
     },
     imagen: {
       src: "./assets/img/Obras/9.jpg",
       autor: `Santiago Tenenbaum`
     },
-    texto: 'Esta fotografía de Horacio Coppola se exhibió en la exposición “Mundo Propio. Fotografía moderna argentina 1927-1962” (2019), realizada en el Malba con curaduría de Facundo de Zuviría. El mismo artista comentó en algunos escritos que en esta imagen encuentra una metáfora del mundo urbano: la relación entre la ciudad y el mundo interior. Una lectura del entorno que se inscribe en un lugar excesivamente personal, a partir de una vista cenital de un escritorio y un cajón abierto ―con unos pocos objetos de su vida cotidiana: escuadra, regla y antifaz― que podría ser el retrato de un espacio urbano edificado. Coppola registra la ciudad moderna de Buenos Aires como ningún otro artista y construye una mirada sistemática a partir de imágenes urbanas que hoy tienen la capacidad de ser actuales. Mundo Propio fue la imagen emblemática que inauguró la exposición, ya que Zuviría considera que es la obra que da inicio a la fotografía moderna en la Argentina y porque, para Coppola, es el punto de partida sobre la autonomía y las posibilidades expresivas del lenguaje fotográfico.'
+    texto: 'Esta fotografía de Horacio Coppola se exhibió en la exposición “Mundo Propio. Fotografía moderna argentina 1927-1962” (2019), realizada en el Malba con curaduría de Facundo de Zuviría. El mismo artista comentó en algunos escritos que en esta imagen encuentra una metáfora del mundo urbano: la relación entre la ciudad y el mundo interior. Una lectura del entorno que se inscribe en un lugar excesivamente personal, a partir de una vista cenital de un escritorio y un cajón abierto ―con unos pocos objetos de su vida cotidiana: escuadra, regla y antifaz― que podría ser el retrato de un espacio urbano edificado. Coppola registra la ciudad moderna de Buenos Aires como ningún otro artista y construye una mirada sistemática a partir de imágenes urbanas que hoy tienen la capacidad de ser actuales. Mundo Propio (1927) fue la imagen emblemática que inauguró la exposición, ya que Zuviría considera que es la obra que da inicio a la fotografía moderna en la Argentina y porque, para Coppola, es el punto de partida sobre la autonomía y las posibilidades expresivas del lenguaje fotográfico.'
   },
   'InfoObras_AutorretratoConHijos': {
     subCategoria: 'Autorretratos',
@@ -1263,7 +1263,7 @@ const infoObras = {
       exposicion: 'Intenciones secretas',
       curaduria:'Victoria Giraudo y Agustín Pérez Rubio',
       museo: 'Museo de Arte Latinoamericano de Buenos Aires',
-      fecha: '1947'
+      fecha: '2015'
     },
     imagen: {
       vertical: true,
