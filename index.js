@@ -102,7 +102,7 @@ function obrasinfo(name)  {
               ${infoObras[name].nombre}
             </p>
             <h3 class="titulo-obras">${infoObras[name].titulo.toUpperCase()}</h3>
-            <p class="museo-fecha">${infoObras[name].caracteristicas.museo.toUpperCase()}, ${infoObras[name].caracteristicas.fecha}.</p>
+            <p class="museo-fecha">${infoObras[name].caracteristicas.museo.toUpperCase()}, ${infoObras[name].caracteristicas.fecha}</p>
             <div class="linea-negra"></div>
             <p class="tipo-obra">${infoObras[name].tipo}</p>
             <p class="curaduria-expo">Curador/a: ${infoObras[name].caracteristicas.curaduria}</p>
@@ -139,7 +139,7 @@ function obrasinfo(name)  {
             ${infoObras[name].nombre}
           </p>
           <h3 class="titulo-obras">${infoObras[name].titulo.toUpperCase()}</h3>
-          <p class="museo-fecha">${infoObras[name].caracteristicas.museo.toUpperCase()}, ${infoObras[name].caracteristicas.fecha}.</p>
+          <p class="museo-fecha">${infoObras[name].caracteristicas.museo.toUpperCase()}, ${infoObras[name].caracteristicas.fecha}</p>
           <div class="linea-negra"></div>
           <p class="tipo-obra">${infoObras[name].tipo}</p>
             <p class="curaduria-expo">Curador/a: ${infoObras[name].caracteristicas.curaduria}</p>

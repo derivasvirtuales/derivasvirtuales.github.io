@@ -570,7 +570,7 @@ const infoObras = {
     tipo: 'Dibujo',
     caracteristicas: {
       exposicion: 'Buenos Aires, a vista de pájaro: Jean Désiré Dulin',
-      curaduria:'Institución',
+      curaduria:'institución',
       museo: 'Museo Histórico Cornelio Saavedra',
       fecha: '1915'
     },
@@ -587,20 +587,20 @@ const infoObras = {
     tipo: 'Pintura',
     caracteristicas: {
       exposicion: 'Colección del Museo Casa Rosada',
-      curaduria:'Institución',
+      curaduria:'institución',
       museo: 'Museo del Bicentenario',
       fecha: '1990'
     },
     imagen: {
       src: "./assets/img/Obras/5.jpg",
-      autor: `Archivo Museo Casa Rosada`
+      autor: `Archivo Museo del Bicentenario`
     },
-    texto: 'Pieza que vincula la arquitectura con la pintura a partir de un documento histórico: el dibujo original del plano del Fuerte de Buenos Aires de principios del siglo XVIII. Es una obra pictórica que plantea una idea de lectura urbana construida por medio del montaje vertical de capas históricas, ya que en ella se superponen diferentes elementos, tales como planos arquitectónicos, maderas, capas de pintura, palabras y signos. Así, se configura una geografía subjetiva —una interpretación personal por parte de Testa— que implica una mirada hacia el pasado de la ciudad, sumando elementos que refieren desde la época de la fundación de Buenos Aires hasta nuestros días. La obra, perteneciente a la colección del Museo Casa Rosada, es exhibida enfrentada al plano original del Fuerte de Buenos Aires, y ello responde a una mirada curatorial dialógica a favor de una subjetivación del espacio.'
+    texto: 'Pieza que vincula la arquitectura con la pintura a partir de un documento histórico: el dibujo original del plano del Fuerte de Buenos Aires de principios del siglo XVIII. Es una obra pictórica que plantea una idea de lectura urbana construida por medio del montaje vertical de capas históricas, ya que en ella se superponen diferentes elementos, tales como planos arquitectónicos, maderas, capas de pintura, palabras y signos. Así, se configura una geografía subjetiva —una interpretación personal por parte de Testa— que implica una mirada hacia el pasado de la ciudad, sumando elementos que refieren desde la época de la fundación de Buenos Aires hasta nuestros días. La obra, perteneciente a la colección del museo, es exhibida enfrentada al plano original del Fuerte de Buenos Aires, y ello responde a una mirada curatorial dialógica a favor de una subjetivación del espacio.'
   },
   'InfoExpo_DianeArbus': {
     subCategoria: 'Flâneur',
-    nombre: 'Diane Arbus. En el principio',
-    titulo: 'Recuerdos superpuestos',
+    nombre: 'Diane Arbus',
+    titulo: 'Diane Arbus. En el principio',
     tipo: 'Fotografías',
     caracteristicas: {
       exposicion: 'Diane Arbus. En el principio',
@@ -751,7 +751,7 @@ const infoObras = {
       src: "./assets/img/Obras/44.jpg",
       autor: `Antonelia Adosi`
     },
-    texto: 'Exposición que indagó acerca de la forma en que las imágenes nos interpelan, construyen estructuras sociales y son claves espirituales de cada época. Se toma como punto de partida al historiador Aby Warburg quien, a partir de su proyecto Atlas Mnemosyne, generaba un vínculo entre visualidades, textos e historia. La muestra se basó en una curaduría de investigación compuesta por: José Emilio Burucúa, Roberto Casazza, Nicolás Kwiatkowski, Federico Ruvituso y Sandra Szir. Las obras incluidas provenían de colecciones del mismo museo y de museos de arte públicos (con colecciones de arte clásicas), junto con obras del siglo XX que funcionaban como contraposición de tiempos e imaginarios. De esta forma, la propuesta curatorial interrogó una serie de obras de patrimonio argentino que se sustentaba en el método de Warburg: un trabajo de investigación que, a partir de reproducciones de obras de diferentes épocas y tipologías artísticas, generaba una forma de pensamiento acronológico, antienciclopédico y antiescuela. Las obras se organizan de acuerdo con diferentes tópicos: «ninfa», «cielos estrellados» y «el héroe», combinando variados soportes y materialidades. '
+    texto: 'Exposición que indagó acerca de la forma en que las imágenes nos interpelan, construyen estructuras sociales y son claves espirituales de cada época. Se toma como punto de partida al historiador Aby Warburg quien, a partir de su proyecto Atlas Mnemosyne, generaba un vínculo entre visualidades, textos e historia. La muestra se basó en una curaduría de investigación compuesta por: José Emilio Burucúa, Roberto Casazza, Nicolás Kwiatkowski, Federico Ruvituso y Sandra Szir. Las obras incluidas provenían de colecciones del mismo museo y de museos de arte públicos (con colecciones de arte clásicas), junto con obras del siglo XX que funcionaban como contraposición de tiempos e imaginarios. De esta forma, la propuesta curatorial interrogó una serie de obras de patrimonio argentino que se sustentaba en el método de Warburg: un trabajo de investigación que, a partir de reproducciones de obras de diferentes épocas y tipologías artísticas, generaba una forma de pensamiento acronológico, antienciclopédico y antiescuela. Las obras se organizan de acuerdo con diferentes tópicos: «ninfa», «cielos estrellados» y «el héroe», combinando variados soportes y materialidades.'
   },
   'InfoExpo_PorqueYoEscribo': {
     subCategoria: 'Libros de artista y múltiples',
@@ -845,7 +845,7 @@ const infoObras = {
     tipo: 'Fotografías y videoinstalación',
     caracteristicas: {
       exposicion: 'El canto de Jano ',
-      curaduria:'Institución',
+      curaduria:'institución',
       museo: 'Isla Flotante (sede anterior)',
       fecha: '2015'
     },
@@ -915,7 +915,7 @@ const infoObras = {
     tipo: 'Videoinstalaciones',
     caracteristicas: {
       exposicion: 'Estado de emergencia',
-      curaduria:'Institución',
+      curaduria:'institución',
       museo: 'Fundación Telefónica Movistar',
       fecha: '2014'
     },
@@ -932,7 +932,7 @@ const infoObras = {
     tipo: 'Instalación fílmica',
     caracteristicas: {
       exposicion: 'Clamor',
-      curaduria:'Institución',
+      curaduria:'institución',
       museo: 'Centro Cultural Recoleta',
       fecha: '2015'
     },
@@ -1001,7 +1001,7 @@ const infoObras = {
     tipo: 'Instalación mixta',
     caracteristicas: {
       exposicion: 'Premio UNTREF a las Artes Electrónicas',
-      curaduria:'Institución',
+      curaduria:'institución',
       museo: 'MUNTREF. Museo de Artes Visuales',
       fecha: '2016'
     },
@@ -1036,7 +1036,7 @@ const infoObras = {
     tipo: 'Fotografías',
     caracteristicas: {
       exposicion: 'Festival de la Luz 2016',
-      curaduria:'Institución',
+      curaduria:'institución',
       museo: 'Centro Cultural de la Memoria Haroldo Conti',
       fecha: '2016'
     },
@@ -1097,16 +1097,16 @@ const infoObras = {
       src: "./assets/img/Obras/43.jpg",
       autor: `Mariel Szlifman`
     },
-    texto: 'Exhibición que dialogó con el contexto de La Boca. La curaduría generó relaciones entre los artistas, la institución y la audiencia. Se tomó como punto de partida la crítica museística, el diálogo entre lo privado y lo público, así como la relación entre el exterior y el interior del espacio de arte. Participaron cuatro artistas a los que se les propuso cumplir diferentes roles y encarnar personajes que, por lo general, visitan este espacio de arte. Gian Paolo Minelli, en el rol de «errante» y con una actitud de flâneur, realizó una lectura del entorno de Proa e incorporó fotografías desde los años noventa hasta la actualidad que evidencian el proceso de gentrificación. Eduardo Molinari, en el papel del «profesional», inició una investigación institucional a partir de la «A.I.A. (Agencia de Investigaciones Artísticas)» para potenciar una praxis de archivo. La obra se exhibió como una instalación que adoptó la forma de una oficina temporaria con archivos, fotografías, collages y mobiliario. Estas obras convivían en el segundo y tercer piso de Proa.'
+    texto: 'Exhibición que dialogó con el contexto de La Boca. La curaduría generó relaciones entre los artistas, la institución y la audiencia. Se tomó como punto de partida la crítica museística, el diálogo entre lo privado y lo público, así como la relación entre el exterior y el interior del espacio de arte. Participaron cuatro artistas a los que se les propuso cumplir diferentes roles y encarnar personajes que, por lo general, visitan este espacio de arte. Gian Paolo Minelli, en el rol de «errante» y con una actitud de flâneur, realizó una lectura del entorno de Proa e incorporó fotografías desde los años noventa hasta la actualidad que evidencian el proceso de gentrificación. Eduardo Molinari, en el papel del «profesional», inició una investigación institucional a partir de la «A.I.A. (Agencia de Investigaciones Artísticas)» para potenciar una praxis de archivo. La obra se exhibió como una instalación que adoptó la forma de una oficina temporaria con archivos, fotografías, collages y mobiliario.'
   },
   'InfoObras_30000': {
     subCategoria: 'Instalaciones artísticas',
     nombre: 'Nicolás Guagnini',
-    titulo: '30000',
+    titulo: '30.000',
     tipo: 'Instalación site specific',
     caracteristicas: {
       exposicion: 'Programa de Arte Público',
-      curaduria:'Institución',
+      curaduria:'institución',
       museo: 'Parque de la Memoria',
       fecha: '1999-2009'
     },
@@ -1123,7 +1123,7 @@ const infoObras = {
     tipo: 'Instalación site specific',
     caracteristicas: {
       exposicion: 'Programa de Arte Público',
-      curaduria:'Institución',
+      curaduria:'institución',
       museo: 'Parque de la Memoria',
       fecha: '1999-2010'
     },
@@ -1140,14 +1140,14 @@ const infoObras = {
     tipo: 'Mural',
     caracteristicas: {
       exposicion: 'Colección del Museo Casa Rosada ',
-      curaduria:'Institución',
+      curaduria:'institución',
       museo: 'Museo del Bicentenario',
       fecha: '2011'
     },
     imagen: {
       vertical: true,
       src: "./assets/img/Obras/4.jpg",
-      autor: `Archivo Museo Casa Rosada`
+      autor: `Archivo Museo del Bicentenario`
     },
     texto: 'Mural realizado por David A. Siqueiros —junto con Antonio Berni, Lino Spilimbergo, Juan Carlos Castagnino y Enrique Lázaro— en los años treinta. Proyectado originalmente en el sótano de la casa de Natalio Botana en 1933 (fundador del diario Crítica). La obra se destaca por varios motivos: el pasaje del ámbito privado al público, el carácter site specific que es reinstalado y rememorado a través de la construcción de un contenedor vidriado que lo protege y la transformación del mural en un objeto museable. A su vez, el mural se distingue por su carácter inmersivo, porque se apropia tanto del espacio físico (piso, techo y paredes) como del conceptual, y resulta imprescindible la interacción del sujeto con la obra. Si tomamos en cuenta el momento de ejecución, se considera de relevancia que fue prefigurada mediante máquinas de imágenes, gracias a la proyección de fotografías sobre el espacio que les permitió a Siqueiros y a sus ayudantes pintar a mano alzada sobre imágenes técnicas.'
   },
@@ -1210,7 +1210,7 @@ const infoObras = {
     tipo: 'Instalación audiovisual mixta',
     caracteristicas: {
       exposicion: 'Intervención en La Salita',
-      curaduria:'Institución',
+      curaduria:'institución',
       museo: 'Espacio de Arte Fundación Osde (sede anterior)',
       fecha: '2014'
     },
@@ -1349,7 +1349,7 @@ const infoObras = {
     tipo: 'Instalación mixta',
     caracteristicas: {
       exposicion: 'Soberanía del uso ',
-      curaduria:'Federico Baeza y Sebastián Vidal Mackinson',
+      curaduria:'Feda Baeza y Sebastián Vidal Mackinson',
       museo: 'Espacio de Arte Fundación Osde (sede anterior)',
       fecha: '2014'
     },
