@@ -9,7 +9,7 @@ const info = {
       ubicacion: 'La Boca'
     },
     web: {
-      sitioWeb: 'Sitio Oficial',
+      sitioWeb: 'Sitio oficial',
       url: 'https://islaflotante.com/'
     },
     imagen: {
@@ -26,7 +26,7 @@ const info = {
       ubicacion: 'Recoleta'
     },
     web: {
-      sitioWeb: 'Sitio Oficial',
+      sitioWeb: 'Sitio oficial',
       url: 'https://www.bellasartes.gob.ar/'
     },
     imagen: {
@@ -43,7 +43,7 @@ const info = {
       ubicacion: 'San Nicolás (Sede Anterior)'
     },
     web: {
-      sitioWeb: 'Sitio Oficial',
+      sitioWeb: 'Sitio oficial',
       url: 'https://artefundacionosde.com.ar/'
     },
     imagen: {
@@ -60,8 +60,8 @@ const info = {
       ubicacion: 'La Boca'
     },
     web: {
-      sitioWeb: 'Sitio Oficial',
-      url: 'https://www.bellasartes.gob.ar/'
+      sitioWeb: 'Sitio oficial',
+      url: 'http://www.proa.org/esp/'
     },
     imagen: {
       src: "./assets/img/museos/fundacion-proa.jpg", 
@@ -77,7 +77,7 @@ const info = {
       ubicacion: 'Caseros'
     },
     web: {
-      sitioWeb: 'Sitio Oficial',
+      sitioWeb: 'Sitio oficial',
       url: 'http://untref.edu.ar/muntref/es/museo-de-artes-visuales/'
     },
     imagen: {
@@ -95,7 +95,7 @@ const info = {
       ubicacion: 'Retiro'
     },
     web: {
-      sitioWeb: 'Sitio Oficial',
+      sitioWeb: 'Sitio oficial',
       url: 'https://untref.edu.ar/muntref/es/centro-de-arte-contemporaneo/'
     },
     imagen: {
@@ -112,7 +112,7 @@ const info = {
       ubicacion: 'Palermo'
     },
     web: {
-      sitioWeb: 'Sitio Oficial',
+      sitioWeb: 'Sitio oficial',
       url: 'https://www.malba.org.ar/'
     },
     imagen: {
@@ -141,7 +141,7 @@ const info = {
       ubicacion: 'Puerto Madero'
     },
     web: {
-      sitioWeb: 'Sitio Oficial',
+      sitioWeb: 'Sitio oficial',
       url: 'https://www.coleccionfortabat.org.ar/'
     },
     imagen: {
@@ -158,7 +158,7 @@ const info = {
       ubicacion: 'Monserrat'
     },
     web: {
-      sitioWeb: 'Sitio Oficial',
+      sitioWeb: 'Sitio oficial',
       url: 'https://www.casarosada.gob.ar/la-casa-rosada/museo'
     },
     imagen: {
@@ -175,7 +175,7 @@ const info = {
       ubicacion: 'San Nicolás'
     },
     web: {
-      sitioWeb: 'Sitio Oficial',
+      sitioWeb: 'Sitio oficial',
       url: 'https://cck.gob.ar/'
     },
     imagen: {
@@ -192,7 +192,7 @@ const info = {
       ubicacion: 'Recoleta'
     },
     web: {
-      sitioWeb: 'Sitio Oficial',
+      sitioWeb: 'Sitio oficial',
       url: 'http://www.centroculturalrecoleta.org/'
     },
     imagen: {
@@ -210,7 +210,7 @@ const info = {
       ubicacion: 'Nuñez'
     },
     web: {
-      sitioWeb: 'Sitio Oficial',
+      sitioWeb: 'Sitio oficial',
       url: 'http://conti.derhuman.jus.gov.ar/'
     },
     imagen: {
@@ -227,7 +227,7 @@ const info = {
       ubicacion: 'Saavedra'
     },
     web: {
-      sitioWeb: 'Sitio Oficial',
+      sitioWeb: 'Sitio oficial',
       url: 'https://www.buenosaires.gob.ar/museos/museo-historico-cornelio-de-saavedra'
     },
     imagen: {
@@ -244,7 +244,7 @@ const info = {
       ubicacion: 'Recoleta'
     },
     web: {
-     sitioWeb: 'Sitio Oficial',
+     sitioWeb: 'Sitio oficial',
       url: 'https://www.fundaciontelefonica.com.ar/'
     },
     imagen: {
@@ -262,7 +262,7 @@ const info = {
       ubicacion: 'Nuñez'
     },
     web: {
-      sitioWeb: 'Sitio Oficial',
+      sitioWeb: 'Sitio oficial',
       url: 'https://www.fadu.uba.ar/'
     },
     imagen: {
@@ -279,7 +279,7 @@ const info = {
       ubicacion: 'Palermo'
     },
     web: {
-      sitioWeb: 'Sitio Oficial',
+      sitioWeb: 'Sitio oficial',
       url: 'https://fola.com.ar/'
     },
     imagen: {
@@ -296,7 +296,7 @@ const info = {
       ubicacion: 'San Telmo'
     },
     web: {
-      sitioWeb: 'Sitio Oficial',
+      sitioWeb: 'Sitio oficial',
       url: 'https://museomoderno.org/'
     },
     imagen: {
@@ -313,7 +313,7 @@ const info = {
       ubicacion: 'Retiro (Sede Actual)'
     },
     web: {
-      sitioWeb: 'Sitio Oficial',
+      sitioWeb: 'Sitio oficial',
       url: 'https://artefundacionosde.com.ar/'
     },
     imagen: {
@@ -330,7 +330,7 @@ const info = {
       ubicacion: 'Belgrano'
     },
     web: {
-      sitioWeb: 'Sitio Oficial',
+      sitioWeb: 'Sitio oficial',
       url: 'https://parquedelamemoria.org.ar/'
     },
     imagen: {
@@ -347,7 +347,7 @@ const info = {
       ubicacion: 'Retiro'
     },
     web: {
-      sitioWeb: 'Sitio Oficial',
+      sitioWeb: 'Sitio oficial',
       url: 'https://rolfart.com.ar/'
     },
     imagen: {
@@ -364,7 +364,7 @@ const info = {
       ubicacion: 'Belgrano'
     },
     web: {
-      sitioWeb: 'Sitio Oficial',
+      sitioWeb: 'Sitio oficial',
       url: 'https://parquedelamemoria.org.ar/arte-sala-pays/'
     },
     imagen: {
@@ -381,7 +381,7 @@ const info = {
       ubicacion: 'San Nicolás'
     },
     web: {
-      sitioWeb: 'Sitio Oficial',
+      sitioWeb: 'Sitio oficial',
       url: 'https://complejoteatral.gob.ar/#'
     },
     imagen: {
