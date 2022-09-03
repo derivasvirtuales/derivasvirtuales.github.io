@@ -1575,6 +1575,7 @@ body {background-color: #0E0D0D;}
 font-size: 26px;
 line-height: 30px;
 text-align: center;
+color: #ffffff;
 }
 .pop-up-mobile .text-popupmobile{
   font-family: 'Roboto';
@@ -1582,6 +1583,7 @@ text-align: center;
   font-size: 16px;
   line-height: 22px;
   text-align: center;
+  color: #ffffff;
 }
 
 @media (max-width: 991px) {
