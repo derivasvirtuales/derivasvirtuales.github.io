@@ -573,7 +573,7 @@ color: white;
   font-size: 14px;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .pop-up-home .pop-up-ficture{
     height: 95%!important;
     width: 90%!important;
@@ -605,7 +605,7 @@ color: white;
     text-align: center!important;
     font-size: 12px;
   }
-}
+} */
 /*Pop Up Button Desplegable*/
 .pop-up-button-open {
   height: 20px;
@@ -626,9 +626,6 @@ color: white;
   width: auto;
 }
 
-.close-popUp{
-  display: none;
-}
 
 
 
@@ -1602,4 +1599,8 @@ text-align: center;
   .pop-up-mobile {
     display: none;
    }
+}
+
+.close-popUp{
+  display: none!important;
 }
