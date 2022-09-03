@@ -1558,3 +1558,22 @@ body {background-color: #0E0D0D;}
   display: block;
   overflow: auto;
 }
+
+/*popup media query*/
+
+@media (max-width: 991px) {
+  .pop-up-home {
+   display: none!important;
+  }
+  .pop-up-mobile {
+    display: flex!important;
+   }
+}
+@media (min-width: 992px) {
+  .pop-up-home {
+   display: flex!important;
+  }
+  .pop-up-mobile {
+    display: none!important;
+   }
+}
