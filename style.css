@@ -12,7 +12,7 @@ body {
   width: 250px;
   position: fixed;
   margin: 2%  0 0 0;
-  padding-left: 2%;
+  padding-left: 2.5%;
   color: #f1f1f1;
   display: flex;
   align-items: start;
@@ -1084,7 +1084,7 @@ color: white;
 .imagen-texto-container-rec {
   height: fit-content;
   display: flex;
-  margin: 0 0 60px;
+  margin: 0 0 0px;
 }
 
 .imagen-texto-container-rec p {
@@ -1134,7 +1134,9 @@ color: white;
 
 .imagen-texto-container-ver p {
   margin: 0;
-
+  height: 200px;
+  display: block;
+  overflow: auto;
   font: 12px 'Roboto';
 }
 
@@ -1524,3 +1526,35 @@ color: #0E0D0D;
 @media (max-width: 991px) {
 body {background-color: #0E0D0D;}
 } */
+
+
+/*SCROLL TEXT*/
+/*OBRAS*/
+.imagen-texto-container-ver p {
+  margin: 0;
+  height: 200px;
+  display: block;
+  overflow: auto;
+  font: 12px 'Roboto';
+}
+
+.modal-container.modal-obras .text p{
+  height: 145px;
+  display: block;
+  overflow: auto;
+}
+
+/*MUSEOS*/
+
+.modal-container.modal-museos-2 .text p{
+  height: 145px;
+  display: block;
+  overflow: auto;
+}
+
+/*RECORRIDOS*/
+.imagen-texto-container-rec p {
+  height: 145px;
+  display: block;
+  overflow: auto;
+}
