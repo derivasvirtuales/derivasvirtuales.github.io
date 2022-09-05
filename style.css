@@ -259,6 +259,7 @@ span {
 .ig-link{
   width: 30%;
   margin-left: 15%;
+  display: inline-flex;
 }
 .ig-container{
   display: flex;
@@ -267,6 +268,16 @@ span {
   align-items: center;
   text-decoration: none;
 }
+
+.ig-container-h{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  padding-left: 20px;
+}
+
 .ig-link .ig-container img{
   width: 15%;
   margin-left: 0%;

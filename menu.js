@@ -198,7 +198,7 @@ function createMenu() {
             <img src="./assets/icons/ig-logo.png" alt="Instagram">
             <h3>@derivasvirtuales</h3>
             </a>
-            <a class="ig-container" href="https://www.instagram.com/explore/tags/derivasvirtuales/" target="_blank" >
+            <a class="ig-container-h" href="https://www.instagram.com/explore/tags/derivasvirtuales/" target="_blank" >
             <p class="ig-derivas">#derivasvirtuales</p>
             </a>      
         </div>
