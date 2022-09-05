@@ -197,8 +197,10 @@ function createMenu() {
           <a class="ig-container" href="https://www.instagram.com/derivasvirtuales/" target="_blank" >
             <img src="./assets/icons/ig-logo.png" alt="Instagram">
             <h3>@derivasvirtuales</h3>
+            </a>
+            <a class="ig-container" href="https://www.instagram.com/explore/tags/derivasvirtuales/" target="_blank" >
             <p class="ig-derivas">#derivasvirtuales</p>
-          </a>          
+            </a>      
         </div>
     </div>
   `;
