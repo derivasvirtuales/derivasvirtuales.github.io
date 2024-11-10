@@ -230,7 +230,7 @@ function createMenu() {
       <img src="./assets/img/iconos/menu-final.svg"/>
       <a class="item-link" href="./acercade.html">ACERCA DE DERIVAS VIRTUALES</a>
       <a class="item-link" href="./navegacion.html">MAPA DE NAVEGACIÓN</a>
-      <a class="item-link" href="https://drive.google.com/file/d/1p3ReFoHTIHObJSxcrfWOhpuL2n-i1Bxt/view?usp=sharing" >PUBLICACIÓN</a>
+      <a class="item-link" href="https://drive.google.com/file/d/1p3ReFoHTIHObJSxcrfWOhpuL2n-i1Bxt/view?usp=drive_link" >PUBLICACIÓN</a>
     </div>
   `;
 }
