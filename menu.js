@@ -185,7 +185,7 @@ function createMenu() {
         <img src="./assets/img/iconos/miscelaneas-v-blanco.svg"/>
         <a class="item-link" href="./acerca-de-derivas.html">Acerca de Derivas Virtuales</a>
         <a class="item-link" href="./guia-navegacion.html">Guía de navegación</a>
-        <a class="item-link" href="https://drive.google.com/file/d/1XOLk-sZKkOj7sixLPMQb2lo5Zn-EECB1/view" target="_blank">Publicación</a>
+        <a class="item-link" href="https://drive.google.com/file/d/1p3ReFoHTIHObJSxcrfWOhpuL2n-i1Bxt/view" target="_blank">Publicación</a>
         <a class="item-link" href="https://www.google.com/maps/d/viewer?mid=1WOM4KNQ1tsVNz0DLBiwT999-XrZUqZeH&ll=-34.58979763575463%2C-58.46037369999999&z=12"  target="_blank">Lista de recorridos</a>
       </div>
     </div>
