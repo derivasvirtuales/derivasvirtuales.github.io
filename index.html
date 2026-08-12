@@ -23,8 +23,15 @@
     <script src="index.js"></script>
     <script src="menu.js"></script>
     <script src="info-edificios.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.128.0/build/three.module.js"
+        }
+      }
+    </script>
     <script type="module">
-      import * as THREE from 'https://unpkg.com/three@0.128.0/build/three.module.js';
+      import * as THREE from 'three';
       import { MapControls } from 'https://unpkg.com/three@0.128.0/examples/jsm/controls/OrbitControls.js';
       import { GLTFLoader } from 'https://unpkg.com/three@0.128.0/examples/jsm/loaders/GLTFLoader.js';
 
